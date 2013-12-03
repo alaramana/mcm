@@ -1,0 +1,23 @@
+<!-- Search about Connection Types-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @connectiontypes.blank? %>
+	<p>There are no Connection Types currently in the system.</p>
+<% else %>
+	<p>These are the current Connection Types:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "name" %><br>Connection Types</td>
+		<td><%= I18n.t "amount" %><br>Amount</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @connectiontypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.amount -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @connectiontypes %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

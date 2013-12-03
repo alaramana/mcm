@@ -1,0 +1,42 @@
+<!--Showing the data of Birth Registration Details-->
+<h1><%= I18n.t "birth_details" %>:<br>Birth Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date of Birth:</td>
+		<td><%= @birth.birth_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @birth.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Sex:</td>
+		<td><%= @birth.gender.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address: </td>
+		<td><%= @birth.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br>Father Name:</td>
+		<td><%= @birth.father_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "mother_name" %>:<br>Mother Name:</td>
+		<td><%= @birth.mother_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'approved_on' %>:<br>Copies:</td>
+		<td> <%= @birth.copies %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'approved_on' %>:<br>Total Amount:</td>
+		<td> <%= @birth.totalamount %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "back" %>:<br><%= link_to 'List', {:action => 'list'} %></td>
+		<td></td>
+	</tr>
+	</table>
+

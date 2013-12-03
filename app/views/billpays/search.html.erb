@@ -1,0 +1,29 @@
+<!-- Search about Bill Pays-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+<% if @billpays.blank? %>
+ 	<p><%= I18n.t "bill_pay_details_no" %> <br>There are no Bill Pays currently in the system:</p>
+<% else %>
+	<p><%= I18n.t "bill_pay_details" %> <br>These are the current Bill Pays:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_number" %> <br>Invoice Number</td>
+		<td><%= I18n.t "date" %><br>Date</td>
+		<td><%= I18n.t "goods_amount" %> <br>Amount</td>		
+		<td><%= I18n.t "paid_amount" %> <br>Payed Amount</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+		
+	</tr>
+	<% @billpays.each do |c| %>
+	
+	<tr>
+		<td><%= link_to c.invoice_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.date -%></td>
+		<td><%=  c.amount -%></td>
+		<td><%= c.paid_amount -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @billpays %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

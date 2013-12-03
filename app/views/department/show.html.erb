@@ -1,0 +1,17 @@
+<!--Showing the details of  Department -->
+<h1> <%= I18n.t "department_details" %>:<br>Department Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "department" %>:<br> Department Name:</td>
+		<td><%= @department.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "short_desc" %>: <br>Short Code: </td>
+		<td><%= @department.description %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @department.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/muncipalerp/!svn/ver/423/trunk/app/views/marital
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/297/trunk/app/views/marital/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/muncipalerp/!svn/ver/422/trunk/app/views/marital/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/muncipalerp/!svn/ver/205/trunk/app/views/marital/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/297/trunk/app/views/marital/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/423/trunk/app/views/marital/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/297/trunk/app/views/marital/show.html.erb
+END

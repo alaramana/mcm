@@ -1,0 +1,13 @@
+<!--Showing the details of Religion-->
+<h1><%= I18n.t "religion_details" %>:<br>Religion Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br>Religion Name:</td>
+		<td><%= @religion.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @religion.description %></td>
+	</tr>
+	</table>
+ <%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

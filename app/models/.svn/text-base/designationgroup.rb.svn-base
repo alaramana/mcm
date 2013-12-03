@@ -1,0 +1,17 @@
+#Author: Chaitanya
+#=========================
+
+class Designationgroup < ActiveRecord::Base
+	has_many :employees
+
+	validates_presence_of :group_name
+
+	#method : indexing on gruop name
+	define_index do
+		indexes group_name
+
+
+	#with{}
+
+	end
+end

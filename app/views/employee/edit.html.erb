@@ -1,0 +1,116 @@
+<!--editing the data of Employee Type Details-->
+<h1><%= I18n.t "edit_employee_details" %>:<br>Edit Caste Detail</h1>
+<%= form_tag :action => 'update', :id => @employee %>
+	<table>
+	<tr>
+		<td><label for="employment_id"><%= I18n.t "employment_number" %>:<br> Employment Number</label>*: </td>
+		<td><%= text_field 'employee', 'name',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="name"><%= I18n.t "name" %>:<br> Name</label>*:</td>
+		<td><%= text_field 'employee', 'name',:class=>'title' %></p></td>
+	</tr>
+	<tr>
+		<td><label for="sex"> <%= I18n.t "gender" %>:<br>Sex</label>*:</td>
+		<td><%= collection_select(:employee,:gender_id,@gender,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="father_name"><%= I18n.t "father_name" %>:<br> Father Name</label>*:</td>
+		<td><%= text_field 'employee', 'father_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="dob"><%= I18n.t "date_of_birth" %>:<br> Date Of Birth</label>*:</td>
+		<td><%= text_field 'employee', 'dob', :class=>'title' %>
+	</td>
+	</tr>
+	<tr>
+		<td><label for="date_join"><%= I18n.t "date_of_join" %>:<br> Date Of Join</label>*:</td>
+		<td><%= text_field 'employee', 'date_join', :class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="religion_id"><%= I18n.t "religion" %>:<br> Religion</label>*:</td>
+		<td><%= collection_select(:employee,:religion_id,@religion,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="caste_id"> <%= I18n.t "caste" %>:<br> Caste</label>*:</td>
+		<td><%= collection_select(:employee,:caste_id,@caste,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="marital_id"><%= I18n.t "marital" %>:<br>  Marital</label>*:</td>
+		<td><%= collection_select(:employee,:marital_id,@marital,:id,:status) %></td>
+	</tr>
+	<tr>
+		<td><label for="education"><%= I18n.t "education" %>:<br>  Education</label>*:</td>
+		<td><%= text_field 'employee', 'education' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="blood_group"><%= I18n.t "blood_group" %>:<br>  Blood Group</label>*:</td>
+		<td><%= text_field 'employee', 'blood_group',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="nationality"><%= I18n.t "nationality" %>:<br>  Nationality</label>*:</td>
+		<td><%= text_field 'employee', 'nationality',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="address"><%= I18n.t "address" %>:<br> Address</label>*:</td>
+		<td><%= text_area 'employee', 'address'%></td>
+	</tr>
+	<tr>
+		<td><label for="phone"> <%= I18n.t "phone_number" %>:<br> Phone</label>*:</td>
+		<td><%= text_field 'employee', 'phone' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="mobile"> <%= I18n.t "phone_number" %>:<br> Mobile</label>*:</td>
+		<td><%= text_field 'employee', 'mobile',:class=>'title' %></td>
+		</tr>
+	<tr>
+		<td><label for="email"><%= I18n.t "email" %>:<br>  Email</label>*:</td>
+		<td><%= text_field 'employee', 'email',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="photo"><%= I18n.t "photo" %>:<br> Photo</label>*:</td>
+		<td><%= text_field 'employee', 'photo',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="pan"> <%= I18n.t "pan_number" %>:<br>PAN</label>*:</td>
+		<td><%= text_field 'employee', 'pan' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="pf_number"><%= I18n.t "pf_number" %>:<br>PF Number</label>*:</td>
+		<td><%= text_field 'employee', 'pf_number' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="bank_account_number"><%= I18n.t "bank_account_number" %>:<br>  Account Number</label>*:</td>
+		<td><%= text_field 'employee', 'bank_account_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="bank_id"><%= I18n.t "bank_number" %>:<br>   Bank</label>*:</td>
+		<td><%= collection_select(:employee,:bank_id,@bank,:id,:name) %></td>
+	</tr>
+
+	<tr>
+		<td><label for="empolyeetype_id"> <%= I18n.t "employee_type" %>:<br> Employee Type</label>*:</td>
+		<td><%= collection_select(:employee,:employeetype_id,@employeetype,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="empolyeetype_id"> <%= I18n.t "employee_type" %>:<br> Employee Category</label>*:</td>
+		<td><%= collection_select(:employee,:employeecategory_id,@employeecategory,:id,:name) %></td>
+	</tr>
+
+	<tr>
+
+		<td><label for="designation_id"> <%= I18n.t "designation" %>:<br>Designation</label>*:</td>
+		<td><%= collection_select(:employee,:designation_id,@designation,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="department_id"><%= I18n.t "department" %>:<br>  Department</label>*:</td>
+		<td><%= collection_select(:employee,:department_id,@department,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="UID"><%= I18n.t "uid" %>:<br> UID</label>*:</td>
+		<td><%= text_field 'employee', 'UID' ,:class=>'title'%></td>
+	</tr>
+	</table>
+<%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %>
+<%= form_tag %>
+ <%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

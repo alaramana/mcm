@@ -1,0 +1,27 @@
+<% if @complaints.blank? %>
+ 	<p align="center>><%= I18n.t "complaint_details_no" %>:<br>There are no complaints currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "complaint_details" %>:<br>Report of Current Complaints</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "complaint_number" %><br>ComplaintNumber</td>
+		<td><%= I18n.t "complaint_type" %><br>ComplaintType</td>
+  <td><%= I18n.t "complaint_date" %><br>ComplaintDate</td>
+  <td><%= I18n.t "resolve_time" %><br>ResolveTime</td>
+	</tr>
+	<% @complaints.each do |c| %>
+	
+	<tr>
+		<td><%= c.complaint_number %></td>
+		<td><%= c.complainttype.complaint_type%></td>
+  <td><%= c.complaint_date%></td>
+		<td><%= c.resolve_time %></td>
+   	</tr>
+	<% end %>
+	</table>
+<% end %>
+

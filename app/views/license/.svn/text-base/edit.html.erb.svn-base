@@ -1,0 +1,89 @@
+<!--editing the data of License Details-->
+<h1>Edit License Detail</h1>
+<%= form_tag :action => 'update', :id => @license %>
+	<table>
+	<tr>
+		<td><label for="lisecse_number">License Type</label>:*</td>
+		<td><%= text_field 'license', 'lisecse_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="first_name"><%= I18n.t "first_name" %>:<br>First Name</label>:* </td>
+		<td><%= text_field 'license', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="last_name"><%= I18n.t "last_name" %>:<br>Last Name</label>:* </td>
+		<td><%= text_field 'license', 'last_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="father_name"><%= I18n.t "father_name" %>:<br>Last Name</label>:* </td>
+		<td><%= text_field 'license', 'father_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="shop_name">Shop Name</label>:*</td>
+		<td><%= text_field 'license', 'shop_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="shop_address1">Shop Address1</label>:</td>
+		<td><%= text_area 'license', 'shop_address1' %></td>
+	</tr>
+	<tr>
+		<td><label for="shop_address1">Shop Address2</label>:</td>
+		<td><%= text_area 'license', 'shop_address1' %></td>
+	</tr>
+	<tr>
+		<td><label for="invoice_number">Invoice Number</label>:*</td>
+		<td><%= text_field 'license', 'invoice_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="period_from">Period From</label>:* </td>
+		<td><%= calendar_date_select_tag 'license[period_from]' %></td>
+	</tr>
+	<tr>
+		<td><label for="period_to ">Period To</label>:* </td>
+		<td><%= calendar_date_select_tag 'license[period_to]' %></td>
+	</tr>
+	
+	<tr>
+		<td><label for="group">License Group</label>:*</td>
+		<td><%= collection_select(:license, :licensegroup_id,@licensegroup, :id, :group) %></td>
+	</tr>
+	<tr>
+		<td><label for="department_id"><%= I18n.t "department" %>:<br>Department</label>*:</td>
+		<td><%= collection_select(:license,:department_id,@departments,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="zone"><%= I18n.t "zone" %>:<br>Zone</label>*: </td>
+		<td><%= collection_select(:license, :zone_id,@zone, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="ward"><%= I18n.t "ward" %>:<br>Ward</label>*: </td>
+		<td><%= collection_select(:license, :ward_id,@ward, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="colony"><%= I18n.t "colony" %>:<br>Colony</label>*: </td>
+		<td><%= collection_select(:license, :colony_id,@colony, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="street"><%= I18n.t "street" %>:<br>Street</label>*: </td>
+		<td><%= collection_select(:license, :street_id,@street, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="surchange">Surchange</label>:*</td>
+		<td><%= text_field 'license', 'surchange',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="net_amount">Net Amount</label>:*</td>
+		<td><%= text_field 'license', 'net_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description">Description</label>:</td>
+		<td><%= text_area 'license', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+				
+<%= form_tag %>
+<%= link_to 'Back', {:action => 'list' } %>

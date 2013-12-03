@@ -1,0 +1,96 @@
+#Author: Chaitanya
+#Controller: Religion Details
+#-----------------------
+class ReligionController < ApplicationController
+
+	#Method: new
+	def new
+		@religion = Religion.new
+	end
+	#End:new
+
+	#Method:create
+	def create
+		@religion = Religion.new(params[:religion])
+		@religion.created_by = 1
+		@religion.modified_by = 1
+
+		if @religion.save
+			flash[:notice] = 'Religion successfully created.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	#End:create
+
+	#Method:list
+	def list
+		@religions = Religion.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @religions }		#Render to XML File
+		end
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@religion = Religion.find(params[:id])
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @religions }		#Render to XML File
+		end
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@religion = Religion.find(params[:id])
+	end
+	#End:edit
+
+	#Method:update
+	def update
+		@religion = Religion.find(params[:id])
+		@religion.modified_by = 1
+		
+		if @religion.update_attributes(params[:religion])
+			flash[:notice] = 'Religion successfully updated.'
+			redirect_to :action => 'show', :id => @religion
+		else
+			render :action => 'edit'
+		end
+	end
+	#End:update
+
+	#Method:delete
+	def delete
+		Religion.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+
+	#Method: search
+	def search
+		
+		@query = params[:query]
+		@religions = Religion.search @query, :page => params[:page], :per_page => 10
+	end
+	#End:search
+
+	#method: Report Generation
+	def report
+		@religions = Religion.find(:all)
+
+
+    html = render :layout => false 
+	kit = PDFKit.new(html)
+
+	kit.stylesheets << RAILS_ROOT + '/public/stylesheets/styles.css' 
+
+	send_data(kit.to_pdf, :filename => "religionreport.pdf", :type => 'application/pdf')
+	end
+	#End:report
+
+end

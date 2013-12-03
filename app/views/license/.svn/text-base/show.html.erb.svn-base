@@ -1,0 +1,17 @@
+<!--Showing the details of License-->
+<h1>License Details:</h1>
+	<table>
+	<tr>
+		<td>License Number:</td>
+		<td><%= @license.license_number %></td>
+	</tr>
+	<tr>
+		<td>License Group Name:</td>
+		<td><%= @license.licensegroup.group%></td>
+	</tr>
+	<tr>
+		<td>Description: </td>
+		<td><%= @license.description %></td>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>

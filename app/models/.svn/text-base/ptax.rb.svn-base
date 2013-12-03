@@ -1,0 +1,25 @@
+#Author: Chaitanya
+#Model: Property Tax Calculation
+#=============================================
+class Ptax < ActiveRecord::Base
+
+    belongs_to :unitvalue
+	belongs_to :usefactor
+	belongs_to :agefactor
+	belongs_to :structurefactor
+	belongs_to :occupancyfactor
+	belongs_to :exemptionfactor
+	belongs_to :ptaxrate				#Property Tax Rates
+	belongs_to :tax						#Surcharge
+	belongs_to :ptaxregistration		#Property Tax Registration
+	belongs_to :taxcategory
+	belongs_to :ownertype
+	has_many   :ptaxpayments			#Property Tax Payments
+
+
+	#Method to Calculate the Property Tax using factors
+	def invoice  #TODO need to improve with arrers and extra floors
+		((((unitvalue.amount * ptaxrate.percentage))/100 * usefactor.factor * agefactor.factor * 			structurefactor.factor* occupancyfactor.factor * exemptionfactor.factor) * build_area)+75
+	end
+
+end

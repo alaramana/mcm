@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/muncipalerp/!svn/ver/466/trunk/app/models
+END
+employee.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/384/trunk/app/models/employee.rb
+END
+employeetype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/384/trunk/app/models/employeetype.rb
+END
+occupancyfactor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/453/trunk/app/models/occupancyfactor.rb
+END
+hospital.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/384/trunk/app/models/hospital.rb
+END
+wtax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/383/trunk/app/models/wtax.rb
+END
+deliverymethod.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/384/trunk/app/models/deliverymethod.rb
+END
+marital.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/muncipalerp/!svn/ver/384/trunk/app/models/marital.rb
+END
+agefactor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/muncipalerp/!svn/ver/384/trunk/app/models/agefactor.rb
+END
+ownertype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/muncipalerp/!svn/ver/453/trunk/app/models/ownertype.rb
+END
+tax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/muncipalerp/!svn/ver/383/trunk/app/models/tax.rb
+END
+designationgroupmaster.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/muncipalerp/!svn/ver/384/trunk/app/models/designationgroupmaster.rb
+END
+ward.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/383/trunk/app/models/ward.rb
+END
+structurefactor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/453/trunk/app/models/structurefactor.rb
+END
+connectiontype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/384/trunk/app/models/connectiontype.rb
+END
+department.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/muncipalerp/!svn/ver/384/trunk/app/models/department.rb
+END
+organization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/384/trunk/app/models/organization.rb
+END
+designation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/muncipalerp/!svn/ver/384/trunk/app/models/designation.rb
+END
+gender.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/muncipalerp/!svn/ver/384/trunk/app/models/gender.rb
+END
+organizationtype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/384/trunk/app/models/organizationtype.rb
+END
+ptaxregistration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/461/trunk/app/models/ptaxregistration.rb
+END
+exemptionfactor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/453/trunk/app/models/exemptionfactor.rb
+END
+birth.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/muncipalerp/!svn/ver/472/trunk/app/models/birth.rb
+END
+ptaxpayment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/muncipalerp/!svn/ver/461/trunk/app/models/ptaxpayment.rb
+END
+registration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/373/trunk/app/models/registration.rb
+END
+bank.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/384/trunk/app/models/bank.rb
+END
+shift.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/muncipalerp/!svn/ver/383/trunk/app/models/shift.rb
+END
+designationgroup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/384/trunk/app/models/designationgroup.rb
+END
+license.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/muncipalerp/!svn/ver/466/trunk/app/models/license.rb
+END
+property.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/384/trunk/app/models/property.rb
+END
+licensetype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/muncipalerp/!svn/ver/384/trunk/app/models/licensetype.rb
+END
+death.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/muncipalerp/!svn/ver/471/trunk/app/models/death.rb
+END
+propertytype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/384/trunk/app/models/propertytype.rb
+END
+workplace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/muncipalerp/!svn/ver/383/trunk/app/models/workplace.rb
+END
+ptaxrate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/373/trunk/app/models/ptaxrate.rb
+END
+pipesize.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/384/trunk/app/models/pipesize.rb
+END
+taxcategory.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/muncipalerp/!svn/ver/383/trunk/app/models/taxcategory.rb
+END
+usefactor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/muncipalerp/!svn/ver/383/trunk/app/models/usefactor.rb
+END
+licensegroup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/455/trunk/app/models/licensegroup.rb
+END
+caste.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/muncipalerp/!svn/ver/384/trunk/app/models/caste.rb
+END
+colony.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/muncipalerp/!svn/ver/384/trunk/app/models/colony.rb
+END
+street.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/muncipalerp/!svn/ver/383/trunk/app/models/street.rb
+END
+religion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/muncipalerp/!svn/ver/383/trunk/app/models/religion.rb
+END
+zone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/383/trunk/app/models/zone.rb
+END
+ptax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/461/trunk/app/models/ptax.rb
+END
+unitvalue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/muncipalerp/!svn/ver/383/trunk/app/models/unitvalue.rb
+END

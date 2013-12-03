@@ -1,0 +1,31 @@
+<!--Listing all the License Details-->
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter License  " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter License'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Licenses" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<% if @licenses.blank? %>
+	<p>There are no License currently in the system.</p>
+<% else %>
+	<p>These are the current License :</p>
+	<table>
+	<% @licenses.each do |c| %>
+	<tr>
+		<td><%= link_to c.license_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @licenses %>
+<%= link_to "Add new", {:action => 'new' }%>
+
+
+

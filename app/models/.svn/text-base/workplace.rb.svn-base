@@ -1,0 +1,15 @@
+#Author: Chaitanya
+#=========================
+
+class Workplace < ActiveRecord::Base	
+	has_many :employees
+
+	validates_presence_of :name
+	
+	#Method: Indexing on Workplace
+	define_index do
+		indexes :name
+
+	end
+
+end

@@ -1,0 +1,19 @@
+<!--editing the data of Employee Type Details-->
+<h1><%= I18n.t "edit_employee_type_details" %>:<br>Edit Employee Type Detail</h1>
+<%= form_tag :action => 'update', :id => @employeetype %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "employee_type" %>:<br>Employee Type</label>:* </td>
+		<td><%= text_field 'employeetype', 'name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'employeetype', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

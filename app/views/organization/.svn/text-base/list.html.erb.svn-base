@@ -1,0 +1,31 @@
+<!--Listing all the Organization Details-->
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Organization Details " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Organization Details'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Organization Details" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<% if @organizations.blank? %>
+	<p>There are no Organization currently in the system.</p>
+<% else %>
+	<p>These are the current:</p>
+	<table>
+	<% @organizations.each do |c| %>
+	<tr>
+		<td><%= link_to c.short_name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>	
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @organizations %>
+<%= link_to "Add new", {:action => 'new' }%>
+
+
+

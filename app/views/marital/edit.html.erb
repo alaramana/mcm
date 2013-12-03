@@ -1,0 +1,19 @@
+<!--editing the data of Marital Information--> 
+<h1><%= I18n.t "edit_marital_details" %>:<br>Edit Marital Information</h1>
+<%= form_tag :action => 'update', :id => @marital %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "marital" %>:<br >Marital Status</label>:* </td>
+		<td><%= text_field 'marital', 'status' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'marital', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %>:<br><%= submit_tag "Update" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back", {:action => 'list' } %><br><%= link_to 'Back', {:action => 'list' } %>

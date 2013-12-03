@@ -1,0 +1,23 @@
+<!--editing the data of Tax Details-->
+<h1>Edit Tax Detail</h1>
+<%= form_tag :action => 'update', :id => @unitvalue %>
+	<table>
+	<tr>
+		<td><label for="name">Tax</label>:* </td>
+		<td><%= text_field 'tax', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="name">Amount</label>:* </td>
+		<td><%= text_field 'tax', 'amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description">Description</label>:</td>
+		<td><%= text_area 'tax', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to 'Back', {:action => 'list' } %>

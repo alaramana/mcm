@@ -1,0 +1,17 @@
+<!--showing each Itemmasters Details depending the ids -->
+<h1><%= I18n.t "item_group_details" %><br>Itemmasters Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "category_name" %> :<br>Item Category:</td>
+		<td><%= @itemmaster.itemcategory.category_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "item_name" %> :<br>Item Masters Name:</td>
+		<td><%= @itemmaster.item_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %> :<br><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @itemmaster.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

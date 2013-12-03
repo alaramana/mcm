@@ -1,0 +1,159 @@
+<!--entering the data for creating Birth Registration Details-->
+<h1><%= I18n.t "enter_birth_details" %>:<br>Enter Birth Registration Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'registration_number' %>:<br>Registration Number*: </td>
+		<td><%= text_field 'birth', 'register_id' ,:class=>'title', :readonly=>"true", :value=>@birth.max + 1%></td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date of Birth:*: </td>
+		<td><%= calendar_date_select_tag 'birth[birth_date]', nil, :year_range => [60.years.ago, 0.years.from_now],:popup => "force" %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Gender:</td>
+		<td><%= collection_select(:birth,:gender_id,@gender,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:: </td>
+		<td><%= text_field 'birth', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "middle_name" %>:<br>Middle Name: </td>
+		<td><%= text_field 'birth', 'middle_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= text_field 'birth', 'last_name' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br>Father Name *: </td>
+		<td><%= text_field 'birth', 'father_name',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "mother_name" %>:<br>Mother Name *: </td>
+		<td><%= text_field 'birth', 'mother_name',:class=>'title' %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address: </td>
+		<td><%=text_area 'birth', 'address'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "place_birth" %>:<br>Place of Birth: </td>
+		<td><%= radio_button("birth", "birth_place", "Hospital",:checked=>'checked')%>Hospital 
+		    <%= radio_button("birth", "birth_place", "Home")%> Home</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "hospital" %>:<br>Hospital Name: </td>
+		<td><%= collection_select(:birth,:hospital_id,@hospital,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "mother_birth_place" %>:<br>Mother Native Place*: </td>
+		<td><%= text_field 'birth', 'mother_native',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br>Religion*: </td>
+		<td><%= collection_select(:birth,:religion_id,@religion,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %>:<br>Caste*: </td>
+		<td><%= collection_select(:birth,:caste_id,@caste,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'father_education' %>:<br>Father Education*: </td>
+		<td><%= text_field 'birth', 'father_education',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_education' %>:<br>Mother Education*: </td>
+		<td><%= text_field 'birth', 'mother_education',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'father_occupation' %>:<br>Father Occupation*: </td>
+		<td><%= text_field 'birth', 'father_occupation' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_occupation' %>:<br>Mother Occupation*: </td>
+		<td><%= text_field 'birth', 'mother_occupation',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_age_marriage' %>:<br>Mother Age (At Time of Marriage)*: </td>
+		<td><%= text_field 'birth', 'mother_age_marriage',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_age_delivery' %>:<br>Mother Age (At Time of Delivery)*: </td>
+		<td><%= text_field 'birth', 'mother_age_delivery' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'total_childern' %>:<br>Total Childern*: </td>
+		<td><%= text_field 'birth', 'total_children',:class=>'title' %></td>
+	</tr>
+	</tr>
+		<td><%= I18n.t 'helper' %>:<br>Helper*: </td>
+		<td><select name="birth[helper]">
+				<option>Government</option>
+				<option>Private/Non Government</option>
+				<option>Doctor/Nurse/Trained Dai</option>
+				<option>Dai/Relation</option>
+			  </select>
+		</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "delivery_method" %>:<br>Delivery Method*: </td>
+		<td><%= collection_select(:birth,:deliverymethod_id,@deliverymethod,:id,:name)%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'baby_weight' %>:<br>Baby Weight*: </td>
+		<td><%= text_field 'birth', 'weight',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'pregancy_period' %>:<br>Pregancy Period (in Weeks)*: </td>
+		<td><%= text_field 'birth', 'total_time',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<tr>
+		<td><%= I18n.t "city" %>:<br>City*: </td>
+		<td><%= text_field 'birth', 'city',:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='MALANJKHAND'", :value=> "MALANJKHAND"%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "district" %>:<br>District*: </td>
+		<td><%= text_field 'birth', 'district',:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='BALAGHAT'", :value=> "BALAGHAT" %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tehsil" %>:<br>Tehsil*: </td>
+		<td><%= text_field 'birth', 'tehsil',:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='BAIHAR'", :value=> "BAIHAR" %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'register_remark' %>:<br>Registeration Remark: </td>
+		<td><%= text_field 'birth', 'remarks',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'register_unit' %>:<br>Registeration Unit*: </td>
+		<td><%= text_field 'birth', 'unit',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "applicant_name" %>:<br>Applicant Name*: </td>
+		<td><%= text_field 'birth', 'applicant',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'registration_date' %>:<br>Registeration Date*: </td>
+		<td><%= calendar_date_select_tag 'birth[register_date]', nil, :year_range => [0.years.ago, 0.years.from_now],:popup => "force" %></td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t 'employee' %>:<br>Employee*: </td>
+		<td><%= text_field 'birth', 'employee_id',:class=>'title' %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t 'approved_by' %>:<br> Number of Copies*: </td>
+		<td><%= text_field 'birth', 'copies',:class=>'title',:value=>1 %></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td><%= I18n.t 'save' %>:<br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>

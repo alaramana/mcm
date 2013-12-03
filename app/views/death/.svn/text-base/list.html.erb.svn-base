@@ -1,0 +1,22 @@
+<!--Listing all the Death Registration Details-->
+<% if @deaths.blank? %>
+	<p><%= I18n.t "death_details_no" %>:<br>There are no Deaths currently in the system.</p>
+<% else %>
+	<p> <%= I18n.t "death_details" %>:<br>These are the current Deaths:</p>
+<% end %>
+<p><%= link_to "Approved", {:action => 'approve_ok' }%></p>
+<p><%= link_to "Not Approved", {:action => 'not_approved' }%></p>
+
+<p><%= link_to "Add new", {:action => 'new' }%></p>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Death Registration" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Death Registration'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Deaths" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->

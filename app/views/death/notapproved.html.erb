@@ -1,0 +1,36 @@
+<!--Listing all the Not approved deaths information -->
+<% if @not_approves.blank? %>
+	<p><%= I18n.t "death_details_no" %>:<br>There are no Not Approved Birth Registration Data currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Death Registration" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Death Registration'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Deaths" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "death_details" %>:<br>List of Not Approved Death Registrations:</p>
+	<table>
+	<tr>
+	<td><%= I18n.t 'registration_number' %>:<br>Register Number</td>
+	<td><%= I18n.t 'edit' %>:<br>Edit</td>
+	</tr>
+	<% @not_approves.each do |c| %>
+	<tr>
+	<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+	<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+<%= I18n.t 'back' %>:<br><%= link_to "back", {:action => 'list' }%>
+
+
+

@@ -1,0 +1,36 @@
+<!--Listing all Ward Details -->
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Ward Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Ward Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Ward" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+
+<% if @wards.blank? %>
+	<p><%= I18n.t "ward_details_no" %>:<br>There are no Wards currently in the system.</p>
+<% else %>
+	<p> <%= I18n.t "ward_details" %>:<br>These are the current Wards:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "ward" %><br>Name</td><td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @wards.each do |c| %>
+	
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @wards %>
+<%= link_to I18n.t "add_new", {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="language" content="en" />
+    <title>ERP Central</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <%= javascript_include_tag :defaults, 'scriptaculous', 'menu', 'swfobject' ,"/javascripts/calendar_date_select/calendar_date_select.js?1233647410", "/javascripts/calendar_date_select/format_italian_date.js" %>
+    <%= stylesheet_link_tag "styles", "menu", "screen","/stylesheets/calendar_date_select/red.css?1233647414" %>
+  </head>
+  <body>
+  <div class="headline">
+  	  <h1>Malanjkhand Muncipal Council</h1>
+  </div>
+  <div class="info-container">
+  	<div class="info">
+		<em>Welcome to Malanjkhand Centralized Solution    |    Today is <%= Time.now.strftime("%A  %d %B %Y ") %></em> 		
+  	</div>
+
+  </div>
+  <div class="menu-container">
+  	<div id="menu">
+		<ul class="level1" id="root">
+		    <li class="sep"></li>
+		    <li><a href="/home">Home</a></li>
+		    <li class="sep"></li>
+		    <li><%= link_to 'RBD', '#'  %>
+		      <ul class="level2">
+		      	<li><%= link_to 'Birth Registration', '/birth/list' %></li>
+		      	<li><%= link_to 'Death Registration', '/death/list'  %></li>
+		      	<li><%= link_to 'List of Hospitals', '/hospital/list'  %></li>
+		      	<li><%= link_to 'Delivery Methods', '/deliverymethod/list'  %></li>
+
+		      </ul>
+		     </li>
+		     <li><%= link_to 'Property Tax', '#' %>
+		     	<ul class="level2">
+		    	 <li><%= link_to 'Property Type', '/propertytype/list'  %></li>
+		    	 <li><%= link_to 'Properties', '/property/list' %></li>
+		    	 <li><%= link_to 'Owner Types', '/ownertype/list' %></li>
+		    	 <li><%= link_to 'Tax Category', '/taxcategory/list' %></li>
+		    	 <li><%= link_to 'Use Factor', '/usefactor/list' %></li>
+		    	 <li><%= link_to 'Age Factor', '/agefactor/list' %></li>
+		    	 <li><%= link_to 'Occupancy Factor', '/occupancyfactor/list' %></li>
+		    	 <li><%= link_to 'Exemption Factor', '/exemptionfactor/list' %></li>
+		    	 <li><%= link_to 'Structure Factor', '/structurefactor/list' %></li>
+		    	 <li><%= link_to 'Unit Values', '/unitvalue/list' %></li>
+		    	 <li><%= link_to 'Property Tax Rates', '/ptaxrate/list' %></li>
+		    	 <li><%= link_to 'Service Tax', '/tax/list' %></li>
+		    	 <li><%= link_to 'Property Tax Registrations', '/registration/list' %></li>
+
+		     	</ul>
+		     </li>
+		     <li><%= link_to 'Settings', '#', :alt=>"Settings"  %>
+		     	<ul class="level2">
+		     	  <li><%= link_to 'Organization', '/organization/list' %></li>		     		
+		     	  <li><%= link_to 'Organization Type', '/organizationtype/list'  %></li>
+		     	  <li><%= link_to 'Department', '/department/list' %></li>
+		     	  <li><%= link_to 'Designation', '/designation/list' %></li>
+		     	  <li><%= link_to 'Designation Group', '/designationgroup/list' %></li>
+			  <li><%= link_to 'DesignationGroup Master', '/designationgroupmaster/list' %></li>
+		     	  <li><%= link_to 'Gender', '/gender/list' %></li>
+		     	  <li><%= link_to 'Marital Status', '/marital/list' %></li>
+		     	  <li><%= link_to 'Religion', '/religion/list' %></li>
+		     	  <li><%= link_to 'Caste', '/caste/list' %></li>
+		     	  <li><%= link_to 'Zone', '/zone/list' %></li>
+		     	  <li><%= link_to 'Wards', '/ward/list' %></li>
+		     	  <li><%= link_to 'Colonies', '/colony/list' %></li>
+		     	  <li><%= link_to 'Streets', '/street/list' %></li>
+
+		     	</ul>
+		     </li>
+		     <li><%= link_to 'HRM', '#'  %>
+		     	<ul class="level2">
+		     	  <li><%= link_to 'Employee Registration', '/employee/list' %></li>
+		     	  <li><%= link_to 'Employee Category', '/employeetype/list' %></li>
+		     	</ul>
+		     </li>
+
+		     <li><%= link_to 'Water Tax', '#'  %>
+		     	<ul class="level2">
+		     	  <li><%= link_to 'Water Registration', '/wtax/list' %></li>
+		     	  <li><%= link_to 'Pipe Size', '/pipesize/list' %></li>
+		     	  <li><%= link_to 'Connection Type', '/connectiontype/list' %></li>
+
+		     	</ul>
+		     </li>
+		
+			 <li><%= link_to 'License', '#'  %>
+		     	<ul class="level2">
+		     	  <li><%= link_to 'License Group', '/licensegroup/list' %></li>
+		     	  <li><%= link_to 'License Type', '/licensetype/list' %></li>
+		     	  <li><%= link_to 'License', '/license/list' %></li>
+
+		     	</ul>
+		     </li>
+		     
+		</ul>
+</div>
+  </div>
+  <div class="page-body-container">
+	<div class="page-body">
+		  <%= yield %>		
+	</div>
+  </div>
+  <div class="footer">
+	  Powered by: SARK Systems Limited.
+  </div>
+  </body>
+</html>
+

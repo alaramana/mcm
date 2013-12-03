@@ -1,0 +1,13 @@
+<!--showing each Zone Details depending the ids -->
+<h1><%= I18n.t "zone details" %>:Zone Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "zone name" %>:<br>Name:</td>
+		<td><%= @zone.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @zone.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

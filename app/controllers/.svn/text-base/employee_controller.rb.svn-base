@@ -1,0 +1,114 @@
+#Author: Chaitanya
+#Controller: Employee Registrations
+#======================================================
+class EmployeeController < ApplicationController
+
+	#Method:new
+	def new
+		@employee = Employee.new
+		@religions = Religion.find(:all)					# List all Religions
+		@castes = Caste.find(:all)							# List all Castes
+		@maritals = Marital.find(:all)						# List all Maritals
+		@genders = Gender.find(:all) 						# List Genders
+		@designations = Designation.find(:all)     			# List Designations
+		@designationgroups = Designationgroup.find(:all) 	# List Designations groups
+		@departments = Department.find(:all) 				# List Departments
+		@shifts = Shift.find(:all) 							# List Shifts
+		@workplaces = Workplace.find(:all) 					# List Workplaces
+		@banks = Bank.find(:all)							# List Banks
+		@employeetypes = Employeetype.find(:all)			# List Employee Types
+	end
+	#End:new
+
+	#Method:
+	def create
+		@employee = Employee.new(params[:employee])
+		@employee.created_by = 1
+		@employee.modified_by = 1
+
+		if @employee.save
+			flash[:notice] = 'Employee Created Sucessfully.'
+			redirect_to :action => 'list'
+		else
+			@religions = Religion.find(:all)
+			@castes = Caste.find(:all)
+			@maritals = Marital.find(:all)
+			@genders = Gender.find(:all) 	
+			@designations = Designation.find(:all)     
+			@designationgroups = Designationgroup.find(:all) 
+			@departments = Department.find(:all) 
+			@shifts = Shift.find(:all) 
+			@workplaces = Workplace.find(:all) 
+			@banks = Bank.find(:all)
+			@employeetypes = Employeetype.find(:all)
+			render :action => 'new'
+		end
+	end  
+	#End:create
+
+	#Method:list
+	def list
+		@employees = Employee.paginate :page => params[:page], :per_page => 10	#pagination
+    	respond_to do |format|		
+     		    format.html 
+      			format.xml  { render :xml => @employees }		#Render to XML File
+    	end
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@employee = Employee.find(params[:id])
+    	respond_to do |format|		
+     		    format.html 
+      			format.xml  { render :xml => @employees }		#Render to XML File
+    	end
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@religions = Religion.find(:all)
+		@castes = Caste.find(:all)
+		@maritals = Marital.find(:all)
+		@genders = Gender.find(:all) 	
+		@designations = Designation.find(:all)     
+		@designationgroups = Designationgroup.find(:all) 
+		@departments = Department.find(:all) 
+		@shifts = Shift.find(:all) 
+		@workplaces = Workplace.find(:all) 
+		@banks = Bank.find(:all)
+		@employeetypes = Employeetype.find(:all)
+		@employee = Employee.find(params[:id])
+	end
+	#End:edit
+
+	#Method:update
+	def update
+		@employee = Employee.find(params[:id])
+
+		@employee.modified_by = 1
+
+		if @employee.update_attributes(params[:employee])
+			flash[:notice] = 'Employee Updated Sucessfully.'
+			redirect_to :action => 'show', :id => @employee
+		else
+			render :action => 'edit'
+		end
+	end
+	#End:update
+	
+	#Method:Delete
+	def delete
+		Employee.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End Method: Delete
+	#method: search
+	def search
+		@query = params[:query]
+		@employees = Employee.search @query, :page => params[:page], :per_page => 10
+	end
+	#End Method: search
+	
+end

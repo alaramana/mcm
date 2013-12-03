@@ -1,0 +1,2 @@
+module OccupancyfactorHelper
+end

@@ -1,0 +1,24 @@
+<!--Listing all Property Registrations-->
+<% if @ptaxpayments.blank? %>
+	<p>There are no Taxes currently in the system.</p>
+<% else %>
+	<p>These are the current:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "assessment_number" %><br>Assessment Number</td><td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @ptaxpayments.each do |c| %>
+	<tr>
+		<td><%= link_to c.id, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+		<td><%= link_to 'Show Invoice', {:action => 'showinvoice', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @ptaxpayments %>
+<%= link_to I18n.t "add_new" , {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+
+

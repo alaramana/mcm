@@ -1,0 +1,86 @@
+	<!--entering the data for creating Property ptax Details-->
+	<h1>Enter Property ptax Details:</h1>
+	
+	<%= form_tag :action => 'create' %>
+		<table>
+			<tr>
+				<td><label for="register_date">Invoice Date</label>:* </td>
+				<td><%= calendar_date_select_tag 'ptax[invoice_date]' %></td>
+			</tr>
+			<tr>
+				<td><label for="register_date">Assessment Number</label>:* </td>
+				<td><%=text_field 'ptax', 'assessment_number',:class=>'title' %></td>
+			</tr>
+
+			<tr>
+				<td><label for="assessment_no"><%= I18n.t "assesment_number" %>:<br>Assesment Number</label>:* </td>
+				<td><%= collection_select(:ptax, :ptaxregistration_id,@ptaxregistration, :id, :number) %></td>
+			</tr>
+			<tr>
+				<td><p><label for="name">Start Year</label>:* </td>
+				<td><%= text_field 'ptax', 'start_year',:class=>'title' %></p> </td>
+			</tr>
+			<tr>
+				<td><p><label for="name">End Year</label>:* </td>
+				<td><%= text_field 'ptax', 'end_year',:class=>'title' %></p> </td>
+			</tr>
+			<tr>
+				<td><p><label for="name">Total Area</label>:* </td>
+				<td><%= text_field 'ptax', 'total_area',:class=>'title' %></p> </td>
+			</tr>
+
+			<tr>
+				<td><p><label for="name">Build Area</label>:* </td>
+				<td><%= text_field 'ptax', 'build_area',:class=>'title' %></p> </td>
+			</tr>
+
+			<tr>
+				<td><label for="zone">Property Tyype</label>*: </td>
+				<td><%= collection_select(:ptax, :propertytype_id,@propertytype, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Use Factor</label>*: </td>
+				<td><%= collection_select(:ptax, :usefactor_id,@usefactor, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Age Factor</label>*: </td>
+				<td><%= collection_select(:ptax, :agefactor_id,@agefactor, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Structure Factor</label>*: </td>
+				<td><%= collection_select(:ptax, :structurefactor_id,@structurefactor, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Occupancy Factor</label>*: </td>
+				<td><%= collection_select(:ptax, :occupancyfactor_id,@occupancyfactor, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Exemption Factor</label>*: </td>
+				<td><%= collection_select(:ptax, :exemptionfactor_id,@exemptionfactor, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Tax Category</label>*: </td>
+				<td><%= collection_select(:ptax, :taxcategory_id,@taxcategory, :id, :category) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Owner Type</label>*: </td>
+				<td><%= collection_select(:ptax, :ownertype_id,@ownertype, :id, :name) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Tax Rate</label>*: </td>
+				<td><%= collection_select(:ptax, :ptaxrate_id,@ptaxrate, :id, :percentage) %></td>
+			</tr>
+			<tr>
+				<td><label for="zone">Unit Value</label>*: </td>
+				<td><%= collection_select(:ptax, :unitvalue_id,@unitvalue, :id, :amount) %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><%= submit_tag "Make Invoice" %></td>
+			</tr>
+		</table>
+
+	<%= form_tag %>
+
+
+

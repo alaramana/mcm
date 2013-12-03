@@ -1,0 +1,2 @@
+module WtaxHelper
+end

@@ -1,0 +1,141 @@
+<!--edoting the data of Death Registration Details-->
+<h1>Edit Death Registration Detail</h1>
+<%= form_tag :action => 'update', :id => @death %>
+	<table>
+	<tr>
+		<td><label for="death_birth">Date Of Death</label>*: </td>
+		<td><%= calendar_date_select_tag 'death[death_date]' %></td>
+	</tr>
+	<tr>
+		<td><label for="first_name">First Name</label>: </td>
+		<td><%= text_field 'death', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="middle_name">Middle Name</label>: </td>
+		<td><%= text_field 'death', 'middle_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="last_name">Last Name</label>: </td>
+		<td><%= text_field 'death', 'last_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="sex">Sex</label>*: </td>
+		<td><%= collection_select(:death,:gender_id,@genders,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="father_name">Father Name</label>*: </td>
+		<td><%= text_field 'death', 'father_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="age">Age</label>*: </td>
+		<td><%= text_field 'death', 'age' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="address">Address</label>*: </td>
+		<td><%=text_area 'death', 'address',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="death_place">Death Place</label>*: </td>
+		<td><%= text_field 'death', 'death_place',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="hospital_id">Hospital Name</label>*: </td>
+		<td><%= collection_select(:death,:hospital_id,@hospitals,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="city">City</label>*: </td>
+		<td><%= text_field 'death', 'city',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="district">District</label>*: </td>
+		<td><%= text_field 'death', 'district',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="tehsil">Tehsil</label>*: </td>
+		<td><%= text_field 'death', 'tehsil',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="applicant_name">Applicant_name</label>*: </td>
+		<td><%= text_field 'death', 'applicant',:class=>'title' %></p> </td>
+	</tr>
+	<tr>
+		<td><p><label for="religion_id">Religion</label>*: </td>
+		<td><%= collection_select(:death,:religion_id,@religions,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="Death Before Treatment">Death Before Treatment</label>*: </td>
+		<td><%= radio_button("death", "death_before_treatment", "Yes")%>YES 
+		    <%= radio_button("death", "death_before_treatment", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="mother_education">Death with Illness</label>*: </td>
+		<td><%= radio_button("death", "death_with_illness", "Yes")%>YES 
+		    <%= radio_button("death", "death_with_illness", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="father_education">Desease Name</label>*: </td>
+		<td><%= text_field 'death', 'desease_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="father_occupation">Death Delivery</label>*: </td>
+		<td><%= radio_button("death", "death_delivery", "Yes")%>YES 
+		    <%= radio_button("death", "death_delivery", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="mother_occupation">Death Cause Smoke</label>*: </td>
+		<td><%= radio_button("death", "death_cause_smoke", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_smoke", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="mother_age_delivery">Age</label>*: </td>
+		<td><%= text_field 'death', 'death_smoke_age',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_age_delivery">Cause Supari</label>*: </td>
+		<td><%= radio_button("death", "death_cause_supari", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_supari", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="total_childern">Age</label>*: </td>
+		<td><%= text_field 'death', 'death_supari_age' ,:class=>'title'%></td>
+		</tr>
+	<tr>
+		<td><label for="delivery_id">Drink</label>*: </td>
+		<td><%= radio_button("death", "death_cause_drink", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_drink", "No")%> No</td>
+	</tr>
+	<tr>
+		<td><label for="baby_weight">Age</label>*: </td>
+		<td><%= text_field 'death', 'death_drink_age', :class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><p><label for="register_number">Registration Number</label>*: </td>
+		<td><%= text_field 'death', 'register_id' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="register_date">Registeration Date</label>*: </td>
+		<td><%= calendar_date_select_tag 'death[register_date]' %></td>
+	</tr>
+	<tr>
+		<td><label for="register_remark">Registeration Remark</label>: </td>
+		<td><%= text_field 'death', 'remarks',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="register_unit">Registeration Unit</label>*: </td>
+		<td><%= text_field 'death', 'unit' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="employee_id">Employee</label>*: </td>
+		<td><%= text_field 'death', 'employee_id',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="employee_id">Apporved By</label>*: </td>
+		<td><%= text_field 'death', 'approved_by',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to 'Back', {:action => 'list' } %>

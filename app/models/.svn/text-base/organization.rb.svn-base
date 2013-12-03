@@ -1,0 +1,48 @@
+#------------------
+#Author: Chaitanya
+#Model: Organization
+#---------------------
+
+class Organization < ActiveRecord::Base
+
+	belongs_to :organizationtype	 	#Type of Organization	
+
+	has_many :departments
+	has_many :designationgroups
+	has_many :designations
+	has_many :employees
+	has_many :shifts
+	has_many :places
+	has_many :zones
+	has_many :wards
+	has_many :streets
+	has_many :colonies
+
+	validates_presence_of :long_name	#Full Name of Organizaiton
+	validates_presence_of :short_name	#Short Name of Organization
+	validates_presence_of :address
+	validates_presence_of :city
+	validates_presence_of :tehsil
+	validates_presence_of :district
+	validates_presence_of :state
+	validates_presence_of :country
+	validates_presence_of :phone_number1
+	validates_presence_of :fax_number1
+	validates_presence_of :email
+	validates_presence_of :pin
+
+	#method : indexing on Organization
+	define_index do
+		indexes short_name
+		indexes city
+		indexes tehsil
+		indexes district
+		indexes state
+		indexes email
+		indexes organizationtype.name
+
+	#with{}
+		has organizationtype_id
+	end
+
+end

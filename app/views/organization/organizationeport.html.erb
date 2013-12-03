@@ -1,0 +1,71 @@
+<% if @organizations.blank? %>
+ 	<p align="center"> <%= I18n.t "orgnanization_details_no" %>:<br>There is no Organizaton currently in the system:</p>
+<% else %>
+<h1 align="center">Muncipal Council Malanjkhand</h1>
+<br>
+	<h2 align="center"><%= I18n.t "orgnanization_details" %>:<br>Organization Report</h2>
+<br>
+	<table border="1" align="center">
+	<% @organizations.each do |c| %>
+	<tr>
+		<td><%= I18n.t "name" %><br>Name</td>
+		<td><%= c.long_name %></td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t "name" %><br>Address</td>
+		<td><%= c.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>City</td>
+		<td><%= c.city %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Tehsil</td>
+		<td><%= c.tehsil %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>District</td>
+		<td><%= c.district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>PIN</td>
+		<td><%= c.pin %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>State</td>
+		<td><%= c.state %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Country</td>
+		<td><%= c.country %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "name" %><br>Phone</td>
+		<td><%= c.phone_number1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Phone</td>
+		<td><%= c.phone_number2 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Fax</td>
+		<td><%= c.fax_number1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Email</td>
+		<td><%= c.email %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %><br>Website</td>
+		<td><%= c.web %></td>
+	</tr>
+
+
+
+	<% end %>
+	</table>
+<% end %>
+
+

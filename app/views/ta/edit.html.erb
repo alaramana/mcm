@@ -1,0 +1,20 @@
+<!--entering the data for creating TA Details-->
+<h1>Edit TA Details:</h1>
+<%= form_tag :action => 'update', :id => @ta %>
+	<table>
+	<tr>
+		<td><label for="name"> <%= I18n.t "value" %>:<br>Percentage</label>:* </td>
+		<td><%= text_field 'ta', 'ta_percentage',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'ta', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

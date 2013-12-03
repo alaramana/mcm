@@ -1,0 +1,22 @@
+<!--Shoing the Baisc Pay Details-->
+<h1><%= I18n.t "basic_pay_details" %><br>Basic Pay Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "department" %>:<br>Department Name:</td>
+		<td><%= @bpay.department.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "department" %>:<br>Desingation: </td>
+		<td><%= @bpay.designation.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "amount" %>:<br>Amount: </td>
+		<td><%= @bpay.bpay_amount %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @bpay.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

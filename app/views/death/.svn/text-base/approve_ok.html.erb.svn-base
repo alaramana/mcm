@@ -1,0 +1,19 @@
+<!--Listing all the approved deaths information -->
+<% if @approves.blank? %>
+	<p>There are no Approved Birth Registration Data currently in the system.</p>
+<% else %>
+	<p>These are the current Approved :</p>
+	<table>
+	<% @approves.each do |c| %>
+	<tr>
+		<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+<%= link_to "back", {:action => 'list' }%>
+
+
+

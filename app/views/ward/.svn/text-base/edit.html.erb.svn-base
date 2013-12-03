@@ -1,0 +1,22 @@
+<!--editing the data of Ward Details -->
+<h1><%= I18n.t "edit_ward_details" %><br>Edit Ward Detail</h1>
+<%= form_tag :action => 'update', :id => @ward %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "ward" %>:<br>Ward:</label>*: </td>
+		<td><%= text_field 'ward', 'name',:class=>'title' %> </td>
+	</tr>	
+	<tr>
+		<td><label for="zone"><%= I18n.t "zone" %>:<br> Zone:</label>*: </td>
+		<td><%= collection_select(:ward, :zone_id,@zone, :id, :name) %></td>
+	</tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_field 'ward', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td> <%= I18n.t "save_chanegs" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to  I18n.t "back" , {:action => 'list' } %><br><%= link_to 'Back', {:action => 'list' } %>

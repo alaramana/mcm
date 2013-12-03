@@ -1,0 +1,139 @@
+<!--editing the data for RationCard Details -->
+<h1><%= I18n.t 'edit_rationcard_reg_details' %><br>Edit RationCard Detail</h1>
+<%= form_tag :action => 'update', :id => @rationcard %>
+	<table>
+	<tr>
+		<td><%= I18n.t "rationcard_number" %>:<br>RationCard Number</label>:* </td>
+		<td><%= text_field 'rationcard', 'rationcard_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rationcard_type" %>:<br><label for="rationcardtype">RationCard Type</label>*: </td>
+		<td><%= collection_select(:rationcard, :rationcardtype_id,@rationcardtype, :id, :card_type) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_name" %>:<br>Owner Name</label>:* </td>
+		<td><%= text_field 'rationcard', 'owner_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_photo" %>:<br>Owner Photo</label>:* </td>
+		<td><%= text_field 'rationcard', 'owner_photo',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "owner_date_of_birth" %>:<br><label for="owner_birth_date">Owner Birth Date</label>:* </td>
+		<td><%= text_field 'rationcard', 'owner_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Owner Gender</label>*: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_address" %>:<br><label for="owner_address">Owner Address</label>*:</td>
+		<td><%= text_area 'rationcard', 'owner_address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member1  Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name1',:class=>'title' %></td>
+	</tr>
+	<tr>
+<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber1_birth_date">Member1 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber1_birth_date', :class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "number" %>:<br><label for="gender">Memeber1 Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>: </td>
+		<td><%= text_field 'rationcard', 'relation1',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member2  Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name2',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber2_birth_date">Member2 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber2_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Memeber2Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>: </td>
+		<td><%= text_field 'rationcard', 'relation2',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member3 Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name3',:class=>'title' %></td>
+	</tr>
+	<tr>
+<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber3_birth_date">Member3 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber3_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Memeber3 Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>:</td>
+		<td><%= text_field 'rationcard', 'relation3',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member4 Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name4',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber4_birth_date">Member4 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber4_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Memeber4 Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>: </td>
+		<td><%= text_field 'rationcard', 'relation4',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member5  Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name5',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber5_birth_date">Member5 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber5_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Memeber5 Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>: </td>
+		<td><%= text_field 'rationcard', 'relation5',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Member6  Name</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber_name6',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_date_of_birth" %>:<br><label for="memeber6_birth_date">Member6 Birth Date</label>: </td>
+		<td><%= text_field 'rationcard', 'memeber6_birth_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Memeber6 Gender</label>: </td>
+		<td><%= collection_select(:rationcard, :gender_id,@gender, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Reation With Owner</label>: </td>
+		<td><%= text_field 'rationcard', 'relation6',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "rationcard_reg_date" %>:<br><label for="card_reg_date">RationCard Registration Date</label>:* </td>
+		<td><%= text_field 'rationcard', 'card_reg_date',:class=>'title' %>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

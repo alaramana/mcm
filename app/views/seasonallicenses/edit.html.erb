@@ -1,0 +1,51 @@
+<!--editing the data of Seasonal License Details-->
+<h1><%= I18n.t "edit_seasonal_license_details" %>:<br>Edit Seasonal License Types Details:</h1>
+<%= form_tag :action => 'update', :id => @seasonallicense %>
+	<table>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:: </td>
+		<td><%= text_field 'seasonallicense', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= text_field 'seasonallicense', 'last_name' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="sex"> Sex</label>*:</td>
+		<td><%= collection_select(:seasonallicense,:gender_id,@genders,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br><label for="address">Address </label>:</td>
+		<td><%= text_area 'seasonallicense', 'address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_name" %>:<br><label for="shop_name">Shop Name</label>:*</td>
+		<td><%= text_field 'seasonallicense', 'shop_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_number" %>:<br><label for="shop_number">Shop Number</label>:*</td>
+		<td><%= text_field 'seasonallicense', 'shop_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_address" %>:<br><label for="shop_address">Shop Address </label>:</td>
+		<td><%= text_area 'seasonallicense', 'shop_address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_date" %>:<br><label for="start_date">Start Date</label>:* </td>
+		<td><%= text_field 'seasonallicense', 'start_date',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_date" %>:<br><label for="end_date">End Date</label>:* </td>
+		<td><%= text_field 'seasonallicense', 'end_date',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br><label for="amount">Amount</label>:*</td>
+		<td><%= text_field 'seasonallicense', 'amount',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	<tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/muncipalerp/!svn/ver/465/trunk/app/views/ptaxpayment/show.html.erb
+END

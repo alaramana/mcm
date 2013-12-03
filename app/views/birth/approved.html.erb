@@ -1,0 +1,43 @@
+<!--Listing all the data of approved Birth Registration Details-->
+<% if @approves.blank? %>
+	<p><%= I18n.t "birth_details_no" %>:<br>There are no Approved Birth Registration Data currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Birth Registration Number" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Birth Registration Number'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Births" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "birth_details" %>:<br>List of Current Approved Birth Registrations :</p>
+	<table>
+	<tr>
+	<td><%= I18n.t 'registration_number' %>:<br>Register Number</td>
+	<td><%= I18n.t 'edit' %>:<br>Edit</td>
+	<td><%= I18n.t 'edit' %>:<br>Print Certificate</td>	
+	</tr>
+	<% @approves.each do |c| %>
+	<tr>
+		<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+		<td><%= link_to 'Print Certificate', {:action => 'printcertificate', :id => c.id} %></td>
+               
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<br>
+<table>
+<tr>
+<td><%= link_to I18n.t "add_new", {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%> </td>
+<td><%= link_to I18n.t "print_report", {:action => 'birthreport' } %> <br><%= link_to "Print Report", {:action => 'birthreport' }%> </td>
+</tr>
+</table>
+
+

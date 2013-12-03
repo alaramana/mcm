@@ -1,0 +1,14 @@
+class Licensetype < ActiveRecord::Base
+  belongs_to :licensegroup
+  has_many :lisecses
+
+	#method : indexing on Licensegroup
+	define_index do
+		indexes lic_type
+		indexes licensegroup.group
+		
+
+	#with{}
+	has licensegroup_id
+	end
+end

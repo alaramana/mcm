@@ -1,0 +1,32 @@
+<% if @loanaccounts.blank? %>
+ 	<p align="center>><%= I18n.t "loanaccount_registration_details_no" %>:<br>There are no Loan Accounts currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "loanaccount_registration_details" %><br>Report of Current Loan Accounts</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+			<td><%= I18n.t "emoloyee_number" %><br>Employee ID</td>
+			<td><%= I18n.t "loanaccountno" %><br>Loan Number</td>
+			<td><%= I18n.t "loan_amount" %><br>Loan Amount</td>
+			<td><%= I18n.t "interest" %><br>Interest</td>
+			<td><%= I18n.t "number_of_emis" %><br>NumberOfEMI's</td>
+			<td><%= I18n.t "paid_amount" %><br>Paid Amount</td>
+			<td><%= I18n.t "balance_amount" %><br>Balance Amount</td>
+	 </tr>
+	<% @loanaccounts.each do |c| %>
+		<tr>
+			<td><%= c.employee.employee_id%></td>
+			<td><%= c.loanaccountno %></td>
+			<td><%= c.loan_amount%></td>
+			<td><%= c.interest%></td>
+			<td><%= c.emi%></td>  
+			<td><%= c.paid_amount %></td>
+			<td><%= c.balance_amount%></td>
+		</tr>
+	<% end %>
+	</table>
+<% end %>
+

@@ -1,0 +1,23 @@
+<!-- Search about Watertaxes-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @wtaxes.blank? %>
+	<p>There are no Watertaxes currently in the system.</p>
+<% else %>
+	<p>These are the current Watertaxes:</p>
+	<table>
+	<tr>
+		<td>Wtax Number </td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+		<td>Calculate</td>
+	</tr>
+	<% @wtaxes.each do |c| %>
+	<tr>
+		<td><%= link_to c.wtax_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+		<td><%= link_to 'Calculate', {:action => 'calculate', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @wtaxes %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

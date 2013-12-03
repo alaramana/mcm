@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/vendor/after_commit/lib/after_commit
+END
+test_bypass.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/vendor/after_commit/lib/after_commit/test_bypass.rb
+END
+connection_adapters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/vendor/after_commit/lib/after_commit/connection_adapters.rb
+END
+active_record.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/vendor/after_commit/lib/after_commit/active_record.rb
+END

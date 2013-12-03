@@ -1,0 +1,82 @@
+#Author: Chaitanya
+#Controller: Exemption Factor(Property Tax)
+#=================================================
+class ExemptionfactorController < ApplicationController
+
+	#Method:new
+	def new
+		@exemptionfactor = Exemptionfactor.new
+	end
+	#End:new
+
+	#Method:create
+	def create
+		@exemptionfactor = Exemptionfactor.new(params[:exemptionfactor])
+		@exemptionfactor.created_by = 1
+		@exemptionfactor.modified_by = 1
+
+		if @exemptionfactor.save
+			flash.now[:notice] = 'Exemption Factor successfully created.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	#End:create
+
+	#Method:list
+	def list
+		@exemptionfactors = Exemptionfactor.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @exemptionfactors }		#Render to XML File
+		end
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@exemptionfactor = Exemptionfactor.find(params[:id])
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @exemptionfactors }		#Render to XML File
+		end
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@exemptionfactor = Exemptionfactor.find(params[:id])
+	end
+	#End:edit
+
+	#Method:update
+	def update
+
+		@exemptionfactor = Exemptionfactor.find(params[:id])
+		@exemptionfactor.modified_by = 1
+		
+		if @exemptionfactor.update_attributes(params[:exemptionfactor])
+			flash.now[:notice] = 'Exemption Factor successfully updated.'
+			redirect_to :action => 'show', :id => @exemptionfactor
+		else
+			render :action => 'edit'
+		end
+	end
+	#End:update
+
+	#Method:delete
+	def delete
+		Exemptionfactor.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+	#method: search
+	def search
+		@query = params[:query]
+		@exemptionfactors = Exemptionfactor.search @query, :page => params[:page], :per_page => 10
+	end
+	#End Method: search
+	
+
+end

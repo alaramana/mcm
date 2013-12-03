@@ -1,0 +1,12 @@
+#Author: Chaitanya
+#==================================
+class Ownertype < ActiveRecord::Base
+	#method : indexing on Ownertype
+	define_index do
+		indexes name		
+
+	#with{}
+		
+	end
+	has_many :ptaxes
+end

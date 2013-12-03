@@ -1,0 +1,118 @@
+<!--Showing the details of Employee Type-->
+<h1> <%= I18n.t "employee_details" %>:<br>Employee Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "employment_number" %>:<br> Employment Number: </td>
+		<td><%= @employee.employment_id %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "name" %>:<br>  Name:</td>
+		<td><%= @employee.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "gender" %>:<br>Sex:</td>
+		<td><%= @employee.gender.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "father_name" %>:<br> Father Name:</td>
+		<td><%= @employee.father_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date Of Birth:</td>
+		<td><%= @employee.dob %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "date_of_join" %>:<br>Date Of Join:</td>
+		<td><%= @employee.date_join %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br> Religion:</td>
+		<td><%= @employee.religion.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %>:<br>Caste:</td>
+		<td><%=@employee.caste.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "marital" %>:<br>Marital:</td>
+		<td><%= @employee.marital.status %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "education" %>:<br>Education:</td>
+		<td><%= @employee.education %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "blood_group" %>:<br>Blood Group:</td>
+		<td><%= @employee.blood_group %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "nationality" %>:<br>Nationality:</td>
+		<td><%= @employee.nationality %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br> Address:</td>
+		<td><%= @employee.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number" %>:<br>Phone:</td>
+		<td><%= @employee.phone %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number" %>:<br>Mobile</td>
+		<td><%= @employee.mobile %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "email" %>:<br> Email:</td>
+		<td><%=  @employee.email %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "photo" %>:<br>Photo:</td>
+		<td><%=@employee.photo %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "pan_number" %>:<br>PAN:</td>
+		<td><%=  @employee.pan %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "pf_number" %>:<br>PF Number:</td>
+		<td><%= @employee.pf_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bank_account_number" %>:<br>Bank Account Number:</td>
+		<td><%= @employee.bank_account_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bank_number" %>:<br>Bank:</td>
+		<td><%= @employee.bank.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "employee_type" %>:<br>Employee Type:</td>
+		<td><%= @employee.employeetype.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "designation" %>:<br>Designation:</td>
+		<td><%= @employee.designation.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "designation_group" %>:<br> Designation Group:</td>
+		<td><%= @employee.designationgroup.group_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "department" %>:<br> Department:</td>
+		<td><%= @employee.department.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shift" %>:<br>Shift:</td>
+		<td><%=  @employee.shift.name%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "work_palace" %>:<br>Work Place:</td>
+		<td><%= @employee.workplace.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "uid" %>:<br>UID:</td>
+		<td><%= @employee.UID %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back",{:action => 'list'}%><br><%= link_to 'Back',{:action => 'list'} %>
+

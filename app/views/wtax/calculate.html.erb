@@ -1,0 +1,23 @@
+<h1><%= I18n.t "enter_water_tax_details" %>:<br>Enter Water Tax Details:</h1>
+<%= form_tag :action => 'updateinvoice', :id => @wtax %>
+	<table>
+	<tr>
+		<td><%= I18n.t "water_tax_number" %>:<br> <label for="wtax_number">Water Tax Number</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_year" %>:<br><label for="start_year">Start Date</label>*: </td>
+		<td><%= calendar_date_select_tag 'wtax[start_year]' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "end_year" %>:<br><label for="end_year">End Date</label>*: </td>
+		<td><%= calendar_date_select_tag 'wtax[end_year]' %></td>
+	</tr>	
+		<td></td>
+		<td><%= I18n.t "make_invoice" %>:<br> <%= submit_tag "Make Invoice" %></td>
+	</tr>
+	</table>
+
+<%= form_tag %>
+
+

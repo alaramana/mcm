@@ -1,0 +1,14 @@
+#Author: Chaitanya
+#-----------
+class Taxcategory < ActiveRecord::Base
+	has_many :unitvalues
+
+
+	 #Method: Indexing on Taxcategory
+	define_index do
+		indexes :category		
+
+		#with{}		
+		
+	end
+end

@@ -1,0 +1,28 @@
+<!--Listing all Streets-->
+<% if @streets.blank? %>
+	<p><%= I18n.t "street_details_no" %>:<br>There are no Streets currently in the system.</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "street_details" %>:<br>Street Report</h2>
+<br>
+	<table>
+	<tr>
+		<td><%= I18n.t "street" %><br>Name</td>
+		<td><%= I18n.t "description" %><br>Description</td>
+		<td><%= I18n.t "ward" %><br>Ward Name</td>
+
+	</tr>
+	<% @streets.each do |c| %>	
+	<tr>
+		<td><%= c.name %></td>
+		<td><%=c.description %></td>	
+		<td><%=c.ward.name %></td>	
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+
+

@@ -1,0 +1,21 @@
+<!-- Search about  Organizations-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @organizations.blank? %>
+	<p><%= I18n.t 'orgnanization_details_no' %><br>OOps! No search Results found.</p>
+<% else %>
+	<p><%= I18n.t 'orgnanization_details' %><br>List of current Organizations:</p>
+	<table>
+	<tr> 
+		<td><%= I18n.t 'long_name' %><br>Organization Name</td>
+		<td><%= I18n.t 'edit' %><br>Edit</td>
+	</tr>
+	<% @organizations.each do |c| %>
+	<tr>
+		<td><%= link_to c.long_name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>	
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @organizations %>	
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

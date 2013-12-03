@@ -1,0 +1,23 @@
+#Author: Chaitanya
+#Model: Water Tax
+#==========
+class Wtax < ActiveRecord::Base
+
+	belongs_to :pipesize
+	belongs_to :connectiontype
+	belongs_to :zone
+	belongs_to :ward
+	belongs_to :colony
+
+#Method: invoice -- Calculate Water Tax
+def invoice #TODO need to be improve and confirmation with Client
+	pipesize.amount + connectiontype.amount + (watertank * 100) + 75
+end
+#End:invoice
+
+	#Method: Indexing on Water Tax
+	define_index do
+		indexes :wtax_number
+		
+	end
+end

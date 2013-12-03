@@ -1,0 +1,23 @@
+<% if @complainttypes.blank? %>
+ 	<p align="center>><%= I18n.t "complaint_type_details_no" %>:<br>There are no Complaint Types currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "complaint_type_details" %><br>Report of  Complient Types</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+		<td><%= I18n.t "complaint_type" %><br>ComplaintType</td>
+  <td><%= I18n.t "description" %><br>Descrioption</td>
+ </tr>
+	<% @complainttypes.each do |c| %>
+	
+	<tr>
+		<td><%= c.complaint_type%></td>
+  <td><%= c.description %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+

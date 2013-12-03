@@ -1,0 +1,124 @@
+<!--Showing the data of Birth Registration Details-->
+<h1>Birth Registration Details:</h1>
+	<table>
+	<tr>
+		<td>First Name:</td>
+		<td><%= @birth.first_name %></td>
+	</tr>
+	<tr>
+		<td>Date of Birth:</td>
+		<td><%= @birth.birth_date %></td>
+	</tr>
+	<tr>
+		<td>Sex:</td>
+		<td><%= @birth.gender.name %></td>
+	</tr>
+	<tr>
+		<td>Address: </td>
+		<td><%= @birth.address %></td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td><%= @birth.city %></td>
+	</tr>
+	<tr>
+		<td>Tehsil:</td>
+		<td><%= @birth.tehsil %></td>
+	</tr>
+	<tr>
+		<td>District:</td>
+		<td><%= @birth.district %></td>
+	</tr>
+	<tr>
+		<td>Father Name:</td>
+		<td><%= @birth.father_name %></td>
+	</tr>
+	<tr>
+		<td>Mother Name:</td>
+		<td><%= @birth.mother_name %></td>
+	</tr>
+	<tr>
+		<td>Birth Palce:</td>
+		<td><%= @birth.birth_place %></td>
+	</tr>
+	<tr>
+		<td>Religion:</td>
+		<td><%= @birth.religion.name%></td>
+	</tr>
+	<tr>
+		<td>Hospital Name:</td>
+		<td><%= @birth.hospital.name %></td>
+	</tr>
+	<tr>
+		<td>Mother Native Place:</td>
+		<td><%= @birth.mother_native %></td>
+	</tr>
+	<tr>
+		<td>Father Education:</td>
+		<td><%= @birth.father_education %></td>
+	</tr>
+	<tr>
+		<td>Mother Education:</td>
+		<td><%= @birth.mother_education %></td>
+	</tr>
+	<tr>
+		<td>Father Occupasion:</td>
+		<td><%= @birth.father_occupation %></td>
+	</tr>
+	<tr>
+		<td>Mother Occupasion:</td>
+		<td><%= @birth.mother_occupation %></td>
+	</tr>
+	<tr>
+		<td>Mother Age - Marriage:</td>
+		<td><%= @birth.mother_age_marriage %></td>
+	</tr>
+	<tr>
+		<td>Mother Age - Delivery:</td>
+		<td><%= @birth.mother_age_delivery %></td>
+	</tr>
+	<tr>
+		<td>Total Children:</td>
+		<td><%= @birth.total_childern %></td>
+	</tr>
+	<tr>
+		<td>Mehod:</td>
+		<td><%= @birth.deliverymethod.name %></td>
+		</tr>
+	<tr>
+		<td>Baby Weight:</td>
+		<td><%= @birth.weight %></td>
+	</tr>
+	<tr>
+		<td>Period:</td>
+		<td><%= @birth.total_time %></td>
+	</tr>
+	<tr>
+		<td>Helper:</td>
+		<td><%= @birth.helper %></td>
+	</tr>
+	<tr>
+		<td>Register Date:</td>
+		<td><%= @birth.register_date %></td>
+	</tr>
+	<tr>
+		<td>Applied By:</td>
+		<td><%= @birth.applicant %></td>
+	</tr>
+	<tr>
+		<td>Remarks:</td>
+		<td><%= @birth.remarks %></td>
+	</tr>
+	<tr>
+		<td>Unit:</td>
+		<td><%= @birth.unit %></td>
+	</tr>
+	<tr>
+		<td>approved on:</td>
+		<td> <%= @birth.approved_on %></td>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>
+<% if @birth.approved == 0 %>
+<%= link_to 'Approve It', {:action => 'approve', :id => @birth.id} %>
+<% end %>

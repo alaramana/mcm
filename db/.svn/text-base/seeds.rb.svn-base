@@ -1,0 +1,587 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#   
+#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
+#   Major.create(:name => 'Daley', :city => cities.first)
+
+#=========================================================
+#Table: Organizationtypes
+Organizationtype.create(:name=>'Municipal Counsil Parishath', :description=>'Municipal Counsil' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Public Sector', :description=>'Public Sector' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Private Sector', :description=>'Private sector' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Zilla Parishath', :description=>'Zilla parishath' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Panchayath', :description=>'Panchayath ' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Corporate', :description=>'Corporate ' , :created_by=>1, :modified_by=>1)
+Organizationtype.create(:name=>'Mandal Parishath', :description=>'Mandal parishath' , :created_by=>1, :modified_by=>1)
+
+#==================================================
+#Table: Organizations
+Organization.create(:long_name=>'MALANJKHAND MUNICIPAL COUNCIL', :short_name=>'MMC', :organizationtype_id=>1, :address=>'Malanjkhand', :city=>'MALANJKHAND',
+:tehsil=>'BALAGHAT', :district=>'BALAGHAT', :state=>'MADHYA PRADESH', :country=>'INDIA',
+:pin=>'481118', :phone_number1=>'123456', :phone_number2=>'7606734',:phone_number3=>'7607144',
+:fax_number1=>'8796565',:fax_number2=>'8796565', :toll_free1=>'8787879', :toll_free2=>'878257',
+:service_line=>'878765653', :email=>'info@sark.com', :web=>'http://sarksystems.in',:about=>'Municipal Counsil in Balagaht Distrtict. It has population of 120000.',
+:info=>'Municipal Counsil of Malanjkhand', :coordinates=>'10N 20S ', :created_by=>123, :modified_by=>123)
+#===========================================================
+#Table: zones
+Zone.create(:name=>'North zone', :description=>'North Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'South zone', :description=>'South Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'East zone', :description=>'East Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'West zone', :description=>'West Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'Central zone', :description=>'Central   Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'NorthEast zone', :description=>'North East Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'NorthWest zone', :description=>'North West Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'South East zone', :description=>'South East Zone', :created_by=>1, :modified_by=>1)
+Zone.create(:name=>'South West zone', :description=>'South West Zone', :created_by=>1, :modified_by=>1)
+#==============================================================
+#Wards
+Ward.create(:name=>'North Ward',:zone_id=>1, :description=>'North Zone', :created_by=>1, :modified_by=>1)
+Ward.create(:name=>'South Ward',:zone_id=>1, :description=>'South Zone', :created_by=>1, :modified_by=>1)
+Ward.create(:name=>'East Ward', :zone_id=>1, :description=>'East Zone', :created_by=>1, :zone_id=>1,:modified_by=>1)
+Ward.create(:name=>'West Ward', :zone_id=>1,:description=>'West Zone', :created_by=>1, :modified_by=>1)
+Ward.create(:name=>'Central Ward', :zone_id=>1,:description=>'Central   Zone', :created_by=>1, :modified_by=>1)
+#=============================================================================================
+#Colonies
+ Colony.create(:name=>'Madhapur', :ward_id=>3,:description=>'Has1000people', :created_by=>1, :modified_by=>1)
+Colony.create(:name=>'Kondapur', :ward_id=>2,:description=>'Has800people', :created_by=>1, :modified_by=>1)
+Colony.create(:name=>'Miyapur', :ward_id=>1,:description=>'Has700people', :created_by=>1, :modified_by=>1)
+Colony.create(:name=>'Madinaguda', :ward_id=>4,:description=>'Has500people', :created_by=>1, :modified_by=>1)
+Colony.create(:name=>'Gachibowli', :ward_id=>3,:description=>'Has400people', :created_by=>1, :modified_by=>1)
+Colony.create(:name=>'LBnagar', :ward_id=>3,:description=>'Has300people', :created_by=>1, :modified_by=>1)
+#====================================================================
+#streets
+Street.create(:name=>'Gandhi Street', :colony_id=>3,:description=>'Has100people', :created_by=>1, :modified_by=>1)
+Street.create(:name=>'NTR Street', :colony_id=>2,:description=>'Has150people', :created_by=>1, :modified_by=>1)
+Street.create(:name=>'Nehru Street', :colony_id=>1,:description=>'Has200people', :created_by=>1, :modified_by=>1)
+Street.create(:name=>'YSR Street', :colony_id=>3,:description=>'Has100people', :created_by=>1, :modified_by=>1)
+Street.create(:name=>'Jubli Street', :colony_id=>3,:description=>'Has100people', :created_by=>1, :modified_by=>1)
+Street.create(:name=>'Main Street', :colony_id=>3,:description=>'Has100people', :created_by=>1, :modified_by=>1)
+#================================================================================
+#castes
+Caste.create(:name=>'OC',:religion_id=>1 ,:description=>'Open Category', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'BC-A',:religion_id=>2 ,:description=>'Backward Category-A', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'BC-B',:religion_id=>3 ,:description=>'Backward Category-B', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'BC-C',:religion_id=>4 ,:description=>'Backward Category-C', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'BC-D',:religion_id=>1 ,:description=>'Backward Category-D', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'SC',:religion_id=>2 ,:description=>'Scheduled Category', :created_by=>1, :modified_by=>1)
+Caste.create(:name=>'ST',:religion_id=>3 ,:description=>'Scheduled Type', :created_by=>1, :modified_by=>1)
+#===========================================================================
+#religions
+Religion.create(:name=>'Hindu',:description=>'People Of Hindu', :created_by=>1, :modified_by=>1)
+Religion.create(:name=>'Muslim',:description=>'People Of Muslim', :created_by=>1, :modified_by=>1)
+Religion.create(:name=>'Christiam',:description=>'People Of Christian', :created_by=>1, :modified_by=>1)
+Religion.create(:name=>'Bouddha',:description=>'People Of Bouddha', :created_by=>1, :modified_by=>1)
+#===========================================================================
+#departments
+Department.create(:name=>'Town Planning',:short_code=>'TP', :description=>'People Do The Research Work' , :created_by=>1, :modified_by=>1)
+Department.create(:name=>'Admin',:short_code=>'ad', :description=>'People Do The Administration Work' , :created_by=>1, :modified_by=>1)
+Department.create(:name=>'Operations',:short_code=>'op', :description=>'People Do The Functional Work' , :created_by=>1, :modified_by=>1)
+Department.create(:name=>'Recruiting',:short_code=>'rt', :description=>'People Do The Recruiting Work' , :created_by=>1, :modified_by=>1)
+Department.create(:name=>'Training',:short_code=>'rt', :description=>'People Do The Training Work' , :created_by=>1, :modified_by=>1)
+#===============================================================
+#designations
+Designation.create(:name=>'Sr. Clerk',:description=>'Analytical Work' , :created_by=>1, :modified_by=>1)
+Designation.create(:name=>'Jr. Clerk',:description=>'Writes The Code' , :created_by=>1, :modified_by=>1)
+Designation.create(:name=>'Chairman',:description=>'Manage The Company' , :created_by=>1, :modified_by=>1)
+Designation.create(:name=>'Manager',:description=>'Manage Project ' , :created_by=>1, :modified_by=>1)
+#========================================================================================
+#genders
+Gender.create(:name=>'Male', :description=>'Male Properties', :created_by=>1, :modified_by=>1)
+Gender.create(:name=>'Female', :description=>'Female Properties', :created_by=>1, :modified_by=>1)
+#=========================================================================================
+#workplaces
+Workplace.create(:name=>'Punjagutta', :location=>'Punjagutta',:description=>'Punjagutta', :created_by=>1, :modified_by=>1)
+Workplace.create(:name=>'Uppal', :location=>'Uppal',:description=>'Uppal', :created_by=>1, :modified_by=>1)
+Workplace.create(:name=>'Mohidipatnam', :location=>'Mohidipatnam',:description=>'Mohidipatnam', :created_by=>1, :modified_by=>1)
+Workplace.create(:name=>'ECIL', :location=>'ECIL',:description=>'ECIL', :created_by=>1, :modified_by=>1)
+#=============================================================================================
+#designationgroups
+Designationgroup.create(:group_name=>'Senior Administration',:description=>'Senior Administration', :created_by=>1, :modified_by=>1)
+Designationgroup.create(:group_name=>'Junior Administration',:description=>'Junior Administration', :created_by=>1, :modified_by=>1)
+Designationgroup.create(:group_name=>'Senior Clerical',:description=>'Senior Clerical', :created_by=>1, :modified_by=>1)
+Designationgroup.create(:group_name=>'Junior Clerical',:description=>'Junior Clerical', :created_by=>1, :modified_by=>1)
+Designationgroup.create(:group_name=>'Senior Operational',:description=>'Senior Operational', :created_by=>1, :modified_by=>1)
+Designationgroup.create(:group_name=>'Junior Operational',:description=>'Junior Operational', :created_by=>1, :modified_by=>1)
+#===============================================================================================
+#designationgroupmaster
+Designationgroupmaster.create(:name=>'Senior Administration',:description=>'Senior Administration', :created_by=>1, :modified_by=>1)
+Designationgroupmaster.create(:name=>'Junior Administration',:description=>'Junior Administration', :created_by=>1, :modified_by=>1)
+Designationgroupmaster.create(:name=>'Senior Clerical',:description=>'Senior Clerical', :created_by=>1, :modified_by=>1)
+Designationgroupmaster.create(:name=>'Junior Clerical',:description=>'Junior Clerical', :created_by=>1, :modified_by=>1)
+Designationgroupmaster.create(:name=>'Senior Operational',:description=>'Senior Operational', :created_by=>1, :modified_by=>1)
+Designationgroupmaster.create(:name=>'Junior Operational',:description=>'Junior Operational', :created_by=>1, :modified_by=>1)
+#============================================================================================
+#shifts
+Shift.create(:name=>'Morning', :start_time=>10.00,:end_time=>16.00, :description=>'Morning Shift', :created_by=>1, :modified_by=>1)
+Shift.create(:name=>'AfterNoon', :start_time=>16.00, :end_time=>24.00, :description=>'AfterNoon Shift', :created_by=>1, :modified_by=>1)
+Shift.create(:name=>'Evening', :start_time=>20.00, :end_time=>12.00, :description=>'Morning Shift', :created_by=>1, :modified_by=>1)
+#==============================================================================================
+#hospitals
+Hospital.create(:name=>'Appolo Hospital',:address=>'2-1-252/1',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2454545',
+:phone2=>'020-3434345',:doctor=>'Dr.Rajesh',:education=>'MD',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Yashoda
+Hospital',:address=>'2-2-252/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2454345',
+:phone2=>'020-3434115',:doctor=>'Dr.Suresh',:education=>'MS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Care
+Hospital',:address=>'2-2-252/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Shankar',:education=>'MBBS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Image
+Hospital',:address=>'2-2-202/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Narayana',:education=>'MBBS FRCS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Chaitanya
+Hospital',:address=>'2-2-202/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Narayana',:education=>'MBBS FRCS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Varma
+Hospital',:address=>'2-2-202/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Narayana',:education=>'MBBS FRCS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Kranthi
+Hospital',:address=>'2-2-202/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Narayana',:education=>'MBBS FRCS',:created_by=>1,:modified_by=>1)
+Hospital.create(:name=>'Suraj
+Hospital',:address=>'2-2-202/3',:city=>'Hyderabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:phone1=>'040-2451245',
+:phone2=>'020-3434115',:doctor=>'Dr.Narayana',:education=>'MBBS FRCS',:created_by=>1,:modified_by=>1)
+#==================================================================================================
+#agefactor       
+Agefactor.create(:name=>'completion period pre 1960-3-31',:factor=>0.5,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)
+Agefactor.create(:name=>'1960-4-1 to 1970-3-31',:factor=>0.6,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)
+Agefactor.create(:name=>'1970-4-1 to 1980-3-31',:factor=>0.7,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)      
+Agefactor.create(:name=>'1980-4-1 to 1990-3-31',:factor=>0.8,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)     
+Agefactor.create(:name=>'1990-4-1 to 2000-3-31',:factor=>0.9,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)     
+Agefactor.create(:name=>'2000-4-1 to 2010-3-31',:factor=>1.0,:description=>'it has to  in time',:created_by=>1,:modified_by=>1)     
+#=====================================================================================================
+#sturucturefactors
+Structurefactor.create(:name=>'Pucca',:factor=>1,:description=>'Pucca Property',:created_by=>1,:modified_by=>1)
+Structurefactor.create(:name=>'Semi Pucca',:factor=>0.7,:description=>'Semi Pucca Property',:created_by=>1,:modified_by=>1)
+Structurefactor.create(:name=>'Kutcha',:factor=>0.5,:description=>'Semi Pucca Property',:created_by=>1,:modified_by=>1)
+#======================================================================================================
+#exemptionfactors
+Exemptionfactor.create(:name=>'Public Charity',:factor=>0,:description=>'EXclusively Used For Public',:created_by=>1,:modified_by=>1)
+Exemptionfactor.create(:name=>'Aggricultural',:factor=>1,:description=>'EXclusively Used For Aggricultural',:created_by=>1,:modified_by=>1)
+Exemptionfactor.create(:name=>'Burial',:factor=>0,:description=>'EXclusively Used For Burial',:created_by=>1,:modified_by=>1)
+Exemptionfactor.create(:name=>'Workship',:factor=>0,:description=>'EXclusively Used For Workship',:created_by=>1,:modified_by=>1)
+Exemptionfactor.create(:name=>'Heritage Lands and Buildings',:factor=>0,:description=>'EXclusively Used For Heritage Lands And Buildings',:created_by=>1,:modified_by=>1)
+Exemptionfactor.create(:name=>'Land And Building Of Corporation',:factor=>0,:description=>'EXclusively Used For  Land And Building of Corporation',:created_by=>1,:modified_by=>1)
+#==================================================================================================
+#occupancyfactors
+Occupancyfactor.create(:name=>'Residential-Self Occupied',:factor=>1,:description=>'Only For Residential-Self Occupied',:created_by=>1,:modified_by=>1)
+Occupancyfactor.create(:name=>'Residential-Rented',:factor=>2,:description=>'Only For Residential- Rented',:created_by=>1,:modified_by=>1)
+Occupancyfactor.create(:name=>'Non-Residential Self Occupied',:factor=>1,:description=>'Only For Non-Residential Self Occupied',:created_by=>1,:modified_by=>1)
+Occupancyfactor.create(:name=>'Non-Residential  Rented',:factor=>2,:description=>'Only For Non-Residential  Rented',:created_by=>1,:modified_by=>1)
+Occupancyfactor.create(:name=>'Form House Residential Self Occupied  ',:factor=>1,:description=>'Only For Form House Residential Self Occupied   ',:created_by=>1,:modified_by=>1)       
+Occupancyfactor.create(:name=>'Form House Residential Tenanted  ',:factor=>1,:description=>'Only For Form House Residential Tenanted  ',:created_by=>1,:modified_by=>1)       
+Occupancyfactor.create(:name=>'Govt. Residential Self Occupied ',:factor=>1,:description=>'Only For Govt. Residential Self Occupied ',:created_by=>1,:modified_by=>1)       
+#====================================================================================================
+#usefactors
+Usefactor.create(:name=>'Residential',:factor=>8,:description=>'It Is Residential',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Business-Self Occupied/tenanted',:factor=>5,:description=>'It Is Business-Self Occupied/tenanted',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Industrial-Self Occupied/tenanted',:factor=>6,:description=>'It Is Industrial-Self Occupied/tenanted',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Govt.Aided Schools/Colleges',:factor=>6,:description=>'It Is Govt.Aided Schools/Colleges',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Hotels-3 Stars And Above',:factor=>1,:description=>'It Is Hotels-3 Stars And Above ',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Tower',:factor=>10,:description=>'It Is Tower ',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Hoardings',:factor=>9,:description=>'It Is Hoarding ',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Religious Institution',:factor=>9,:description=>'It Is Religious Institution ',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Guest House',:factor=>9,:description=>'It Is Guest House ',:created_by=>1,:modified_by=>1)
+Usefactor.create(:name=>'Medical Govt Institute',:factor=>9,:description=>'It Is Medical Govt Institute ',:created_by=>1,:modified_by=>1)
+#========================================================================================================
+#propertytypes
+Propertytype.create(:name=>'Residential ',:description=>'Residential type',:created_by=>1,:modified_by=>1)
+Propertytype.create(:name=>'Industrial ',:description=>'Industrial type',:created_by=>1,:modified_by=>1)       
+Propertytype.create(:name=>'Institutional-Education ',:description=>'Institutional-Education type',:created_by=>1,:modified_by=>1)       
+Propertytype.create(:name=>'Institutional General',:description=>'Institutional General type',:created_by=>1,:modified_by=>1)   
+Propertytype.create(:name=>'Recreational',:description=>' Recreational type',:created_by=>1,:modified_by=>1)      
+Propertytype.create(:name=>'Local Shopping Centre',:description=>'Local Shopping Centre type',:created_by=>1,:modified_by=>1)      
+#===================================================================================================
+#properties
+Property.create(:name=>'Guest Houses',:propertytype_id=>1,:description=>'It is Property Of Residential type',:created_by=>1,:modified_by=>1)
+Property.create(:name=>'Banquet Halls',:propertytype_id=>2,:description=>'It is Property Of Industrial type',:created_by=>1,:modified_by=>1)
+Property.create(:name=>'Institutional Religion',:propertytype_id=>3,:description=>'It is Property Of Institutional-Education',:created_by=>1,:modified_by=>1)
+Property.create(:name=>'Agriculture ',:propertytype_id=>4,:description=>'It is Property Of Institutional-General type',:created_by=>1,:modified_by=>1)
+Property.create(:name=>'Shopping Centre',:propertytype_id=>5,:description=>'It is Property Of Recreational type',:created_by=>1,:modified_by=>1)
+Property.create(:name=>'District Centre/Malls/Multiplexes',:propertytype_id=>6,:description=>'It is Property Of Local Shopping Centre type',:created_by=>1,:modified_by=>1)
+#=================================================================================================
+#categories
+Taxcategory.create(:category=>'A',:description=>'A category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'B',:description=>'B category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'C',:description=>'C category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'D',:description=>'D category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'E',:description=>'E category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'F',:description=>'F category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'G',:description=>'G category',:created_by=>1,:modified_by=>1)
+Taxcategory.create(:category=>'H',:description=>'H category',:created_by=>1,:modified_by=>1)
+#================================================================================================
+#unitvaluse
+Unitvalue.create(:taxcategory_id=>1,:amount=>650.00,:description=>'A Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>2,:amount=>550.00,:description=>'B Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>3,:amount=>450.00,:description=>'C Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>4,:amount=>350.00,:description=>'D Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>5,:amount=>250.00,:description=>'E Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>6,:amount=>150.00,:description=>'F Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>7,:amount=>1250.00,:description=>'G Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+Unitvalue.create(:taxcategory_id=>8,:amount=>100.00,:description=>'H Unit Area Value',
+  :created_by=>1,:modified_by=>1)
+#==================================================================================================
+#ptaxrates
+Ptaxrate.create(:propertytype_id=>1,:percentage=>12,:start_year=>2010,:end_year=>2011,:description=>'Only 12%',
+:created_by=>1,:modified_by=>1)
+Ptaxrate.create(:propertytype_id=>2,:percentage=>10,:start_year=>2011,:end_year=>2012,:description=>'Only 10%',
+:created_by=>1,:modified_by=>1)
+Ptaxrate.create(:propertytype_id=>3,:percentage=>8,:start_year=>2013,:end_year=>2014,:description=>'Only 8%',
+:created_by=>1,:modified_by=>1)
+Ptaxrate.create(:propertytype_id=>4,:percentage=>7,:start_year=>2014,:end_year=>2015,:description=>'Only 7%',
+:created_by=>1,:modified_by=>1)
+Ptaxrate.create(:propertytype_id=>5,:percentage=>13,:start_year=>2016,:end_year=>2017,:description=>'Only 13%',
+:created_by=>1,:modified_by=>1)
+Ptaxrate.create(:propertytype_id=>6,:percentage=>14,:start_year=>2017,:end_year=>2018,:description=>'Only 14%',
+:created_by=>1,:modified_by=>1)
+#======================================================================================================
+#births
+Birth.create(:birth_date=>'2010-8-1',:first_name=>'Ala',:middle_name=>'Ramana',:last_name=>'Reddy',:father_name=>'Prahladhudu',
+:mother_name=>'Parvathi',:gender_id=>1,:address=>'2-1-252/1',:birth_place=>'Hyderabad',:hospital_id=>2,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramanji',:religion_id=>3,:mother_native=>'Dhone',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>3,:register_date=>'2010-8-02',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>1234,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-8-2',:first_name=>'Goreddy',:middle_name=>'Vijay',:last_name=>'Kumar',:father_name=>'Thiru Reddy',:mother_name=>'Savithri',:gender_id=>1,:address=>'2-1-202/1',:birth_place=>'Hyderabad',:hospital_id=>1,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramanji',:religion_id=>3,:mother_native=>'Dhone',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Lecturer',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>2,:register_date=>'2010-8-03',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>2234,:approved_by=>1,:approved_on=>'2010-8-11',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-8-8',:first_name=>'Akula',:middle_name=>'Subba',:last_name=>'Rao',:father_name=>'Surendhar',
+:mother_name=>'Shashikala',:gender_id=>1,:address=>'2-1-282/1',:birth_place=>'Hyderabad',:hospital_id=>5,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramanji',:religion_id=>3,:mother_native=>'Dhone',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Service',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>1,:register_date=>'2010-8-04',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>1834,:approved_by=>1,:approved_on=>'2010-8-14',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-8-4',:first_name=>'Panuganti',:middle_name=>'Anil',:last_name=>'Shastri',:father_name=>'Venkateswarlu',
+:mother_name=>'Suchitra',:gender_id=>1,:address=>'2-1-1012/1',:birth_place=>'Hyderabad',:hospital_id=>5,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramanji',:religion_id=>3,:mother_native=>'Dhone',:father_education=>'Graduation',:mother_education=>
+'Post Graduation',:father_occupation=> 'S/W  Engineer',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>11,:register_date=>'2010-8-05',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>2589,:approved_by=>1,:approved_on=>'2010-8-15',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-8-1',:first_name=>'Kanaparti',:middle_name=>'Lavanya',:last_name=>'Kumari',:father_name=>'Surendhar',
+:mother_name=>'Saroja',:gender_id=>2,:address=>'2-1-252/2',:birth_place=>'Hyderabad',:hospital_id=>2,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramanji',:religion_id=>1,:mother_native=>'Dhone',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>12,:register_date=>'2010-8-02',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6547,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-8-8',:first_name=>'Ragala',:middle_name=>'Suchitra',:last_name=>'Kumari',:father_name=>'Satish',
+:mother_name=>'Saroja',:gender_id=>2,:address=>'2-1-250/2',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>13,:register_date=>'2010-8-12',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6547,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-8',:first_name=>'Bandla',:middle_name=>'Sarita',:last_name=>'Reddy',:father_name=>'Siddhartha',
+:mother_name=>'Saroja',:gender_id=>2,:address=>'2-1-150/2',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>14,:register_date=>'2010-8-12',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-7',:first_name=>'Sandu',:middle_name=>'Sudhakar',:last_name=>'Rao',:father_name=>'Seshaiah',
+:mother_name=>'Saroja',:gender_id=>1,:address=>'2-2-250/2',:birth_place=>'Hyderabad',:hospital_id=>5,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>4,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>2,:total_time=>44,:helper=>'Nurse',:register_id=>15,:register_date=>'2010-7-12',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6547,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-8',:first_name=>'Bandla',:middle_name=>'Balaram',:last_name=>'Kumar',:father_name=>'Vijay',
+:mother_name=>'Savithri',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>16,:register_date=>'2010-7-12',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6547,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-18',:first_name=>'Perala',:middle_name=>'Rajaram',:last_name=>'Rao',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>17,:register_date=>'2010-7-12',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-19',:first_name=>'Perala',:middle_name=>'Satish',:last_name=>'Rao',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>18,:register_date=>'2010-7-20',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-21',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-19',:first_name=>'Sangala',:middle_name=>'Rajaram',:last_name=>'Reddy',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>19,:register_date=>'2010-7-20',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-21',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-20',:first_name=>'Sangala',:middle_name=>'Supraja',:last_name=>'Reddy',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>2,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>20,:register_date=>'2010-7-21',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-22',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-21',:first_name=>'Sangala',:middle_name=>'vijay',:last_name=>'Reddy',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>21,:register_date=>'2010-7-22',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-23',:created_by=>1,:modified_by=>1,:approved=>1)
+Birth.create(:birth_date=>'2010-7-22',:first_name=>'Sangala',:middle_name=>'Anil',:last_name=>'Kumar',:father_name=>'Sridhar',
+:mother_name=>'Laxmi',:gender_id=>1,:address=>'2-1-250/9',:birth_place=>'Hyderabad',:hospital_id=>3,:city=>'Hyderabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:mother_native=>'Hyderabad',:father_education=>'Graduation',:mother_education=>
+'PostGraduation',:father_occupation=>'Business',:mother_occupation=>'HouseWife',:mother_age_marriage=>22,:mother_age_delivery=>26,
+:weight=>10.3,:total_children=>3,:deliverymethod_id=>3,:total_time=>44,:helper=>'Nurse',:register_id=>22,:register_date=>'2010-7-23',
+:remarks=>'Successful',:unit=>'Uppal',:employee_id=>6500,:approved_by=>1,:approved_on=>'2010-8-24',:created_by=>1,:modified_by=>1,:approved=>1)
+
+#================================================================================================================================================
+#deaths
+
+Death.create(:death_date=>'2010-8-11',:first_name=>'Panuganti',:middle_name=>'Aravind',:last_name=>'Swamy',:father_name=>'Simhachalam',
+:gender_id=>1,:age=>68,:address=>'5-2-246/1',:death_place=>'Hyderabad',:hospital_id=>3,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderaad',:applicant=>'Ramana',:religion_id=>4,:death_before_treatment=>'Yes',:death_with_illness=>'Yes',
+:desease_name=>'Maleria',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>2,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>1,:register_date=>'2010-9-11',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>325,:approved_by=>1,:approved_on=>'2010-9-13',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-21',:first_name=>'Akula',:middle_name=>'Shashikala',:last_name=>'Reddy',:father_name=>'Simhachalam',
+:gender_id=>2,:age=>68,:address=>'5-2-236/1',:death_place=>'Hyderabad',:hospital_id=>2,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderaad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'Yes',
+:desease_name=>'Maleria',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>2,:register_date=>'2010-9-21',
+:remarks=>'SoBad',:unit=>'Uppal',:employee_id=>325,:approved_by=>1,:approved_on=>'2010-9-13',:created_by=>1,:modified_by=>1,
+:approved=>1)
+Death.create(:death_date=>'2010-8-20',:first_name=>'Kanaparti',:middle_name=>'Sridhar',:last_name=>'Setty',:father_name=>'Rajeswar',
+:gender_id=>1,:age=>62,:address=>'5-2-206/1',:death_place=>'Hyderabad',:hospital_id=>3,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderaad',:applicant=>'Ramana',:religion_id=>4,:death_before_treatment=>'No',:death_with_illness=>'Yes',
+:desease_name=>'HIV',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>5,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>3,:register_date=>'2010-9-20',
+:remarks=>'SoBad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-9-23',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-22',:first_name=>'Gattu',:middle_name=>'Rajesh',:last_name=>'Sasthri',:father_name=>'Rajeswaraiah',
+:gender_id=>1,:age=>62,:address=>'5-2-206/1',:death_place=>'Hyderabad',:hospital_id=>1,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderaad',:applicant=>'Ramana',:religion_id=>2,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>5,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>4,:register_date=>'2010-9-22',
+:remarks=>'SoBad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-9-23',:created_by=>1,:modified_by=>1,
+:approved=>1)
+Death.create(:death_date=>'2010-8-1',:first_name=>'Bandla',:middle_name=>'Balaram',:last_name=>'Setty',:father_name=>'Sitaram',
+:gender_id=>1,:age=>62,:address=>'5-2-226/1',:death_place=>'Hyderabad',:hospital_id=>3,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderaad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'Yes',
+:desease_name=>'HIV',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>5,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>5,:register_date=>'2010-8-2',
+:remarks=>'SoBad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-3',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-2',:first_name=>'Ala',:middle_name=>'Chennamma',:last_name=>'Sasthri',:father_name=>'Sitaram',
+:gender_id=>2,:age=>62,:address=>'5-2-226/5',:death_place=>'Hyderabad',:hospital_id=>3,:city=>'Hydearabad',:tehsil=>'Hyderabad',
+:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>6,:register_date=>'2010-8-3',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-4',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-3',:first_name=>'Sandu',:middle_name=>'Suvarchala',:last_name=>'Kumari',:father_name=>'Chennareddy',
+:gender_id=>2,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',
+:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>7,:register_date=>'2010-8-4',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-5',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-4',:first_name=>'Gitala',:middle_name=>'Sundhar',:last_name=>'Reddy',:father_name=>'Ravikanth',
+:gender_id=>1,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>8,:register_date=>'2010-8-5',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-6',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-5',:first_name=>'Bandaru',:middle_name=>'Katika',:last_name=>'Reddy',:father_name=>'Chennareddy',
+:gender_id=>2,:age=>62,:address=>'5-2-122/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>2,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>9,:register_date=>'2010-8-6',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-7',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-6',:first_name=>'Bethala',:middle_name=>'Ravi',:last_name=>'Kumar',:father_name=>'Chennareddy',
+:gender_id=>1,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>2,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>10,:register_date=>'2010-8-7',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-8',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-7',:first_name=>'Bethala',:middle_name=>'Suvarna',:last_name=>'Kumari',:father_name=>'Laxmareddy',
+:gender_id=>2,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>2,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>11,:register_date=>'2010-8-8',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-9',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-8',:first_name=>'Arla',:middle_name=>'Shashirekha',:last_name=>'Choudari',:father_name=>'Laxmareddy',
+:gender_id=>2,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>2,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>12,:register_date=>'2010-8-9',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-10',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-9',:first_name=>'Sandu',:middle_name=>'Sudharshan',:last_name=>'Shetty',:father_name=>'Rajesh',
+:gender_id=>1,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'Yes',:death_smoke_age=>2,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>13,:register_date=>'2010-8-10',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-11',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-10',:first_name=>'Charu',:middle_name=>'Sumalata',:last_name=>'Rao',:father_name=>'Suresh',
+:gender_id=>2,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>14,:register_date=>'2010-8-11',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-12',:created_by=>1,:modified_by=>1,
+:approved=>0)
+Death.create(:death_date=>'2010-8-11',:first_name=>'Charu',:middle_name=>'vijay',:last_name=>'Rao',:father_name=>'Suresh',
+:gender_id=>1,:age=>62,:address=>'5-2-126/5',:death_place=>'Hyderabad',:hospital_id=>5,:city=>'Hydearabad',:tehsil=>'Hyderabad',:district=>'Hyderabad',:applicant=>'Ramana',:religion_id=>3,:death_before_treatment=>'No',:death_with_illness=>'No',
+:desease_name=>'No',:death_delivery=>'No',:death_cause_smoke=>'No',:death_smoke_age=>0,:death_cause_supari=>'No',
+:death_supari_age=>0,:death_cause_drink=>'No',:death_drink_age=>0,:register_id=>15,:register_date=>'2010-8-11',
+:remarks=>'SoSad',:unit=>'Uppal',:employee_id=>425,:approved_by=>1,:approved_on=>'2010-8-12',:created_by=>1,:modified_by=>1,
+:approved=>0)
+#==========================================================================================================
+#pipesizes
+Pipesize.create(:name=>'15MM',:amount=>300,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'20MM',:amount=>400,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'30MM',:amount=>450,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'40MM',:amount=>500,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'50MM',:amount=>600,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'600MM',:amount=>700,:created_by=>1,:modified_by=>1)
+Pipesize.create(:name=>'700MM',:amount=>800,:created_by=>1,:modified_by=>1)
+#=======================================================================================================
+#connectiontypes
+Connectiontype.create(:name=>'Residential',:description=>'Residential Connection',:amount=>500,:created_by=>1,:modified_by=>1)
+Connectiontype.create(:name=>'Hotel',:description=>'Hotel Connection',:amount=>600,:created_by=>1,:modified_by=>1)
+Connectiontype.create(:name=>'Resorts',:description=>'Resorts Connection',:amount=>700,:created_by=>1,:modified_by=>1)
+Connectiontype.create(:name=>'Hospital',:description=>'Hospital
+ Connection ',:amount=>500,:created_by=>1,:modified_by=>1)
+Connectiontype.create(:name=>'Multiplexes',:description=>'Multiplexes Connection',:amount=>700,:created_by=>1,:modified_by=>1)
+#==============================================================================================
+#Ownertypes
+Ownertype.create(:name=>'Single Owner',:description=>'Olny one MD in the business',:created_by=>1,:modified_by=>1)
+Ownertype.create(:name=>'Joint Owners',:description=>'Only two MDS in the business',:created_by=>1,:modified_by=>1)
+Ownertype.create(:name=>'Trust',:description=>'No Boss in the business',:created_by=>1,:modified_by=>1)
+Ownertype.create(:name=>'Board',:description=>'Under Government business',:created_by=>1,:modified_by=>1)
+Ownertype.create(:name=>'Company-Private Ltd',:description=>'Corporate  business',:created_by=>1,:modified_by=>1)
+Ownertype.create(:name=>'Company-Public Ltd',:description=>'Public business',:created_by=>1,:modified_by=>1)
+#========================================================================================
+#employees
+Employee.create(:employment_id=>1001,:name=>'Kiran',:gender_id=>1,:father_name=>'shashikanth',
+:dob=>'1978-5-03',:date_join=>'2000-09-03',:religion_id=>3,:marital_id=>1,:education=>'Post Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/1',:phone=>'040-2020201',:mobile=>'9948815263',
+:email=>'kiran@sark.com',:photo=>'1.jpg',:pan=>'A12P0031',:pf_number=>'85285210',
+:bank_account_number=>'62016344273',:bank_id=>6,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Kiran',:caste_id=>3,
+:created_by=>1,:modified_by=>1)
+Employee.create(:employment_id=>1002,:name=>'Varma',:gender_id=>1,:father_name=>'shashikanth',
+:dob=>'1978-5-09',:date_join=>'2002-09-03',:religion_id=>3,:marital_id=>2,:education=>'Post Graduation',:blood_group=>'O+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2020201',:mobile=>'9948815263',
+:email=>'varma@sark.com',:photo=>'2.jpg',:pan=>'A12P0051',:pf_number=>'85284210',
+:bank_account_number=>'62016344273',:bank_id=>6,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Varma',:caste_id=>3,
+:created_by=>1,:modified_by=>1)
+Employee.create(:employment_id=>1003,:name=>'Sharma',:gender_id=>1,:father_name=>'Mahesh',
+:dob=>'1969-5-09',:date_join=>'1992-09-03',:religion_id=>3,:marital_id=>1,:education=>'Post Graduation',:blood_group=>'A+ve',:nationality=>'India',:address=>'2-1-152/2',:phone=>'040-2020211',:mobile=>'9948819263',
+:email=>'sharma@sark.com',:photo=>'3.jpg',:pan=>'A12P0051',:pf_number=>'85284210',
+:bank_account_number=>'62016344273',:bank_id=>6,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Sharma',:caste_id=>3,
+:created_by=>1,:modified_by=>1)    
+Employee.create(:employment_id=>1004,:name=>'Raju',:gender_id=>1,:father_name=>'Sundhar',
+:dob=>'1980-5-09',:date_join=>'2002-09-03',:religion_id=>3,:marital_id=>1,:education=>' Graduation',:blood_group=>'A+ve',:nationality=>'India',:address=>'2-1-152/2',:phone=>'040-2020211',:mobile=>'9948810263',
+:email=>'raju@sark.com',:photo=>'4.jpg',:pan=>'A12P0011',:pf_number=>'85284010',
+:bank_account_number=>'62016344273',:bank_id=>6,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>3,:UID=>'Raju',:caste_id=>3,
+:created_by=>1,:modified_by=>1)   
+Employee.create(:employment_id=>1005,:name=>'Sekhar',:gender_id=>1,:father_name=>'Sundhar',
+:dob=>'1988-5-09',:date_join=>'2003-09-03',:religion_id=>2,:caste_id=>1,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-152/2',:phone=>'040-2020211',:mobile=>'9948810263',
+:email=>'sekhar@sark.com',:photo=>'5.jpg',:pan=>'A12P0021',:pf_number=>'85284010',
+:bank_account_number=>'62036344273',:bank_id=>6,:employeetype_id=>3,:designation_id=>2,
+:designationgroup_id=>1,:department_id=>1,:workplace_id=>2,:shift_id=>3,:UID=>'Sekhar',
+:created_by=>1,:modified_by=>1)      
+Employee.create(:employment_id=>1006,:name=>'Navaratan',:gender_id=>1,:father_name=>'Sekhar',
+:dob=>'1987-5-09',:date_join=>'2005-09-03',:religion_id=>3,:caste_id=>1,:marital_id=>1,:education=>' Graduation',:blood_group=>'A+ve',:nationality=>'India',:address=>'2-1-152/2',:phone=>'040-2020211',:mobile=>'9948810263',
+:email=>'navaratan@sark.com',:photo=>'6.jpg',:pan=>'A12P0022',:pf_number=>'85284010',
+:bank_account_number=>'62016004273',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>3,:UID=>'Navaratan',
+:created_by=>1,:modified_by=>1)  
+Employee.create(:employment_id=>1007,:name=>'Srinivas',:gender_id=>1,:father_name=>'Prahlath',
+:dob=>'1989-5-09',:date_join=>'2009-09-03',:religion_id=>2,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2012211',:mobile=>'9948889263',
+:email=>'srinivas@sark.com',:photo=>'7.jpg',:pan=>'A12P0022',:pf_number=>'85284010',
+:bank_account_number=>'62016004273',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>3,:UID=>'Srinivas',
+:created_by=>1,:modified_by=>1) 
+Employee.create(:employment_id=>1008,:name=>'Sandhya',:gender_id=>2,:father_name=>'Sharath',
+:dob=>'1984-5-09',:date_join=>'2006-09-03',:religion_id=>2,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2012211',:mobile=>'9952889263',
+:email=>'sandhaya@sark.com',:photo=>'8.jpg',:pan=>'A12P0822',:pf_number=>'85280010',
+:bank_account_number=>'62016004273',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Sandhya',
+:created_by=>1,:modified_by=>1)  
+Employee.create(:employment_id=>1009,:name=>'Kavitha',:gender_id=>2,:father_name=>'Kiran',
+:dob=>'1987-5-09',:date_join=>'2008-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-292/2',:phone=>'040-2012001',:mobile=>'9952889230',
+:email=>'kavitha@sark.com',:photo=>'9.jpg',:pan=>'A12P0822',:pf_number=>'85280010',
+:bank_account_number=>'62016004273',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Kavitha',
+:created_by=>1,:modified_by=>1)   
+Employee.create(:employment_id=>1010,:name=>'Pavani',:gender_id=>2,:father_name=>'Chranjeevi',
+:dob=>'1990-5-09',:date_join=>'2009-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-292/2',:phone=>'040-2012001',:mobile=>'9952889230',
+:email=>'Pavani@sark.com',:photo=>'10.jpg',:pan=>'A12P0820',:pf_number=>'80080010',
+:bank_account_number=>'62016004270',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Pavani',
+:created_by=>1,:modified_by=>1)    
+Employee.create(:employment_id=>1011,:name=>'Rajita',:gender_id=>2,:father_name=>'Ramakrishna',
+:dob=>'1992-5-09',:date_join=>'2009-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2012001',:mobile=>'9952889230',
+:email=>'rajita@sark.com',:photo=>'11.jpg',:pan=>'A12P0820',:pf_number=>'80080010',
+:bank_account_number=>'62016004270',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Rajita',
+:created_by=>1,:modified_by=>1)   
+Employee.create(:employment_id=>1012,:name=>'Dinesh',:gender_id=>1,:father_name=>'Narayana',
+:dob=>'1991-5-09',:date_join=>'2008-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2010001',:mobile=>'9999889230',
+:email=>'dinesh@sark.com',:photo=>'12.jpg',:pan=>'A12P0800',:pf_number=>'80080010',
+:bank_account_number=>'62016004070',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Dinesh',
+:created_by=>1,:modified_by=>1)    
+Employee.create(:employment_id=>1013,:name=>'Teja',:gender_id=>1,:father_name=>'Narayana',
+:dob=>'1990-5-09',:date_join=>'2008-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2010001',:mobile=>'9999889230',
+:email=>'teja@sark.com',:photo=>'13.jpg',:pan=>'A12P0800',:pf_number=>'80080010',
+:bank_account_number=>'62016004070',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Teja',
+:created_by=>1,:modified_by=>1)     
+Employee.create(:employment_id=>1014,:name=>'Sudhakar',:gender_id=>1,:father_name=>'Sriramulu',
+:dob=>'1989-5-09',:date_join=>'2008-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2010001',:mobile=>'9999866230',
+:email=>'sudhakar@sark.com',:photo=>'14.jpg',:pan=>'A12P0800',:pf_number=>'80080010',
+:bank_account_number=>'62016001270',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Sudhakar',
+:created_by=>1,:modified_by=>1)   
+Employee.create(:employment_id=>1015,:name=>'Sekhar',:gender_id=>1,:father_name=>'Narayana',
+:dob=>'1990-5-09',:date_join=>'2007-09-03',:religion_id=>3,:caste_id=>2,:marital_id=>2,:education=>' Graduation',:blood_group=>'B+ve',:nationality=>'India',:address=>'2-1-252/2',:phone=>'040-2010001',:mobile=>'9999889230',
+:email=>'sekhar@sark.com',:photo=>'15.jpg',:pan=>'A12P0800',:pf_number=>'80080010',
+:bank_account_number=>'62016004070',:bank_id=>2,:employeetype_id=>5,:designation_id=>3,
+:designationgroup_id=>3,:department_id=>1,:workplace_id=>3,:shift_id=>2,:UID=>'Sekhar',
+:created_by=>1,:modified_by=>1)  
+#==============================================================================================
+#employeetypes
+Employeetype.create (:name=>'Perminent',:description=>'Perminent- Employee',:created_by=>1,:modified_by=>1)   
+Employeetype.create (:name=>'Temporary',:description=>'Temporary- Employee',:created_by=>1,:modified_by=>1)
+#===============================================================================================
+#ptaxregistrations
+Ptaxregistration.create(:register_date=>'2010-8-1',:number=>101,:first_name=>'Ala',
+:last_name=>'Ramanjaneyulu',:area=>'Nallakunta',:door_number=>'2-1-252/1',:apartment_name=>'sarada cute',:email=>'ala.ram@gmail.com',:phone=>040-7607212,:mobile=>9000143728,:description=>'Property tTaxRegistration',:zone_id=>1,:ward_id=>1,:colony_id=>1,:street_id=>1,:created_by=>1,:modified_by=>1)
+#===================================================================================================
+#ptaxes
+Ptax.create(:assessment_number=>101,:ptaxregistration_id=>1,:invoice_date=>'2010-8-1',
+:start_year=>2009,:end_year=>2010,:total_area=>150.0,:build_area=>125.0,:propertytype_id=>1,
+:taxcategory_id=>1,:usefactor_id=>1,:occupancyfactor_id=>1,:agefactor_id=>1,:structurefactor_id=>1,
+:exemptionfactor_id=>1,:unitvalue_id=>1,:ptaxrate_id=>1,:ownertype_id=>1,:total=>1050.00,
+:created_by=>1,:modified_by=>1)
+#=============================================================================================================
+#maritals
+Marital.create(:status=>'Married',:description=>'Got Married',:created_by=>1,:modified_by=>1)
+Marital.create(:status=>'un-married',:description=>'Not Yet Married',:created_by=>1,:modified_by=>1)
+Marital.create(:status=>'Widowed',:description=>'Husband Died ',:created_by=>1,:modified_by=>1)
+Marital.create(:status=>'Divorced',:description=>'Divorced From Spouse',:created_by=>1,:modified_by=>1)
+#================================================================================================
+#deliverymethods
+Deliverymethod.create(:name=>'Normal',:description=>'Normal Delivery',:created_by=>1,:modified_by=>1)
+Deliverymethod.create(:name=>'Sigerian',:description=>'Sigerian Delivery',:created_by=>1,:modified_by=>1)
+#==================================================================================
+
+
+
+
+
+
+  
+

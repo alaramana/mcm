@@ -1,0 +1,19 @@
+<!--editing the data of Designation Details-->
+<h1><%= I18n.t "edit_designation_details" %>:<br>Edit Designation Detail</h1>
+<%= form_tag :action => 'update', :id => @designation %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "designation" %>:<br> Designation</label>:* </td>
+		<td><%= text_field 'designation', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_field 'designation', 'description' %></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td> <%= I18n.t "save_cahnges" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" , {:action => 'list' }%><br><%= link_to 'Back', {:action => 'list' } %>

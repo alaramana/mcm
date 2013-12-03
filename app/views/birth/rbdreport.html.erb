@@ -1,0 +1,40 @@
+	<table>
+	<tr>
+		<td>Birth Report Caste Wise</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %><br>Name</td>
+	<% @castes.each do |c| %>	
+		<td><%= link_to c.name, {:action => 'castereport', :id => c.id} -%></td>
+	<% end %>
+	</tr>
+	</table>
+
+<br>
+
+	<table>
+	<tr>
+		<td>Death Report Caste Wise</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %><br>Name</td>
+	<% @castes.each do |c| %>	
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+	<% end %>
+	</tr>
+	</table>
+
+<br>
+
+	<table>
+	<tr>
+		<td>Birth and Death Report Staticits</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %><br>Name</td>
+	<% @castes.each do |c| %>	
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+	<% end %>
+	</tr>
+	</table>
+

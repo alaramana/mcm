@@ -1,0 +1,81 @@
+#Author: Chaitanya
+#Controller: Delivery Methods (For Birth Registrations)
+#===================================================
+class DeliverymethodController < ApplicationController
+	#Method: New
+	def new
+		@deliverymethod = Deliverymethod.new
+	end
+	#End Method: New
+
+	#Method: create
+	def create
+		@deliverymethod = Deliverymethod.new(params[:deliverymethod])
+		@deliverymethod.created_by = 1
+		@deliverymethod.modified_by = 1
+
+		if @deliverymethod.save
+			flash.now[:notice] = 'Delivery Method created Sucessfully.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	# End of create
+
+	#Method: list
+	def list
+		@deliverymethods = Deliverymethod.paginate :page => params[:page], :per_page => 10
+    	respond_to do |format|		
+     		    format.html 
+      			format.xml  { render :xml => @deliverymethods }		#Render to XML File
+    	end
+		
+	end
+	#End Method: list
+
+	#Method: show
+	def show
+		@deliverymethod = Deliverymethod.find(params[:id])
+    	respond_to do |format|		
+     		    format.html 
+      			format.xml  { render :xml => @deliverymethods }		#Render to XML File
+    	end
+		
+	end
+	#End Method: show
+
+	#Method: edit
+	def edit
+		@deliverymethod = Deliverymethod.find(params[:id])
+	end
+	#End Method: edit
+
+	#Method: update
+	def update
+		@deliverymethod = Deliverymethod.find(params[:id])
+		@deliverymethod.modified_by = 1
+
+		if @deliverymethod.update_attributes(params[:deliverymethod])
+			flash.now[:notice] = 'Delivery Method UPDATED Sucessfully.'
+			redirect_to :action => 'show', :id => @deliverymethod
+		else
+			render :action => 'edit'
+		end
+	end
+	#End Method: update
+
+	#Method:Delete
+	def delete
+		Deliverymethod.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End Method: Delete
+	
+	#method: search
+	def search
+	@query = params[:query]
+	@deliverymethods = Deliverymethod.search @query, :page => params[:page], :per_page => 10
+	end
+	#End Method: search
+end

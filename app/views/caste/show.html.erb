@@ -1,0 +1,17 @@
+<!--Showing the deatils of the Caste-->
+<h1><%= I18n.t "caste_details" %>:<br>Caste Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "caste" %>:<br> Name:</td>
+		<td><%= @caste.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br> Religion:</td>
+		<td><%= @caste.religion.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @caste.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

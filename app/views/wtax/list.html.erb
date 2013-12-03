@@ -1,0 +1,35 @@
+<!--Listing all the Water Tax-->
+<% if @ptaxregistrations.blank? %>
+	<p><%= I18n.t "water_tax_details_no" %>:<br>There are no Water Taxes currently in the system.</p>
+<% else %>
+	<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Water Tax" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter  Water Tax'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search  Water Tax" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "water_tax_details" %>:<br>These are the current Watertaxes:</p>
+	<table>	
+	<tr>
+		<td><%= I18n.t "water_tax_number" %>:<br>Wtax Number </td>
+		<td><%= I18n.t "calculate" %><br> Calculate</td>
+	</tr>
+	<% @ptaxregistrations.each do |c| %>
+	<tr>
+		<td><%= link_to c.number, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Calculate', {:action => 'calculate', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @ptaxregistrations %>
+
+
+

@@ -1,0 +1,32 @@
+<!--Listing all the Gender Details-->
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Gender" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Gender'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Gender" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<% if @genders.blank? %>
+	<p><%= I18n.t "gender_details_no" %>:<br>There are no Genders currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "gender_details" %>:<br>These are the current genders:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "gender" %><br>Gender</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @genders.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @genders %>
+<%= link_to I18n.t "add_new" , {:action => 'new' }%><br><%= link_to "Add new", {:action => 'new' }%>

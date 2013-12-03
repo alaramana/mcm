@@ -1,0 +1,18 @@
+<!-- Search about Wards,related zone-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "ward" %>:<br>Ward Name</td>
+		<td><%= I18n.t "zone" %>:<br>Zone Name</td>
+		<td><%= I18n.t "description" %>:<br>Description</td>
+	</tr>
+	<% @wards.each do |ward| %>
+	<tr>
+		<td><%= link_to ward.name , {:action => 'show', :id => ward.id}-%> </td>
+		<td><%= link_to ward.zone.name %>
+		<td><%= ward.description %> </td>
+	</tr>
+	<% end %>
+	</table>
+<%= will_paginate @wards %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

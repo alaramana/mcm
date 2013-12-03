@@ -1,0 +1,109 @@
+<!--Showing the details of Death Registrat-->
+<h1>Death Registration Details:</h1>
+	<table>
+	<tr>
+		<td>Name:</td>
+		<td><%= @death.first_name %></td>
+	</tr>
+	<tr>
+		<td>Date of Death:</td>
+		<td><%= @death.death_date %></td>
+	</tr>
+	<tr>
+		<td>Sex:</td>
+		<td><%= @death.gender.name %></td>
+	</tr>
+	<tr>
+		<td>Address: </td>
+		<td><%= @death.address %></td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td><%= @death.city %></td>
+	</tr>
+	<tr>
+		<td>Tehsil:</td>
+		<td><%= @death.tehsil %></td>
+	</tr>
+	<tr>
+		<td>District:</td>
+		<td><%= @death.district %></td>
+	</tr>
+	<tr>
+		<td>Father Name:</td>
+		<td><%= @death.father_name %></td>
+	</tr>
+	<tr>
+		<td>Age:</td>
+		<td><%= @death.age %></td>
+	</tr>
+	<tr>
+		<td>Death Palce:</td>
+		<td><%= @death.death_place %></td>
+	</tr>
+	<tr>
+		<td>Religion:</td>
+		<td><%= @death.religion.name%></td>
+	</tr>
+	<tr>
+		<td>Hospital Name:</td>
+		<td><%= @death.hospital.name %></td>
+	</tr>
+	<tr>
+		<td>Death Before Treatment:</td>
+		<td><%= @death.death_before_treatment %></td>
+	</tr>
+	<tr>
+		<td>Death With Illness:</td>
+		<td><%= @death.death_with_illness %></td>
+	</tr>
+	<tr>
+		<td>Desease Name:</td>
+		<td><%= @death.desease_name %></td>
+	</tr>
+	<tr>
+		<td>Death Delivery:</td>
+		<td><%= @death.death_delivery %></td>
+	</tr>
+	<tr>
+		<td>Death Cause Smoke:</td>
+		<td><%= @death.death_cause_smoke %></td>
+	</tr>
+	<tr>
+		<td>Period From:</td>
+		<td><%= @death.death_smoke_age %></td>
+	</tr>
+	<tr>
+		<td>Death Cause Supari:</td>
+		<td><%= @death.death_cause_supari %></td>
+	</tr>
+	<tr>
+		<td>Period To:</td>
+		<td><%= @death.death_supari_age %></td>
+	</tr>
+	<tr>
+		<td>Death Cause Drink:</td>
+		<td><%= @death.death_cause_drink %></td>
+	</tr>
+	<tr>
+		<td>Period:</td>
+		<td><%= @death.death_drink_age %></td>
+	</tr>
+	<tr>
+		<td>Register Date:</td>
+		<td><%= @death.register_date %></td>
+	</tr>
+	<tr>
+		<td>Applied By:</td>
+		<td><%= @death.applicant %></td>
+	</tr>
+	<tr>
+		<td>Remarks:</td>
+		<td><%= @death.remarks %></td>
+	</tr>
+	<tr>
+		<td>Unit:</td>
+		<td><%= @death.unit %></td>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>

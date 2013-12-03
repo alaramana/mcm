@@ -1,0 +1,35 @@
+<STYLE TYPE="text/css">
+
+TD{font-size: 7pt;}
+.break { page-break-before: always; }
+</STYLE>
+
+<% if @seasonallicenses.blank? %>
+ 	<p align="center>><%= I18n.t "seasonal_license_details_no" %>:<br>There are no SeasonalLicenses currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "seasonal_license_details" %><br>Report of  Seasonal Licenses</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+		 <td><%= I18n.t "name" %><br>Name</td>
+   <td><%= I18n.t "shop_name" %><br>ShopName</td>
+   <td><%= I18n.t "shop_address" %><br>ShopAddress</td>
+   <td><%= I18n.t "period_from" %><br>StartDate</td>
+   <td><%= I18n.t "period_to" %><br>Enddate</td>
+	</tr>
+	<% @seasonallicenses.each do |c| %>
+	
+	<tr>
+		<td><%= c.last_name%></td>
+  		<td><%= c.shop_name%></td>
+		<td><%= c.shop_address %></td>
+		<td><%= c.start_date %></td>
+		<td><%= c.end_date%></td>
+		</tr>
+	<% end %>
+	</table>
+<% end %>
+

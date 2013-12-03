@@ -1,0 +1,16 @@
+#Author: Chaitanya
+#=======
+class Connectiontype < ActiveRecord::Base
+	has_many :wtaxes
+
+
+	#method indexing on connectiontype,amount
+	define_index do
+
+		indexes name
+		indexes amount
+
+
+		#with{}
+	end
+end

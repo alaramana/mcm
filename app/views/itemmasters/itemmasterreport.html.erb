@@ -1,0 +1,26 @@
+<% if @itemmasters.blank? %>
+ 	<p align="center>><%= I18n.t "item_group_details_no" %>:<br>There are no Itemmasters currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "seasonal_license_details" %><br>Item Master Report</h2>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "item_category" %><br>ItemCategory</td>
+		<td><%= I18n.t "item_name" %><br>ItemName</td>
+  <td><%= I18n.t "quantity" %><br>Quantity</td>
+  <td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @itemmasters.each do |c| %>
+	
+	<tr>
+		<td><%= c.itemcategory.category_name%></td>
+		<td><%= c.item_name %></td>
+  <td><%= c.quantity%></td>
+  <td><%= c.description%></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+

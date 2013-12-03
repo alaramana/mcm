@@ -1,0 +1,31 @@
+<!--Listing all the Connection Types-->
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Connection Type Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Connection Type Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Connection Type" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<% if @connectiontypes.blank? %>
+	<p>There are no Water Connection Type currently in the system.</p>
+<% else %>
+	<p>These are the current:</p>
+	<table>
+	<% @connectiontypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @connectiontypes %>
+<%= link_to "Add new", {:action => 'new' }%>
+
+
+

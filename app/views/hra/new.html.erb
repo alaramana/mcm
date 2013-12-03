@@ -1,0 +1,20 @@
+<!--entering the data for creating HRA Details-->
+<h1><%= I18n.t "enter_hra_amount_details" %><br>Enter HRA Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "hra_amount" %>:<br><label for="hra_amount"> HRM Amount</label>:* </td>
+		<td><%= text_field 'hra', 'hra_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'hra', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

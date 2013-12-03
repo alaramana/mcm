@@ -1,0 +1,32 @@
+<!--entering the data for Bill Pay Details -->
+<h1><%= I18n.t "enter_bill_pay_details" %> <br>Enter Bill Pay Detail</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_number" %>: <br><label for="invoice_number">Invoice Numbaer</label>:* </td>
+		<td><%= text_field 'billpay', 'invoice_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date" %>: <br><label for="date">Date</label>:* </td>
+		<td><%= calendar_date_select_tag 'billpay[date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "goods_amount" %>: <br><label for="amount">Amount</label>:* </td>
+		<td><%= text_field 'billpay', 'amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "paid_amount" %>: <br><label for="paid_amount">Paid Amount</label>:* </td>
+		<td><%= text_field 'billpay', 'paid_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br><label for="description">Description</label>:</td>
+		<td><%= text_area 'billpay', 'description', :cols=>30, :rows=>5 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %> <br> <%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+
+<%= form_tag %>
+

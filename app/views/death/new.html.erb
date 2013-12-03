@@ -1,0 +1,141 @@
+<!--entering the data for creating Death Registration Details-->
+<h1><%= I18n.t 'enter_death_details' %>:<br>Enter Death Registration Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'registration_number' %>:<br><label for="register_number">Registration Number</label>*: </td>
+		<td><%= text_field 'death', 'register_id' ,:class=>'title',:readonly=>"true",:value=>@death.max + 1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'registration_date' %>:<br><label for="register_date">Registeration Date</label>*: </td>
+		<td><%= calendar_date_select_tag 'death[register_date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_death" %>:<br><label for="death_birth">Date Of Death</label>*: </td>
+		<td><%= calendar_date_select_tag 'death[death_date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br><label for="first_name">First Name</label>: </td>
+		<td><%= text_field 'death', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "middle_name" %>:<br><label for="middle_name">Middle Name</label>: </td>
+		<td><%= text_field 'death', 'middle_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br><label for="last_name">Last Name</label>: </td>
+		<td><%= text_field 'death', 'last_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="sex">Sex</label>*: </td>
+		<td><%= collection_select(:death,:gender_id,@genders,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br><label for="father_name">Father Name</label>*: </td>
+		<td><%= text_field 'death', 'father_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "age" %>:<br><label for="age">Age</label>*: </td>
+		<td><%= text_field 'death', 'age' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br><label for="address">Address</label>*: </td>
+		<td><%=text_area 'death', 'address',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_place" %>:<br><label for="death_place">Death Place</label>*: </td>
+		<td><%= text_field 'death', 'death_place',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "hospital" %>:<br><label for="hospital_id">Hospital Name</label>*: </td>
+		<td><%= collection_select(:death,:hospital_id,@hospitals,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "city" %>:<br><label for="city">City</label>*: </td>
+		<td><%= text_field 'death', 'city',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "district" %>:<br><label for="district">District</label>*: </td>
+		<td><%= text_field 'death', 'district',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tehsil" %>:<br><label for="tehsil">Tehsil</label>*: </td>
+		<td><%= text_field 'death', 'tehsil',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "applicant_name" %>:<br><label for="applicant_name">Applicant_name</label>*: </td>
+		<td><%= text_field 'death', 'applicant',:class=>'title' %></p> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br><label for="religion_id">Religion</label>*: </td>
+		<td><%= collection_select(:death,:religion_id,@religions,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br><label for="religion_id">Caste</label>*: </td>
+		<td><%= collection_select(:death,:caste_id,@castes,:id,:name) %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "death_before_treatment" %>:<br>Death Before Treatment*: </td>
+		<td><%= radio_button("death", "death_before_treatment", "Yes")%>YES 
+		    <%= radio_button("death", "death_before_treatment", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_with_illness" %>:<br>Death with Illness*: </td>
+		<td><%= radio_button("death", "death_with_illness", "Yes")%>YES 
+		    <%= radio_button("death", "death_with_illness", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "illness_name" %>:<br>Desease Name*: </td>
+		<td><%= text_field 'death', 'desease_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_at_deliverytime" %>:<br> Death Delivery*: </td>
+		<td><%= radio_button("death", "death_delivery", "Yes")%>YES 
+		    <%= radio_button("death", "death_delivery", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_smoke" %>:<br> Death Cause Smoke*: </td>
+		<td><%= radio_button("death", "death_cause_smoke", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_smoke", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "smoke_age" %>:<br> Age*: </td>
+		<td><%= text_field 'death', 'death_smoke_age',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_supari" %>:<br>Cause Supari*: </td>
+		<td><%= radio_button("death", "death_cause_supari", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_supari", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "supari_age" %>:<br>Age*: </td>
+		<td><%= text_field 'death', 'death_supari_age' ,:class=>'title'%></td>
+		</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_drink" %>:<br>Drink*: </td>
+		<td><%= radio_button("death", "death_cause_drink", "Yes")%>YES 
+		    <%= radio_button("death", "death_cause_drink", "No",:checked=>'checked')%> No</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "drink_age" %>:<br> Age*: </td>
+		<td><%= text_field 'death', 'death_drink_age', :class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'register_remark' %>:<br><label for="register_remark">Registeration Remark</label>: </td>
+		<td><%= text_field 'death', 'remarks',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'employee' %>:<br><label for="employee_id">Employee</label>*: </td>
+		<td><%= text_field 'death', 'employee_id',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'approved_by' %>:<br>Number of Copies*: </td>
+		<td><%= text_field 'death', 'copies',:class=>'title', :value=>1%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t 'save' %>:<br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>

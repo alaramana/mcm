@@ -1,0 +1,128 @@
+<!--Showing the data of Birth Registration Details-->
+<h1><%= I18n.t "birth_details" %>:<br>Birth Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @birth.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date of Birth:</td>
+		<td><%= @birth.birth_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Sex:</td>
+		<td><%= @birth.gender.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address: </td>
+		<td><%= @birth.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "city" %>:<br>City:</td>
+		<td><%= @birth.city %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tehsil" %>:<br>Tehsil:</td>
+		<td><%= @birth.tehsil %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "district" %>:<br>District:</td>
+		<td><%= @birth.district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br>Father Name:</td>
+		<td><%= @birth.father_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "mother_name" %>:<br>Mother Name:</td>
+		<td><%= @birth.mother_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "place_birth" %>:<br>Birth Palce:</td>
+		<td><%= @birth.birth_place %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br>Religion:</td>
+		<td><%= @birth.religion.name%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "hospital" %>:<br>Hospital Name:</td>
+		<td><%= @birth.hospital.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "mother_birth_place" %>:<br>Mother Native Place:</td>
+		<td><%= @birth.mother_native %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'father_education' %>:<br>Father Education:</td>
+		<td><%= @birth.father_education %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_education' %>:<br>Mother Education:</td>
+		<td><%= @birth.mother_education %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'father_occupation' %>:<br>Father Occupasion:</td>
+		<td><%= @birth.father_occupation %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_occupation' %>:<br>Mother Occupasion:</td>
+		<td><%= @birth.mother_occupation %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_age_marriage' %>:<br>Mother Age - Marriage:</td>
+		<td><%= @birth.mother_age_marriage %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'mother_age_delivery' %>:<br>Mother Age - Delivery:</td>
+		<td><%= @birth.mother_age_delivery %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'total_childern' %>:<br>Total Children:</td>
+		<td><%= @birth.total_children %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "delivery_method" %>:<br>Mehod:</td>
+		<td><%= @birth.deliverymethod.name %></td>
+		</tr>
+	<tr>
+		<td><%= I18n.t 'baby_weight' %>:<br>Baby Weight:</td>
+		<td><%= @birth.weight %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'pregancy_period' %>:<br>Period:</td>
+		<td><%= @birth.total_time %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'helper' %>:<br>Helper:</td>
+		<td><%= @birth.helper %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'registration_date' %>:<br>Register Date:</td>
+		<td><%= @birth.register_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "applicant_name" %>:<br>Applied By:</td>
+		<td><%= @birth.applicant %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'register_remark' %>:<br>Remarks:</td>
+		<td><%= @birth.remarks %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'register_unit' %>:<br>Unit:</td>
+		<td><%= @birth.unit %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'approved_on' %>:<br>Approved on:</td>
+		<td> <%= @birth.approved_on.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %></td>
+		<td><% if (@birth.approved == false) %>
+<%= link_to 'Approve It', {:action => 'approve', :id => @birth.id} %>
+<% end %>
+</td>
+	</tr>
+	</table>
+

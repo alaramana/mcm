@@ -1,0 +1,17 @@
+<!--Showing the details of Water Connection Types-->
+<h1>Water Connection Type Details:</h1>
+	<table>
+	<tr>
+		<td>Water Connection Name:</td>
+		<td><%= @connectiontype.name %></td>
+	</tr>
+	<tr>
+		<td>Description:</td>
+		<td><%= @connectiontype.description %>
+	</tr>
+	<tr>
+		<td>Amount:</td>
+		<td><%= @connectiontype.amount %>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>

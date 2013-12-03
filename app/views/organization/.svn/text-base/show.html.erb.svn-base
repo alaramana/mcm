@@ -1,0 +1,97 @@
+<!--Showing the details of Organizations-->
+<h1>Organization Details:</h1>
+	<table>
+	<tr>
+		<td>Organization Full Name:</td>
+		<td><%= @organization.long_name %></td>
+	</tr>
+	<tr>
+		<td>Organization Short Name:</td>
+		<td><%= @organization.short_name %></td>
+	</tr>
+	<tr>
+		<td>Organization Type:</td>
+		<td><%= @organization.organizationtype.name %></td>
+	</tr>
+	<tr>
+		<td>Address: </td>
+		<td><%= @organization.address %></td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td><%= @organization.city %></td>
+	</tr>
+	<tr>
+		<td>Tehsil:</td>
+		<td><%= @organization.tehsil %></td>
+	</tr>
+	<tr>
+		<td>District:</td>
+		<td><%= @organization.district %></td>
+	</tr>
+	<tr>
+		<td>State:</td>
+		<td><%= @organization.state %></td>
+	</tr>
+	<tr>
+		<td>Country:</td>
+		<td><%= @organization.country %></td>
+	</tr>
+	<tr>
+		<td>PIN:</td>
+		<td><%= @organization.pin %></td>
+	</tr>
+	<tr>
+		<td>Phone:</td>
+		<td><%= @organization.phone_number1 %></td>
+	</tr>
+	<tr>
+		<td>Phone:</td>
+		<td><%= @organization.phone_number2 %></td>
+	</tr>
+	<tr>
+		<td>Phone:</td>
+		<td><%= @organization.phone_number3 %></td>
+	</tr>
+	<tr>
+		<td>Fax:</td>
+		<td><%= @organization.fax_number1 %></td>
+	</tr>
+	<tr>
+		<td>Fax:</td>
+		<td><%= @organization.fax_number1 %></td>
+	</tr>
+	<tr>
+		<td>Toll-Free:</td>
+		<td><%= @organization.toll_free1 %></td>
+	</tr>
+	<tr>
+		<td>Toll-Free:</td>
+		<td><%= @organization.toll_free1 %></td>
+	</tr>
+	<tr>
+		<td>Serive Line:</td>
+		<td><%= @organization.service_line %></td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td><%= @organization.email %></td>
+	</tr>
+	<tr>
+		<td>Homepage:</td>
+		<td><%= @organization.web %></td>
+	</tr>
+	<tr>
+		<td>About:</td>
+		<td><%= @organization.about %></td>
+	</tr>
+	<tr>
+		<td>Info:</td>
+		<td><%= @organization.info %></td>
+	</tr>
+	<tr>
+		<td>Coordinates:</td>
+		<td><%= @organization.coordinates %></td>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>

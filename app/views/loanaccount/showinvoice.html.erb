@@ -1,0 +1,48 @@
+<h1><%= I18n.t "license_registration_details" %><br>License Tax Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'license_number' %><br>License Number:</td>
+		<td><%= @license.license_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'license_type' %>:<br>License Types </label>:</td>
+		<td><%= @license.licensetype.lic_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @license.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= @license.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_name" %>:<br>Shop Name:</td>
+		<td><%= @license.shop_name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "shop_address" %>:<br>Shop Address1:</td>
+		<td><%= @license.shop_address1 %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "shop_address" %>:<br>Street adress2:</td>
+		<td><%= @license.street.name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "ward" %>:<br>Ward Name :</td>
+		<td><%= @license.ward.name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_from" %>:<br>Period From:</td>
+		<td><%= @license.period_from %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_to" %>:<br>Period To :</td>
+		<td><%= @license.period_to %></td>
+	</tr>			
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>License Amount:</td>
+		<td> <del>&#2352;</del> <%= @license.invoice %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %>

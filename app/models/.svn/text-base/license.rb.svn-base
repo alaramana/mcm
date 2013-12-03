@@ -1,0 +1,19 @@
+class License < ActiveRecord::Base
+	belongs_to :licensegroup
+	belongs_to :licensetype
+	belongs_to :department
+	belongs_to :zone
+	belongs_to :ward
+	belongs_to :colony
+	belongs_to :street
+
+
+	#method : indexing on License
+	define_index do
+		indexes lisecse_number
+		
+
+	#with{}
+	
+	end
+end

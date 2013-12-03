@@ -1,0 +1,17 @@
+class CreatePipesizes < ActiveRecord::Migration
+  def self.up
+    create_table :pipesizes do |t|
+	
+	t.string   :name
+	t.float    :amount
+	t.integer  :created_by, :null=>false
+	t.integer  :modified_by, :null=>false
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :pipesizes
+  end
+end

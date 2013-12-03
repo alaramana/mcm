@@ -1,0 +1,27 @@
+<h1><%= I18n.t 'enter_license_registration_details' %><br>Enter Property License Details:</h1>
+<%= form_tag :action => 'updateinvoice', :id => @license %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'license_number' %>:<br><label for="license_number">License Number</label>:* </td>
+		<td><%= text_field 'license', 'license_number',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_from" %>:<br><label for="period_from">Period From</label>*: </td>
+		<td><%= text_field 'license', 'period_from',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_to" %>:<br><label for="period_to">Period To</label>*: </td>
+		<td><%= text_field 'license', 'period_to',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "amount" %>:<br><label for="amount">License Type </label>:*</td>
+		<td><%= collection_select(:license, :licensetype_id,@licensetype, :id, :lic_type) %></td>
+	</tr>	
+	<tr>
+		<td></td>
+		<td><%= I18n.t "make_invoice" %>:<br><%= submit_tag "Make Invoice" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

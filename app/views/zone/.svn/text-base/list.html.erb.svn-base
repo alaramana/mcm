@@ -1,0 +1,33 @@
+<!--Listing all Zone Details -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Zone Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Zone Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Zone" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+<% if @zones.blank? %>
+ 	<p><%= I18n.t "zone_details_no" %>:<br>There are no Zones currently in the system:</p>
+<% else %>
+	<p><%= I18n.t "zone_details" %>:<br>These are the current Zones:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "name" %><br>Name</td<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @zones.each do |c| %>
+	
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @zones %>
+<%= link_to I18n.t "new" , {:action => 'new' } %> <br><%= link_to "Add new", {:action => 'new' }%>
+
+

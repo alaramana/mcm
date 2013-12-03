@@ -1,0 +1,36 @@
+<!--Listing all Structure Factors-->
+<% if @structurefactors.blank? %>
+	<p><%= I18n.t "structure_factor_details_no" %>:<br>There are no Structure Factor currently in the system.</p>
+<% else %>
+
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Structure Factor " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Structure Factor'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Structure Factors" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "structure_factor_details" %>:<br>These are the current Structure Factor:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "structure_factor" %><br>Structure</td<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @structurefactors.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @structurefactors %>
+<%= link_to I18n.t "add_new" , {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

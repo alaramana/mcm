@@ -1,0 +1,18 @@
+<!-- Search about  Tax Details-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @taxes.blank? %>
+	<p>There are no  Tax Details currently in the system.</p>
+<% else %>
+	<p>These are the current  Tax Details:</p>
+	<table>
+	<% @taxes.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.amount -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @taxes %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

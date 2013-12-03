@@ -1,0 +1,38 @@
+#Author: Chaitanya
+#==================
+class CreateWtaxes < ActiveRecord::Migration
+  def self.up
+    create_table :wtaxes do |t|
+
+	t.date     :register_date
+	t.string   :wtax_number
+	t.string   :name
+	t.string   :door_number
+	t.string   :address
+	t.string   :phone
+	t.string   :email
+	t.string   :mobile
+        t.integer  :zone_id
+	t.integer  :ward_id
+	t.integer  :colony_id
+	t.integer  :pipesize_id
+	t.integer  :connectiontype_id
+        t.float    :total_area
+	t.float    :tax_amount
+	t.float    :charges
+	t.date     :start_date
+	t.date     :end_date
+	t.integer  :watertank
+
+	t.integer  :created_by, :null=>false
+	t.integer  :modified_by, :null=>false
+
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :wtaxes
+  end
+end

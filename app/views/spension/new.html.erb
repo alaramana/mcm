@@ -1,0 +1,56 @@
+<!--entering the data for Ssc pension Details -->
+<h1><%= I18n.t "enter_ssc_details" %><br>Enter Ssc pension Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>	
+	<tr>
+		<td><%= I18n.t "social_security_category" %>:<br><label for="ssccategory">SSC Number</label>*: </td>
+		<td><%= text_field 'spension', 'spension_number',:class=>'title',:readonly=>"true", :value=>@spension.max + 1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "social_security_category" %>:<br><label for="ssccategory">SSC Category</label>*: </td>
+		<td><%= collection_select(:spension, :ssccategory_id,@ssccategory, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br><label for="first_name">First Name</label>:* </td>
+		<td><%= text_field 'spension', 'first_name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br><label for="last_name">Last Name</label>:* </td>
+		<td><%= text_field 'spension', 'last_name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br><label for="gender">Gender</label>*: </td>
+		<td><%= collection_select(:spension, :gender_id,@gender, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br><label for="date_of_birth">Date Of Birth</label>:* </td>
+		<td><%= calendar_date_select_tag 'spension[date_of_birth]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "pensioner_photo" %>:<br><label for="photo">Pensioner Photo</label>:* </td>
+		<td><%= text_field 'spension', 'photo',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "ssc_registration_date" %>:<br><label for="reg_date">Date Of Register</label>:* </td>
+		<td><%= calendar_date_select_tag 'spension[reg_date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "age" %>:<br><label for="age">Age</label>:* </td>
+		<td><%= text_field 'spension', 'age',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br><label for="address"><%= I18n.t "address" %>:<br>Address</label>:</td>
+		<td><%= text_area 'spension', 'address'%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br> <label for="description">Description</label>:</td>
+		<td><%= text_area 'spension', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+        </tr>
+	</table>
+<%= form_tag %>
+
+

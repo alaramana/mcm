@@ -1,0 +1,17 @@
+<!--Showing the details of Propertys-->
+<h1><%= I18n.t "property_details" %>:<br> Property Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "property" %>:<br>Property:</td>
+		<td><%= @property.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "property_type" %>:<br>Property Type: </td>
+		<td><%= @property.propertytype.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @property.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

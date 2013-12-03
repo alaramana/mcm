@@ -1,0 +1,97 @@
+<!--entering the data for creating  Marriage Registration  Information--> 
+<h1><%= I18n.t "enter_marriage_details" %>:<br >Enter Marriage Registration  Information:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "marriage_reg_number" %>:<br ><label for="marriage_reg_number">Marriage Registration Number</label>:* </td>
+		<td><%= text_field 'marriage', 'marriage_reg_number' ,:class=>'title',:readonly=>"true", :value=>@marriage.max + 1%></td>
+	</tr>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_name" %>:<br ><label for="groom_name">Groom Name</label>:</td>
+		<td><%= text_field 'marriage', 'groom_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_father" %>:<br ><label for="groom_father">Groom Father Name</label>:</td>
+		<td><%= text_field 'marriage', 'groom_father',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_mother" %>:<br ><label for="groom_mother">Groom Mother Name</label>:</td>
+		<td><%= text_field 'marriage', 'groom_mother',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_birth_date" %>:<br ><label for="groom_birth_date">Groom Birth Date</label>:</td>
+		<td><%= calendar_date_select_tag 'marriage[groom_birth_date]' %></td>		
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_photo" %>:<br ><label for="groom_photo">Groom Photo URL</label>:</td>
+		<td><%= text_field 'marriage', 'groom_photo',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_address" %>:<br ><label for="groom_address">Groom Address</label>:</td>
+		<td><%= text_area 'marriage', 'groom_address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_district" %>:<br ><label for="groom_district">Groom District</label>:</td>
+		<td><%= text_field 'marriage', 'groom_district',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_state" %>:<br ><label for="groom_state">Groom State</label>:</td>
+		<td><%= text_field 'marriage', 'groom_state',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_country" %>:<br ><label for="groom_country">Groom Country</label>:</td>
+		<td><%= text_field 'marriage', 'groom_country',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_name" %>:<br ><label for="bride_name">Bride Name</label>:</td>
+		<td><%= text_field 'marriage', 'bride_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_father" %>:<br ><label for="bride_father">Bride Father Name</label>:</td>
+		<td><%= text_field 'marriage', 'bride_father',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_mother" %>:<br ><label for="bride_mother">Bride Mother Name</label>:</td>
+		<td><%= text_field 'marriage', 'bride_mother',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_birth_date" %>:<br ><label for="bride_birth_date">Bride Birth Date</label>:</td>
+		<td><%= calendar_date_select_tag 'marriage[bride_birth_date]' %></td>		
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_photo" %>:<br ><label for="bride_photo">Bride Photo URL</label>:</td>
+		<td><%= text_field 'marriage', 'bride_photo',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_address" %>:<br ><label for="bride_address">Bride Address</label>:</td>
+		<td><%= text_area 'marriage', 'bride_address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_district" %>:<br ><label for="bride_district">Bride District</label>:</td>
+		<td><%= text_field 'marriage', 'bride_district',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_state" %>:<br ><label for="bride_state">Bride State</label>:</td>
+		<td><%= text_field 'marriage', 'bride_state',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_country" %>:<br ><label for="bride_country">Bride Country</label>:</td>
+		<td><%= text_field 'marriage', 'bride_country',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "marriage_date" %>:<br ><label for="marriage_date">Marriage Date</label>:</td>
+		<td><%= calendar_date_select_tag 'marriage[marriage_date]' %></td>		
+	</tr>
+	<tr>
+		<td><%= I18n.t "marriage_place" %>:<br ><label for="marriage_place">Marriage Place</label>:</td>
+		<td><%= text_field 'marriage', 'marriage_place',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %>:<br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

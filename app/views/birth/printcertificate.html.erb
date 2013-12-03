@@ -1,0 +1,30 @@
+<h1 align="center">मध्य प्रदेश शासन </h1>
+<br>
+	<h2 align="center">(योजना, आर्थिक एवं सांख्यिकी विभाग)
+<br>आर्थिक एवं सांख्यिकी संचालनालय <br>
+जन्म प्रमाण - पत्र <br>
+(जन्म एवं मृत्यु रजिस्ट्रीकरण अधिनियम १९६९ की धारा १२/१७ के  अधीन जारी किया गया)
+</h2>
+<br>
+
+<table border="1" align="center">
+<tr>
+<td>
+<p align="justify">याह प्रमाणित किया जाता है  कि निम्नलिखित  जानकारी मूल जन्म अभीलेख से ली गई   है   |
+जो <%= @birth.unit %> (रजिस्ट्रीकरण इकाई का नाम) स्थनीय  क्षेत्र <u> <%= @birth.tehsil %> </u> तहसील   जिला  <u> <%= @birth.district %>  </u>राज्य मध्य प्रदेश  के रजिस्टर में उल्लेखित  है ! 
+</p>
+<br>
+
+<p align="justify">
+नाम <u><%= @birth.first_name %>  <% @birth.middle_name %>   <%@birth.last_name %>  </u> लिंग <u> <%= @birth.gender.name %>  </u>  जन्म दिनाक  <u><%= @birth.birth_date %> </u> जन्म स्थान <u> <%= @birth.hospital.name %> </u> पिता का नाम <u> <%= @birth.father_name %> </u> माता का नाम <u> <%= @birth.mother_name %> </u> जन्म के समय माता - पिटा का पता  <u>  <%= @birth.address %>  </u>रजिस्ट्रीकरण  क्रमाक <u> <%= @birth.register_id %> </u> रजिस्ट्रीकरण  दिनांक  <u> <%= @birth.register_date %> </u></p>
+<br>
+<br>
+<br>
+
+<p align="right">रजिस्ट्रार (जन्म - मृत्यु) <br>
+मुहर </p>
+</tr>
+
+</table>
+
+

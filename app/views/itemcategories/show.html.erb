@@ -1,0 +1,17 @@
+<!--showing each Item category Details depending the ids -->
+<h1><%= I18n.t "item_category_details" %><br>Item category Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "item_category" %>:<br>Item category Name:</td>
+		<td><%= @itemcategory.category_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "short_desc" %>:<br><%= I18n.t "description" %>:<br>Short Description: </td>
+		<td><%= @itemcategory.short_description %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @itemcategory.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

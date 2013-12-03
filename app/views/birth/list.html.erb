@@ -1,0 +1,23 @@
+<!--Listing all the Birth Registration Details-->
+<% if @births.blank? %>
+<p><%= I18n.t "birth_details_no" %>:<br>There are no Births currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Birth Registration Number" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Birth Registration Number'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Birth Registration" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "birth_details" %>:<br>These are the current Births:</p>
+<% end %>
+<p><%= I18n.t "list_of_approved_birth_details" %>:<br> <%= link_to "List of Approved Registrations", {:action => 'approved' } %></p>
+<p><%= I18n.t "list_of_notapproved_birth_details" %>:<br><%= link_to "List of Not Approved Registrations", {:action => 'notapproved' } %></p>
+<p><%= I18n.t "add_new" %>:<br><%= link_to "Add New Registration", {:action => 'new' } %></p>
+

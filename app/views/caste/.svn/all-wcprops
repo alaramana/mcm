@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/muncipalerp/!svn/ver/394/trunk/app/views/caste
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/284/trunk/app/views/caste/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/393/trunk/app/views/caste/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/views/caste/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/394/trunk/app/views/caste/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/394/trunk/app/views/caste/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/284/trunk/app/views/caste/show.html.erb
+END

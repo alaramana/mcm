@@ -1,0 +1,508 @@
+hi:
+#general
+  long_name: "पूरा नाम"
+  short_name: "संक्षेप नाम" #TODO Improve  
+  name: नाम  
+  assesment_number: असेस्मन्ट नम्बर
+  first_name: प्रथम नाम
+  middle_name: मध्य नाम  
+  last_name: अंतिम नाम
+  mother_name: माँ के नाम
+  father_name: पिता का नाम  
+  address: पता
+  number: नम्बर   
+  age: उम्र
+  door_number: मकान नम्बर
+  area: स्थान  
+  date_of_birth: जन्म दिनांक
+  date_of_death: निधन दिनांक
+  date: दिनांक     
+  description: विवरण
+  short_desc: लघु वर्णन  
+  remarks: टिप्पणी
+  details: विस्तृत सूचना  
+  edit: सुधारना
+  enter: दाखिल
+  new: नया
+  list: सूची  
+  no: नहीं हैं
+  delete: मिटाना
+  back: पीछे 
+  save: सुरक्षित करो
+  changes: बदलाव
+  save_changes: बदलाव सुरक्षित करो
+  add: लगाना  
+  type: वर्गीकरण
+  add_new: नया लगाना
+  search: खोज
+  city: नगर
+  tehsil: मंडल
+  district: जिला 
+  phone_number: फोन नम्बर
+  register_remark: पंजीकरण टिप्पणियां
+  register_unit: पंजीकरण राशि
+  registration_date: पंजीकरण की तारीख
+  registration_number: पंजीकरण संख्या   
+  email: ईमेल
+  photo: फोटो   
+  start_date: प्रारंभ दिनांक
+  end_date: समाप्ति दिनांक  
+  start_time: शुरू होना समय
+  end_time: खतम होना समय
+  unit: इकाई
+  factor: अंश
+  use: उपयोग 
+  value: मूल्य  
+  time: समय
+  approve: इसे मंजूरी दे 
+  reject: इसे मंजूरी नहीं
+  bank_name: बैंक का नाम
+  pin_number: पिन नंबर
+  state: राज्य
+  country: देश
+  #organization type
+  organization: संस्था
+  organization_name: संस्था नाम
+  enter_orgnanization_details: दाखिल संस्था  का विस्तृत सूचना
+  edit_orgnanization_details: सुधारना संस्था  का विस्तृत सूचना
+  orgnanization_details: संस्था  का विस्तृत सूचना
+  orgnanization_details_no: संस्था  का विस्तृत सूचना नहीं हैं
+  geographic_co_ordinates: भौगोलिक निर्देशांक
+  information: जानकारी
+  about_organization: संस्थाके बारे में
+  website: वेब साइट
+  service: सेवा
+  toll_free: टोल फ्री
+  fax: फैक्स
+  contact_number: संपर्क नम्बर
+  #organization type 
+  orgnanization_type: संस्था  का नमूना
+  enter_orgnanization_type_details: दाखिल संस्था  का नमूना विस्तृत सूचना
+  edit_orgnanization_type_details: सुधारना संस्था  का नमूना विस्तृत सूचना
+  orgnanization_type_details: संस्था  का नमूना विस्तृत सूचना
+  orgnanization_type_details_no: संस्था  का नमूना विस्तृत सूचना नहीं हैं
+  #zone
+  zone: अंचल
+  enter_zone_details: दाखिल अंचल विस्तृत सूचना
+  edit_zone_details: सुधारना अंचल विस्तृत सूचना
+  zone_details: अंचल विस्तृत सूचना
+  zone_details_no: अंचल विस्तृत सूचना नहीं हैं
+  #ward
+  ward: वॉर्ड
+  enter_ward_details: दाखिल वॉर्ड विस्तृत सूचना
+  edit_ward_details: सुधारना वॉर्ड विस्तृत सूचना
+  ward_details: वॉर्ड विस्तृत सूचना
+  ward_details_no: वॉर्ड विस्तृत सूचना नहीं हैं
+  #colony
+  colony: कालनी
+  enter_colony_details: दाखिल कालनी विस्तृत सूचना
+  edit_colony_details: सुधारना कालनी विस्तृत सूचना
+  colony_details: कालनी विस्तृत सूचना
+  colony_details_no: कालनी विस्तृत सूचना नहीं हैं
+  #street
+  street: गली
+  enter_street_details: दाखिल गली विस्तृत सूचना
+  edit_street_details: सुधारना गली विस्तृत सूचना
+  street_details: गली विस्तृत सूचना
+  street_details_no: गली विस्तृत सूचना नहीं हैं
+  #religion  
+  religion: धर्म
+  enter_religion_details: दाखिल मत विस्तृत सूचना
+  edit_religion_details: सुधारना मत विस्तृत सूचना
+  religion_details: मत विस्तृत सूचना
+  religion_details_no: मत विस्तृत सूचना नहीं हैं
+  confirm_delete: पक्का मिटाना
+  #caste
+  caste: जाति  
+  enter_caste_details: दाखिल जाति विस्तृत सूचना
+  edit_caste_details: सुधारना जाति विस्तृत सूचना
+  caste_details: जाति विस्तृत सूचना
+  caste_details_no: जाति विस्तृत सूचना नहीं हैं
+  #gender
+  gender: लिंग
+  enter_gender_details: दाखिल लिंग विस्तृत सूचना
+  edit_gender_details: सुधारना लिंग विस्तृत सूचना
+  gender_details: विवाह लिंग सूचना
+  gender_details_no: विवाह लिंग सूचना नहीं हैं
+  #marital
+  marital: विवाह संबंधी
+  enter_marital_details: दाखिल विवाह संबंधी विस्तृत सूचना
+  edit_marital_details: सुधारना विवाह संबंधी विस्तृत सूचना
+  marital_details: विवाह संबंधी विस्तृत सूचना
+  marital_details_no: विवाह संबंधी विस्तृत सूचना नहीं हैं
+  #degignation
+  designation: पदनाम
+  enter_designation_details: दाखिल पदनाम विस्तृत सूचना
+  edit_designation_details: सुधारना पदनाम विस्तृत सूचना
+  designation_details: पदनाम विस्तृत सूचना
+  designation_details_no: पदनाम विस्तृत सूचना नहीं हैं 
+  #department
+  department: विभाग
+  enter_department_details: दाखिल विभाग विस्तृत सूचना
+  edit_department_details: सुधारना विभाग विस्तृत सूचना
+  department_details: विभाग विस्तृत सूचना
+  department_details_no: विभाग विस्तृत सूचना नहीं हैं  
+  #tax
+  tax: शुल्क
+  service_tax: सेवा का शुल्क
+  enter_service_tax_details: दाखिल सेवा का शुल्कक विस्तृत सूचना
+  edit_service_tax_details: सुधारना सेवा का शुल्क विस्तृत सूचना
+  service_tax_details: सेवा का शुल्क विस्तृत सूचना
+  service_tax_details_no: सेवा का शुल्क विस्तृत सूचना नहीं हैं
+  #property type
+  property: जायदाद 
+  property_type: जायदाद वर्गीकरण
+  enter_property_type_details: दाखिल जायदाद वर्गीकरण विस्तृत सूचना
+  edit_property_type_details: सुधारना जायदाद वर्गीकरण विस्तृत सूचना
+  property_type_details: जायदाद वर्गीकरण विस्तृत सूचना
+  property_type_details_no: जायदाद वर्गीकरण विस्तृत सूचना नहीं हैं
+  #property 
+  enter_property_details: दाखिल जायदाद  विस्तृत सूचना
+  edit_property_details: सुधारना जायदाद  विस्तृत सूचना
+  property_details: जायदाद  विस्तृत सूचना
+  property_details_no: जायदाद  विस्तृत सूचना नहीं हैं    
+  total_area: स्थान
+  built_area: स्थान
+  #property tax registraion
+  invoice_date: चालान तिथि
+  enter_property_tax_details: दाखिल जायदाद शुल्क विस्तृत सूचना
+  edit_property_tax_details: सुधारना जायदाद शुल्क विस्तृत सूचना
+  property_tax_details: जायदाद शुल्क विस्तृत सूचना
+  property_tax_details_no: जायदाद शुल्क विस्तृत सूचना नहीं हैं
+  property_tax_invoice: संपत्ति कर चालान
+  total_tax: कुल कर
+  apartment_name: अपार्टमेंट नाम
+  payment_mode: भुगतान मोड
+  paid_amount: राशि का भुगतान
+  total_amount: कुल राशि
+  dd_cheque: DD/चेक नम्बर
+  balance_amount: शेष राशि
+  #property tax category payment
+  category: विभाग
+  tax: शुल्क
+  tax_category: शुल्क विभाग
+  enter_tax_category_details: दाखिल शुल्क विभाग विस्तृत सूचना
+  edit_tax_category_details: सुधारना शुल्क विभाग विस्तृत सूचना
+  tax_category_details: शुल्क विभाग विस्तृत सूचना
+  tax_category_details_no: शुल्क विभाग विस्तृत सूचना नहीं हैं
+  #unit values 
+  unit_value: इकाई मूल्य  
+  enter_unit_value_details: दाखिल इकाई मूल्य विस्तृत सूचना
+  edit_unit_value_details: सुधारना इकाई मूल्य विस्तृत सूचना
+  unit_value_details: इकाई मूल्य विस्तृत सूचना
+  unit_value_details_no: इकाई मूल्य विस्तृत सूचना नहीं हैं
+  #occupancy factor
+  occupancy_factor: दखलकारी अंश
+  occupancy: दखलकारी
+  enter_occupancy_factor_details: दाखिल दखलकारी अंश विस्तृत सूचना
+  edit_occupancy_factor_details: सुधारना दखलकारी अंश विस्तृत सूचना
+  occupancy_factor_details: दखलकारी अंश विस्तृत सूचना
+  occupancy_factor_details_no: दखलकारी अंश विस्तृत सूचना नहीं हैं
+  #structure factor
+  structure_factor: बनावट का अंश
+  enter_structure_factor_details: दाखिल बनावट का अंश विस्तृत सूचना
+  edit_structure_factor_details: सुधारना बनावट का अंश विस्तृत सूचना
+  structure_factor_details: बनावट का अंश विस्तृत सूचना
+  structure_factor_details_no: बनावट का अंश विस्तृत सूचना नहीं हैं
+  amount: रकम
+  percentage: प्रतिशत
+  #delivery method   
+  doctor: डाक्टर
+  delivery: प्रसव
+  method: तरीका
+  delivery_method: प्रसव का तरीका
+  pregancy_period: गर्भावस्था की अवधि (सप्ताह में)
+  enter_delivery_method_details: दाखिल प्रसव का तरीका विस्तृत सूचना
+  edit_delivery_method_details: सुधारना प्रसव का तरीका विस्तृत सूचना
+  delivery_method_details: प्रसव का तरीका विस्तृत सूचना
+  delivery_method_details_no: प्रसव का तरीका विस्तृत सूचना नहीं हैं
+  hospital_name: दवाखाना नाम  
+  doctor_name: डाक्टर नाम
+  qualification: योग्यता
+  hospital: अस्पताल नाम
+  enter_hospital_details: दाखिल दवाखाना विस्तृत सूचना
+  edit_hospital_details: सुधारना दवाखाना विस्तृत सूचना
+  hospital_details: दवाखाना विस्तृत सूचना
+  hospital_details_no: दवाखाना विस्तृत सूचना नहीं हैं
+  #employee details
+  employee: नौकर
+  employee_type: नौकर का वर्गीकरण
+  enter_employee_type_details: दाखिल नौकर का वर्गीकरण विस्तृत सूचना
+  edit_employee_type_details: सुधारना नौकर का वर्गीकरण विस्तृत सूचना
+  employee_type_details: नौकर का वर्गीकरण विस्तृत सूचना
+  employee_type_details_no: नौकर का वर्गीकरण विस्तृत सूचना नहीं हैं
+  enter_employee_details: दाखिल नौकर विस्तृत सूचना
+  edit_employee_details: सुधारना नौकर  विस्तृत सूचना
+  employee_details: नौकर विस्तृत सूचना
+  employee_details_no: नौकर विस्तृत सूचना नहीं हैं
+  employee_number: नौकर का नम्बर
+  date_of_join: तिथि के शामिल होने
+  education: पढ़ाई लिखाई
+  nationality: राष्ट्रीयता
+  blood_group: खून वर्ग 
+  shift: बदलना
+  pan_number: पैन नम्बर assessment
+  pf_number: pf नम्बर
+  bank_number: बैंक नम्बर
+  bank_account_number: बैंक कथा का नम्बर
+  work_palace: काम करने का कार्य
+  uid: उपयोगकर्ता का नम्बर
+  employment_number: रोजगार नम्बर
+  enter_shift_details: दाखिल बदलना विस्तृत सूचना
+  edit_shift_details: सुधारना बदलना  विस्तृत सूचना
+  shift_details: बदलना विस्तृत सूचना
+  shift_details_no: बदलना विस्तृत सूचना नहीं हैं
+  #marriage details(registration)
+  groom_name: दूल्हे के नाम
+  groom_father: दूल्हे के पिता का नाम
+  groom_mother: दूल्हे की माँ का नाम
+  groom_birth_date: दूल्हे की उम्र
+  groom_photo: दूल्हा फोटो
+  groom_address: दूल्हे पता
+  groom_district: दूल्हे के जिले
+  groom_state: दूल्हे के राज्य
+  groom_country: दूल्हे देश
+  bride_name: दुल्हन के नाम
+  bride_father: दुल्हन के पिता का नाम
+  bride_mother: दुल्हन की माँ के नाम
+  bride_birth_date: दुल्हन की उम्र
+  bride_photo: दुल्हन फोटो
+  bride_address: दुल्हन पता
+  bride_district: दुल्हन के जिले
+  bride_state: दुल्हन के राज्य
+  bride_country: दुल्हन के देश
+  marriage_date: शादी की तारीख
+  marriage_place: शादी का स्थान
+  marriage_reg_number: विवाह पंजीकरण संख्या
+  enter_marriage_details: दाखिल शादी के विस्तृत सूचना
+  edit_marriage_details: सुधारना शादी के विस्तृत सूचना
+  marriage_details: शादी के विस्तृत सूचना
+  marriage_details_no: शादी के विस्तृत सूचना नहीं हैं
+  list_of_approved_marriage_details: अनुमोदित शादी विवरण की सूची
+  list_of_notapproved_marriage_details: शादी पंजीकरण की सूची नहीं स्वीकृत
+  approved_it: शादी के विवरण को मंजूरी
+  approved_by: अनुमोदन के द्वारा
+  approved_on: अनुमोदन की तिथि
+  #birth details
+  enter_birth_details: दाखिल जन्म के विस्तृत सूचना
+  edit_birth_details: सुधारना जन्म के विस्तृत सूचना
+  birth_details: जन्म के विस्तृत सूचना
+  birth_details_no: जन्म के विस्तृत सूचना नहीं हैं
+  list_of_approved_birth_details: अनुमोदित जन्म पंजीकरण की सूची
+  list_of_notapproved_birth_details: जन्म पंजीकरण की सूची नहीं स्वीकृत
+  helper: सहायक 
+  applicant_name: आवेदक का नाम
+  place_birth: जन्म स्थान
+  mother_birth_place: माँ की जन्म स्थान
+  mother_education: माँ की शिक्षा
+  father_education: पिता की शिक्षा
+  father_occupation: पिता का व्यवसाय
+  mother_occupation: माँ का व्यवसाय
+  mother_age_marriage: माँ की उम्र (शादी के समय)
+  mother_age_delivery: माँ की उम्र (प्रसव के समय में)
+  total_childern: बच्चों की कुल संख्या (इस बच्चे सहित)
+  baby_weight: बच्चे का वजन (प्रसव के समय में)
+  #death
+  death: निधन
+  death_place: मृत्यु स्थान
+  enter_death_details: दाखिल निधन विस्तृत  सूचना
+  edit_death_details: सुधारना निधन विस्तृत सूचना
+  death_details: निधन विस्तृत सूचना
+  death_details_no: निधन विस्तृत सूचना नहीं हैं
+  death_with_illness: बीमारी से मौत
+  death_before_treatment: इलाज से पहले मौत
+  illness_name: बीमारी का नाम
+  death_at_deliverytime: प्रसव के समय मृत्यु
+  death_cause_smoke: मौत का कारण धूम्रपान
+  smoke_age: धूम्रपान उम्र
+  death_cause_supari: मौत का कारण बन सुपारी
+  supari_age: सुपारी उम्र
+  death_cause_drink: मौत का कारण बन पीना
+  drink_age: पीने उम्र   
+  list_of_approved_death_details: अनुमोदित निधन पंजीकरण की सूची
+  list_of_notapproved_death_details: निधन पंजीकरण की सूची नहीं स्वीकृत
+  #connection type
+  connection_type: कनेक्शन के प्रकार
+  connection_name: कनेक्शन का नाम
+  connection_details_no: कनेक्शन के विस्तृत सूचना नहीं हैं
+  connection_details: कनेक्शन के विस्तृत सूचना
+  enter_connection_details: दाखिल कनेक्शन के विस्तृत सूचना
+  edit_connection_details: सुधारना कनेक्शन के विस्तृत सूचना
+  #water tax
+  water_tax_number: जल कर नंबर
+  water_tax_registration: जल कर पंजीकरण
+  calculate: गणना
+  start_year: साल शुरू
+  end_year: अंत वर्ष
+  water_tax_details: जल कर विवरण
+  water_tax_details_no: जल कर विस्तृत सूचना नहीं हैं
+  enter_water_tax_details: दाखिल जल कर  के विस्तृत सूचना
+  edit_water_tax_details: सुधारना जल कर  के विस्तृत सूचना
+  make_invoice: चालान बनाना
+  total_tax: कुल कर
+  #license registration
+  license_registration: लाइसेंस का पंजीकरण
+  enter_license_registration_details: दाखिल लाइसेंस पंजीकरण के विस्तृत सूचना
+  edit_license_registration_details: सुधारना लाइसेंस पंजीकरण  के विस्तृत सूचना
+  license_registration_details: लाइसेंस पंजीकरण  के विस्तृत सूचना
+  license_registration_details_no: लाइसेंस पंजीकरण  के विस्तृत नहीं हैं
+  #license type
+  license_type: लाइसेंस का वर्गीकरण
+  enter_license_type_details: दाखिल लाइसेंस  प्रकार के विस्तृत सूचना
+  edit_license_type_details: सुधारना लाइसेंस  प्रकार  के विस्तृत सूचना
+  license_type_details:  लाइसेंस  प्रकार के विस्तृत सूचना
+  license_type_details_no:  लाइसेंस  प्रकार के विस्तृत नहीं हैं
+  license_number: लाइसेंस नम्बर
+  shop_name: दुकान का नाम
+  shop_number: दुकान का नम्बर
+  period_to: अवधि तक
+  period_from: अवधि सेसामाजिक सुरक्षा श्रेणी
+  shop_address: दुकान का पता
+  #seasonal license
+  seasonal_license: मौसमी लाइसेंस
+  enter_seasonal_license_details: दाखिल मौसमी लाइसेंस के विस्तृत सूचना
+  edit_seasonal_license_details: सुधारना मौसमी लाइसेंस के विस्तृत सूचना
+  seasonal_license_details: मौसमी लाइसेंस के विस्तृत सूचना
+  seasonal_license_details_no: मौसमी लाइसेंस के विस्तृत नहीं हैं
+  #rental type
+  rental_type: किराया  की वर्गीकरण
+  enter_rental_type_details: दाखिल किराया के विस्तृत सूचना
+  edit_rental_type_details: सुधारना किराया के विस्तृत सूचना
+  rental_type_details: किराया के विस्तृत सूचना
+  rental_type_details_no: किराया के विस्तृत नहीं हैं
+  #rental registration
+  rental_registration: किराया की पंजीकरण
+  rental_number: किराए पर लेने की संख्या
+  enter_rental_registration_details: दाखिल किराया की पंजीकरण विस्तृत सूचना
+  edit_rental_registration_details: सुधारना किराया की पंजीकरण विस्तृत सूचना
+  rental_registration_details: किराया की पंजीकरण विस्तृत सूचना
+  rental_registration_details_no: किराया की पंजीकरण विस्तृत नहीं हैं
+  #ration card type
+  rationcard_type: राशन कार्ड के वर्गीकरण
+  enter_rationcard_type_details: दाखिल राशन कार्ड के वर्गीकरण विस्तृत सूचना
+  edit_rationcard_type_details: सुधारना राशन कार्ड के वर्गीकरण विस्तृत सूचना
+  rationcard_type_details: राशन कार्ड के वर्गीकरण विस्तृत सूचना
+  rationcard_type_details_no: राशन कार्ड के वर्गीकरण विस्तृत नहीं हैं
+  #ration card registration
+  owner: मालिक  
+  rationcard_reg: राशन कार्ड पंजीकरण
+  rationcard_reg_date: राशन कार्ड पंजीकरण दिनांक
+  enter_rationcard_reg_details: दाखिल राशन कार्ड पंजीकरण विस्तृत सूचना
+  edit_rationcard_reg_details: सुधारना राशन कार्ड पंजीकरण विस्तृत सूचना
+  rationcard_reg_details: राशन कार्ड पंजीकरण विस्तृत सूचना
+  rationcard_number: राशन कार्ड नम्बर  
+  rationcard_reg_details_no: राशन कार्ड पंजीकरण विस्तृत नहीं हैं
+  owner_name: मालिक का नाम
+  owner_photo: मालिक का फोटो
+  owner_date_of_birth: मालिक का जन्म दिनांक
+  relation_with_owner: मालिक के साथ संबंध
+  member_name: सदस्य का नाम
+  member_date_of_birth: जन्म तारीख के सदस्य
+  owner_address: मालिक का पता
+  #complaint type
+  complaint_type: शिकायतों के वर्गीकरण
+  enter_complaint_type_details: दाखिल शिकायतों के वर्गीकरण विस्तृत सूचना
+  edit_complaint_type_details: सुधारना शिकायतों के वर्गीकरण विस्तृत सूचना
+  complaint_type_details: शिकायतों के वर्गीकरण विस्तृत सूचना
+  complaint_type_details_no: शिकायतों के वर्गीकरण विस्तृत नहीं हैं
+  #compaint 
+  complaint: शिकायत
+  enter_complaint_details: दाखिल शिकायतों के  विस्तृत सूचना
+  edit_complaint_details: सुधारना शिकायतों के  विस्तृत सूचना
+  complaint_details: शिकायतों के  विस्तृत सूचना
+  complaint_details_no: शिकायतों के विस्तृत नहीं हैं
+  complaint_date: शिकायत का दिनांक
+  complaint_dec: शिकायत का विवरण
+  resolve_time: समय संकल्प
+  complaint_number: शिकायत का नम्बर
+  complaint_view: शिकायतों का सूची 
+  #SSC
+  social_security_category: सामाजिक सुरक्षा श्रेणी
+  ssc_name: सामाजिक सुरक्षा श्रेणी का नाम
+  enter_ssc_details: दाखिल सामाजिक सुरक्षा श्रेणी के  विस्तृत सूचना
+  edit_ssc_details: सुधारना सामाजिक सुरक्षा श्रेणी के  विस्तृत सूचना
+  ssc_details: सामाजिक सुरक्षा श्रेणी के  विस्तृत सूचना
+  ssc_details_no: सामाजिक सुरक्षा श्रेणी के विस्तृत नहीं हैं
+  #ssc Pension
+  social_security_pension: सामाजिक सुरक्षा पेंशन
+  pensioner_name: पेंशनभोगी का नाम
+  pensioner_photo: पेंशनभोगी फोटो
+  ssc_registration_date: पंजीकरण की तारीख
+  enter_sscpension_details: दाखिल सामाजिक पेंशन के  विस्तृत सूचना
+  edit_ssc_details: सुधारना सामाजिक पेंशन  विस्तृत सूचना
+  ssc_details: सामाजिक पेंशन के  विस्तृत सूचना
+  ssc_details_no: सामाजिक पेंशन के विस्तृत नहीं हैं
+  list_of_approved_sscpension_details: अनुमोदित  पेंशन के पंजीकरण की सूची
+  list_of_notapproved_sscpension_details:  पेंशन के पंजीकरण की सूची नहीं स्वीकृत
+  spension_number: सामाजिक पेंशन नम्बर
+  #basic pay
+  basic_pay: मूल वेतन
+  enter_basic_pay_details: दाखिल मूल वेतन विस्तृत सूचना
+  edit_basic_pay_details: सुधारना मूल वेतन विस्तृत सूचना
+  basic_pay_details: मूल वेतन विस्तृत सूचना
+  basic_pay_details_no: मूल वेतन विस्तृत नहीं हैं
+  #DA
+  da_amount: दैनिक भत्ता मूल
+  enter_da_amount_details: दाखिल दैनिक भत्ता मूल विस्तृत सूचना
+  edit_da_amount_details: सुधारना दैनिक भत्ता मूल विस्तृत सूचना
+  da_amount_details: दैनिक भत्ता मूल विस्तृत सूचना
+  da_amount_details_no: दैनिक भत्ता मूल विस्तृत नहीं हैं
+  #HRA
+  hra_amount: मकान किराया मूल
+  enter_hra_amount_details: दाखिल मकान किराया मूल विस्तृत सूचना
+  edit_hra_amount_details: सुधारना मकान किराया मूल विस्तृत सूचना
+  hra_amount_details: मकान किराया मूल विस्तृत सूचना
+  hra_amount_details_no: मकान किराया मूल विस्तृत नहीं हैं
+  #item master
+  item_group: वस्तु समूह
+  quantity: परिमाण
+  item_name: वस्तु का नाम
+  category_name: श्रेणी का नाम
+  enter_item_group_details: दाखिल वस्तु समूह विस्तृत सूचना
+  edit_item_group_details: सुधारना वस्तु समूह विस्तृत सूचना
+  item_group_details: वस्तु समूह विस्तृत सूचना
+  item_group_details_no: वस्तु समूह विस्तृत नहीं हैं  
+  #item Category
+  item_category: वस्तु का श्रेणी
+  enter_item_category_details: दाखिल वस्तु का श्रेणी विस्तृत सूचना
+  edit_item_category_details: सुधारना वस्तु का श्रेणी विस्तृत सूचना
+  item_category_details: वस्तु का श्रेणी विस्तृत सूचना
+  item_category_details_no: वस्तु का श्रेणी विस्तृत नहीं हैं
+  #bill pay
+  bill_pay: बिल रकम
+  invoice_number: चालान नम्बर
+  enter_bill_pay_details: दाखिल बिल रकम विस्तृत सूचना
+  edit_bill_pay_details: सुधारना बिल रकम विस्तृत सूचना
+  bill_pay_details: बिल रकम विस्तृत सूचना
+  bill_pay_details_no: बिल रकम विस्तृत नहीं हैं
+  #bill passing
+  bill_passing: बिल पास 
+  enter_bill_passing_details: दाखिल बिल पास विस्तृत सूचना
+  edit_bill_passing_details: सुधारना बिल पास विस्तृत सूचना
+  bill_passing_details: बिल पास विस्तृत सूचना
+  bill_passing_details_no: बिल पास विस्तृत नहीं हैं
+  #goods received
+  goods_received: वस्तुओं का प्राप्त
+  enter_goods_received_details: दाखिल वस्तुओं का प्राप्त विस्तृत सूचना
+  edit_goods_received_details: सुधारना वस्तुओं का प्राप्त विस्तृत सूचना
+  goods_received_details: वस्तुओं का प्राप्त विस्तृत सूचना
+  goods_received_details_no: वस्तुओं का प्राप्त विस्तृत नहीं हैं
+  received_date: प्राप्त की तारीख  
+  goods_amount: वस्तु का मूल
+  #goods return
+  goods_return: वस्तुओं का वापस
+  return_date: वापसी की तारीख
+  enter_goods_return_details: दाखिल वस्तुओं का वापस विस्तृत सूचना
+  edit_goods_return_details: सुधारना वस्तुओं का वापस विस्तृत सूचना
+  goods_return_details: वस्तुओं का वापस विस्तृत सूचना
+  goods_return_details_no: वस्तुओं का वापस विस्तृत नहीं हैं
+  #Stores Consumption
+  stores_consumption: गोदाम का उपयोग
+  enter_stores_consumption_details: दाखिल गोदाम का उपयोग विस्तृत सूचना
+  edit_stores_consumption_details: सुधारना गोदाम का उपयोग विस्तृत सूचना
+  stores_consumption_details: गोदाम का उपयोग विस्तृत सूचना
+  stores_consumption_details_no: गोदाम का उपयोग विस्तृत नहीं हैं
+  print_report: प्रिंट रिपोर्ट
+  mcm: कार्यालय नगरपलिका परिषद् मलाजखंड
+  mcm_address: मुख्य -  मोहगाव, जिला - बालाघाट (म. प्र). ४८१११८
+

@@ -1,0 +1,23 @@
+<!--editing the data of Unit Values Details-->
+<h1><%= I18n.t "enter_unit_value_details" %>:<br>Edit Unit Values Details</h1>
+<%= form_tag :action => 'update', :id => @unitvalue %>
+	<table>
+	<tr>
+		<td><label for="taxcategory"> <%= I18n.t "tax_category" %>:<br>Tax Category</label>*: </td>
+		<td><%= collection_select(:unitvalue, :taxcategory_id,@taxcategory, :id, :category) %></td>
+	</tr>
+	<tr>
+		<td><label for="amount"> <%= I18n.t "amount" %>:<br>Amount</label>:* </td>
+		<td><%= text_field 'unitvalue', 'amount',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'unitvalue', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

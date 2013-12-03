@@ -1,0 +1,28 @@
+<% if @goodsreturns.blank? %>
+ 	<p align="center>><%= I18n.t "goods_return_details_no" %>:<br>There are no Goods Returns currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "goods_return_details" %><br>Goods Return Report</h2>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "item_group" %><br>Item Master Name</td>
+		<td><%= I18n.t "quantity" %><br>Quantity</td>
+		<td><%= I18n.t "goods_amount" %><br>Amount</td>
+		<td><%= I18n.t "return_date" %><br>Return Date</td>
+		<td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @goodsreturns.each do |c| %>
+	
+	<tr>
+		<td><%= c.itemmaster.item_name%></td>
+		<td><%= c.quantity %></td>
+  <td><%= c.amount%></td>
+  <td><%= c.return_date%></td>
+  <td><%= c.description%></td>  
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+

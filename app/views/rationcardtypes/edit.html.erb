@@ -1,0 +1,19 @@
+<!--editing the data for RationCard Type Details -->
+<h1><%= I18n.t 'edit_rationcard_type_details' %><br>Edit RationCard Type</h1>
+<%= form_tag :action => 'update', :id => @rationcardtype %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'rationcard_type' %>:<br>Ration Card Type</label>:* </td>
+		<td><%= text_field 'rationcardtype', 'card_type',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br><label for="description">Description</label>:</td>
+		<td><%= text_area 'rationcardtype', 'description', :cols=>30, :rows=>5 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

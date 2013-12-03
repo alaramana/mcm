@@ -1,0 +1,25 @@
+<!-- Search about  Basic Pay Details-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @bpays.blank? %>
+	<p><%= I18n.t "basic_pay_details_no" %><br>There are no Basic Pay Details currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "basic_pay_details" %><br>These are the current Basic Pay Details:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "department" %><br>Department</td>
+		<td><%= I18n.t "designation" %><br>Designation</td>
+		<td><%= I18n.t "amount" %><br>Amount</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @bpays.each do |c| %>
+	<tr>
+		<td><%= c.amount -%></td>
+		<td><%= link_to c.department.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= c.designation.name -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @bpays %>	
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

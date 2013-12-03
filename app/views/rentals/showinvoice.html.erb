@@ -1,0 +1,41 @@
+<h1><%= I18n.t "rental_registration_details" %><br>Rental  Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "rental_number" %>:<br>Rental Number:</td>
+		<td><%= @rental.rental_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rental_type" %>:<br>Rental Types :</td>
+		<td><%= @rental.rentaltype.rental_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @rental.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= @rental.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "street" %>:<br>Street Name :</td>
+		<td><%= @rental.street.name %></td>
+	</tr>		
+	<tr>
+		<td><%= I18n.t "ward" %>:<br>Ward Name :</td>
+		<td><%= @rental.ward.name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_from" %>:<br>Period From:</td>
+		<td><%= @rental.period_from %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_to" %>:<br>Period To :</td>
+		<td><%= @rental.period_to %></td>
+	</tr>	
+		
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Rental Amount:</td>
+		<td> <del>&#2352;</del> <%= @rental.invoice %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,213 @@
+hi:
+  long_name: "पूरा नाम"
+  short_name: "संक्षेप नाम" #TODO Improve
+  address: पता
+  name: नाम
+  gender: लिंग
+  enter_gender_details: दाखिल लिंग विस्तृत सूचना
+  edit_gender_details: सुधारना लिंग विस्तृत सूचना
+  gender_details: विवाह लिंग सूचना
+  gender_details_no: विवाह लिंग सूचना नहीं हैं
+  assesment_number: असेस्मन्ट नम्बर
+  first_name: प्रथम नाम
+  zone: अंचल
+  ward: वॉर्ड
+  colony: कालनी
+  street: गली
+  last_name: कुलनाम
+  door_number: मकान नम्बर
+  area: स्थान
+  organization: संस्था
+  orgnanization_type: संस्था  का नमूना
+  enter_orgnanization_type_details: दाखिल संस्था  का नमूना विस्तृत सूचना
+  edit_orgnanization_type_details: सुधारना संस्था  का नमूना विस्तृत सूचना
+  orgnanization_type_details: संस्था  का नमूना विस्तृत सूचना
+  orgnanization_type_details_no: संस्था  का नमूना विस्तृत सूचना नहीं हैं
+  mother_name: माता का नाम
+  father_name: पिता का नाम
+  department: विभाग
+  designation: पदनाम
+  enter_designation_details: दाखिल पदनामविस्तृत सूचना
+  edit_designation_details: सुधारना पदनाम विस्तृत सूचना
+  designation_details: पदनाम विस्तृत सूचना
+  designation_details_no: पदनाम विस्तृत सूचना नहीं हैं
+  designation_group: पदनाम वर्ग
+  date_of_birth: जन्म तिथि
+  date_of_death: निधन तिथि
+  death: निधन
+  death_details: निधन विस्तृत सूचना
+  death_details_no: निधन विस्तृत सूचना नहीं हैं
+  date_of_join: तिथि
+  middle_name: मध्य नाम
+  religion: धर्म
+  caste: जाति
+  marital: विवाह संबंधी
+  enter_marital_details: दाखिल विवाह संबंधी विस्तृत सूचना
+  edit_marital_details: सुधारना विवाह संबंधी विस्तृत सूचना
+  marital_details: विवाह संबंधी विस्तृत सूचना
+  marital_details_no: विवाह संबंधी विस्तृत सूचना नहीं हैं
+  description: विवरण
+  remarks: टिप्पणी
+  details: विस्तृत सूचना
+  enter_zone_details: दाखिल अंचल विस्तृत सूचना
+  edit_zone_details: सुधारना अंचल विस्तृत सूचना
+  edit: सुधारना
+  enter: दाखिल
+  new: नया
+  list: सूची
+  zone_details: अंचल विस्तृत सूचना
+  zone_details_no: अंचल विस्तृत सूचना नहीं हैं
+  no: नहीं हैं
+  delete: मिटाना
+  back: पीछे
+  enter_ward_details: दाखिल वॉर्ड विस्तृत सूचना
+  edit_ward_details: सुधारना वॉर्ड विस्तृत सूचना
+  ward_details: वॉर्ड विस्तृत सूचना
+  ward_details_no: वॉर्ड विस्तृत सूचना नहीं हैं
+  save: सुरक्षित करो
+  changes: बदलाव
+  save_changes: बदलाव सुरक्षित करो
+  add: लगाना
+  add_new: नया लगाना
+  search: खोज
+  enter_colony_details: दाखिल कालनी विस्तृत सूचना
+  edit_colony_details: सुधारना कालनी विस्तृत सूचना
+  colony_details: कालनी विस्तृत सूचना
+  colony_details_no: कालनी विस्तृत सूचना नहीं हैं
+  enter_street_details: दाखिल गली विस्तृत सूचना
+  edit_street_details: सुधारना गली विस्तृत सूचना
+  street_details: गली विस्तृत सूचना
+  street_details_no: गली विस्तृत सूचना नहीं हैं
+  enter_religion_details: दाखिल मत विस्तृत सूचना
+  edit_religion_details: सुधारना मत विस्तृत सूचना
+  religion_details: मत विस्तृत सूचना
+  religion_details_no: मत विस्तृत सूचना नहीं हैं
+  confirm_delete: पक्का मिटाना
+  enter_caste_details: दाखिल जाति विस्तृत सूचना
+  edit_caste_details: सुधारना जाति विस्तृत सूचना
+  caste_details: जाति विस्तृत सूचना
+  caste_details_no: जाति विस्तृत सूचना नहीं हैं
+  enter_department_details: दाखिल विभाग विस्तृत सूचना
+  edit_department_details: सुधारना विभाग विस्तृत सूचना
+  department_details: विभाग विस्तृत सूचना
+  department_details_no: विभाग विस्तृत सूचना नहीं हैं
+  short_desc: लघु वर्णन
+  doctor: डाक्टर
+  property: जायदाद 
+  property_type: जायदाद वर्गीकरण
+  enter_property_type_details: दाखिल जायदाद वर्गीकरण विस्तृत सूचना
+  edit_property_type_details: सुधारना जायदाद वर्गीकरण विस्तृत सूचना
+  property_type_details: जायदाद वर्गीकरण विस्तृत सूचना
+  property_type_details_no: जायदाद वर्गीकरण विस्तृत सूचना नहीं हैं
+  enter_property_details: दाखिल जायदाद  विस्तृत सूचना
+  edit_property_details: सुधारना जायदाद  विस्तृत सूचना
+  property_details: जायदाद  विस्तृत सूचना
+  property_details_no: जायदाद  विस्तृत सूचना नहीं हैं
+  owner: मालिक
+  owner_type: मालिक वर्गीकरण
+  enter_owner_type_details: दाखिल मालिक वर्गीकरण विस्तृत सूचना
+  edit_owner_type_details: सुधारना मालिक वर्गीकरण विस्तृत सूचना
+  owner_type_details: मालिक वर्गीकरण विस्तृत सूचना
+  owner_type_details_no: मालिक वर्गीकरण विस्तृत सूचना नहीं हैं
+  category: विभाग
+  tax: शुल्क
+  enter_property_tax_details: दाखिल जायदाद शुल्क विस्तृत सूचना
+  edit_property_tax_details: सुधारना जायदाद शुल्क विस्तृत सूचना
+  property_tax_details: जायदाद शुल्क विस्तृत सूचना
+  property_tax_details_no: जायदाद शुल्क विस्तृत सूचना नहीं हैं
+  tax_category: शुल्क विभाग
+  enter_tax_category_details: दाखिल शुल्क विभाग विस्तृत सूचना
+  edit_tax_category_details: सुधारना शुल्क विभाग विस्तृत सूचना
+  tax_category_details: शुल्क विभाग विस्तृत सूचना
+  tax_category_details_no: शुल्क विभाग विस्तृत सूचना नहीं हैं
+  unit: इकाई
+  factor: अंश
+  use: उपयोग
+  use_factor: उपयोग का अंश
+  value: मूल्य
+  unit_value: इकाई मूल्य
+  enter_use_factor_details: दाखिल उपयोग का अंश विस्तृत सूचना
+  edit_use_factor_details: सुधारना उपयोग का अंश विस्तृत सूचना
+  use_factor_details: उपयोग का अंश विस्तृत सूचना
+  use_factor_details_no: उपयोग का अंश विस्तृत सूचना नहीं हैं
+  enter_unit_value_details: दाखिल इकाई मूल्य विस्तृत सूचना
+  edit_unit_value_details: सुधारना इकाई मूल्य विस्तृत सूचना
+  unit_value_details: इकाई मूल्य विस्तृत सूचना
+  unit_value_details_no: इकाई मूल्य विस्तृत सूचना नहीं हैं
+  age: उम्र
+  age_factor: उम्र का अंश
+  enter_age_factor_details: दाखिल उम्र का अंश विस्तृत सूचना
+  edit_age_factor_details: सुधारना उम्र का अंश विस्तृत सूचना
+  age_factor_details: उउम्र का अंश विस्तृत सूचना
+  age_factor_details_no: उम्र का अंश विस्तृत सूचना नहीं हैं
+  occupancy_factor: दखलकारी अंश
+  occupancy: दखलकारी
+  enter_occupancy_factor_details: दाखिल दखलकारी अंश विस्तृत सूचना
+  edit_occupancy_factor_details: सुधारना दखलकारी अंश विस्तृत सूचना
+  occupancy_factor_details: दखलकारी अंश विस्तृत सूचना
+  occupancy_factor_details_no: दखलकारी अंश विस्तृत सूचना नहीं हैं
+  exemption_factor: माफी  का अंश
+  enter_exemption_factor_details: दाखिल माफी  का अंश विस्तृत सूचना
+  edit_exemption_factor_details: सुधारना माफी  का अंश विस्तृत सूचना
+  exemption_factor_details: माफी  का अंश विस्तृत सूचना
+  exemption_factor_details_no: माफी  का अंश विस्तृत सूचना नहीं हैं
+  structure_factor: बनावट का अंश
+  enter_structure_factor_details: दाखिल बनावट का अंश विस्तृत सूचना
+  edit_structure_factor_details: सुधारना बनावट का अंश विस्तृत सूचना
+  structure_factor_details: बनावट का अंश विस्तृत सूचना
+  structure_factor_details_no: बनावट का अंश विस्तृत सूचना नहीं हैं
+  amount: रकम
+  percentage: प्रतिशत
+  delivery: प्रसव
+  method: तरीका
+  delivery_method: प्रसव का तरीका
+  enter_delivery_method_details: दाखिल प्रसव का तरीका विस्तृत सूचना
+  edit_delivery_method_details: सुधारना प्रसव का तरीका विस्तृत सूचना
+  delivery_method_details: प्रसव का तरीका विस्तृत सूचना
+  delivery_method_details_no: प्रसव का तरीका विस्तृत सूचना नहीं हैं
+  hospital_name: दवाखाना नाम
+  city: नगर
+  tehsil: मंडल
+  district: जिला 
+  phone_number: फोन नम्बर
+  doctor_name: डाक्टर नाम
+  qualification: योग्यता
+  enter_hospital_details: दाखिल दवाखाना विस्तृत सूचना
+  edit_hospital_details: सुधारना दवाखाना विस्तृत सूचना
+  hospital_details: दवाखाना विस्तृत सूचना
+  hospital_details_no: दवाखाना विस्तृत सूचना नहीं हैं
+  type: वर्गीकरण
+  employee: नौकर
+  employee_type: नौकर का वर्गीकरण
+  enter_employee_type_details: दाखिल नौकर का वर्गीकरण विस्तृत सूचना
+  edit_employee_type_details: सुधारना नौकर का वर्गीकरण विस्तृत सूचना
+  employee_type_details: नौकर का वर्गीकरण विस्तृत सूचना
+  employee_type_details_no: नौकर का वर्गीकरण विस्तृत सूचना नहीं हैं
+  enter_employee_details: दाखिल नौकर विस्तृत सूचना
+  edit_employee_details: सुधारना नौकर  विस्तृत सूचना
+  employee_details: नौकर विस्तृत सूचना
+  employee_details_no: नौकर विस्तृत सूचना नहीं हैं
+  employee_number: नौकर का नम्बर
+  number: नम्बर
+  education: पढ़ाई लिखाई
+  nationality: राष्ट्रीयता
+  blood_group: खून वर्ग
+  email: ईमेल
+  photo: फोटो
+  shift: बदलना
+  pan_number: पैन नम्बर
+  pf_number: pf नम्बर
+  bank_number: बैंक नम्बर
+  bank_account_number: बैंक कथा का नम्बर
+  work_palace: काम करने का कार्य
+  uid: उपयोगकर्ता का नम्बर
+  employment_number: रोजगार नम्बर
+  enter_shift_details: दाखिल बदलना विस्तृत सूचना
+  edit_shift_details: सुधारना बदलना  विस्तृत सूचना
+  shift_details: बदलना विस्तृत सूचना
+  shift_details_no: बदलना विस्तृत सूचना नहीं हैं
+  start_time: शुरू होना समय
+  end_time: खतम होना समय
+  time: समय
+  total_area: स्थान
+  built_area: स्थान

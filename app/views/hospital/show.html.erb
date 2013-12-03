@@ -1,0 +1,41 @@
+<!--Showing the details of Hospital-->
+<h1><%= I18n.t "hospital_details" %>:<br>Hospital Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "hospital_name" %>:<br>Hospital Name:</td>
+		<td><%= @hospital.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address: </td>
+		<td><%= @hospital.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "city" %>:<br>City:</td>
+		<td><%= @hospital.city %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tehsil" %>:<br>Tehsil:</td>
+		<td><%= @hospital.tehsil %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "district" %>:<br>District:</td>
+		<td><%= @hospital.district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number" %>:<br>Phone:</td>
+		<td><%= @hospital.phone1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number" %>:<br>Phone:</td>
+		<td><%= @hospital.phone2 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "doctor_name" %>:<br> Doctor Name:</td>
+		<td><%= @hospital.doctor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "qualification" %>:<br>Qualification:</td>
+		<td><%= @hospital.education %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

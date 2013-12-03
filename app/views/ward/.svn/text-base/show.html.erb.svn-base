@@ -1,0 +1,17 @@
+<!--Showing the Ward Details -->
+<h1><%= I18n.t " ward_details" %>:<br>Ward Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "ward" %>:<br>Name:</td>
+		<td><%= @ward.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "zone" %>:<br>Zone:</td>
+		<td><%= @ward.zone.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @ward.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

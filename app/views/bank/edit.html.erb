@@ -1,0 +1,40 @@
+<!--editing the data of Age Factor Details-->
+<h1>Edit Religion Type Detail</h1>
+<%= form_tag :action => 'update', :id => @bank %>
+	<table>
+	<tr>
+		<td><label for="name">Name</label>*: </td>
+		<td><%= text_field 'bank', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="branch">Branch</label>*: </td>
+		<td><%= text_field 'bank', 'branch',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="branch_code">Branch Code</label>*: </td>
+		<td><%= text_field 'bank', 'branch_code',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="address">Address</label>*: </td>
+		<td><%=text_area  'bank', 'address',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="phone1">Phone1</label>*: </td>
+		<td><%= text_field 'bank', 'phone1',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="phone2">Phone2</label>:</td>
+		<td><%= text_field 'bank', 'phone2',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="manager">Manager</label>: </td>
+		<td><%= text_field 'bank', 'manager',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="manager_contact">Manager Contact</label>: </td>
+		<td><%= text_field 'bank', 'manager_contact',:class=>'title' %></td>
+	</tr>
+	</table>
+<%= submit_tag "Save Changes" %></td>
+<%= form_tag %>
+<%= link_to 'Back', {:action => 'list' } %>

@@ -1,0 +1,24 @@
+<!--entering the data for creating License Types Details-->
+<h1><%= I18n.t 'enter_license_type_details' %><br>Enter License Types Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'license_type' %><br><label for="lic_type">License Type</label>:*</td>
+		<td><%= text_field 'licensetype', 'lic_type',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'amount' %><br><label for="amount">Amount</label>:*</td>
+		<td><%= text_field 'licensetype', 'amount',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'description' %><br><label for="description">Description</label>:</td>
+		<td><%= text_area 'licensetype', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t 'save' %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

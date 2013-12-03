@@ -1,0 +1,46 @@
+<!--Showing the data of Property Tax Details-->
+<h1><%= I18n.t 'property_tax_details' %>:<br>Property Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Assessment Number:</td>
+		<td><%= @ptax.assessment_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "registration_numbe"%>:<br> Register Number:</td>
+		<td><%= @ptax.ptaxregistration.number %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "start_date"%>:<br>Tax Year From:</td>
+		<td><%= @ptax.start_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_date"%>:<br>Tax Year To:</td>
+		<td><%= @ptax.end_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "total_area"%>:<br>Total Area :</td>
+		<td><%= @ptax.total_area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "build_area"%>:<br>Build Area:</td>
+		<td><%= @ptax.build_area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "occupancy_factor"%>:<br>Occupancy Factor:</td>
+		<td><%= @ptax.occupancyfactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "structure_factor"%>:<br>Structure Factor:</td>
+		<td><%= @ptax.structurefactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tax_category"%>:<br>Tax Category:</td>
+		<td><%= @ptax.taxcategory.category %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "unit_value"%>:<br>Unit Value :</td>
+		<td><%= @ptax.unitvalue.amount %></td>
+	</tr>
+	</table>
+<%= I18n.t "back"%><br><%= link_to 'Back', {:action => 'list'} %>
+

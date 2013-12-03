@@ -1,0 +1,44 @@
+<!--entering the data for creating Property Tax Rate Details-->
+<h1><%= I18n.t "edit_property_tax_details" %>:<br>Enter Property Tax Payment Details:</h1>
+<%= form_tag :action => 'update', :id => @ptaxpayment %>
+	<table>
+	<tr>
+		<td><%= I18n.t "assesment_number" %>:<br><label for="propertytype"> assesment_number</label>*: </td>
+		<td><%= collection_select(:ptaxpayment, :ptax_id,@ptax, :id, :assessment_number) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "total_amount" %>:<br><label for="total_amount">Total Amount</label>:* </td>
+		<td><%= text_field 'ptaxpayment', 'total_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "paid_amount" %>:<br><label for="paid_amount">Paid Amount</label>:* </td>
+		<td><%= text_field 'ptaxpayment', 'paid_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "payment_mode" %>:<br> <label for="Before">Payment Mode</label>*: </td>
+		<td><%= radio_button("ptaxpayment", "paymentmode", "Cash")%>Cash 
+		    <%= radio_button("ptaxpayment", "paymentmode", "Cheque")%>DD/Cheque</td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t "bank_name" %>:<br><label for="bank_name">Bank Name</label>:* </td>
+		<td><%= text_field 'ptaxpayment', 'bank_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "dd_cheque" %>:<br>DD/Cheque Number:* </td>
+		<td><%= text_field 'ptaxpayment', 'cheque_number',:class=>'title' %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "remarks" %>:<br> <label for="remarks">Remarks</label>:</td>
+		<td><%= text_area 'ptaxpayment', 'remark'%></td>
+	</tr>
+
+	<tr>
+	<td></td>
+	<td><%= I18n.t "save_changes" %>:<br> <%= submit_tag "Save Changes" %></td>
+	<tr>
+	</table>
+<%= form_tag %>
+
+

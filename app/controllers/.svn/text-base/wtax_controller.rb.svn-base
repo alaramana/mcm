@@ -1,0 +1,125 @@
+#Author: Chaitanya
+#Controller: Water Tax 
+#=====================
+class WtaxController < ApplicationController
+
+	#Method:new
+	def new
+		@wtax = Wtax.new
+		@zone = Zone.find(:all)	#List all zone
+		@ward = Ward.find(:all)	#List all wards
+		@colony = Colony.find(:all)	#List all Colonies
+		@pipesize = Pipesize.find(:all)	#List pipe Sioze
+		@connectiontype = Connectiontype.find(:all)	#List of all connection types
+	end
+	#End:new
+
+	#Method:create
+	def create
+		@wtax = Wtax.new(params[:wtax])
+		@wtax.created_by = 1
+		@wtax.modified_by = 1
+
+		if @wtax.save
+			flash[:notice] = 'Water Tax Record successfully created.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end 
+	#End:create
+
+	#Method:list
+	def list
+		@wtaxes = Wtax.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|
+			format.html 
+			format.xml  { render :xml => @wtaxes } #Render to XML 
+		end
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@wtax = Wtax.find(params[:id])
+		respond_to do |format|
+			format.html 
+			format.xml  { render :xml => @wtaxes } #Render to XML 
+		end
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@wtax = Wtax.find(params[:id])
+		@zone = Zone.find(:all)
+		@ward = Ward.find(:all)
+		@colony = Colony.find(:all)
+		@pipesize = Pipesize.find(:all)
+		@connectiontype = Connectiontype.find(:all)
+	end  
+	#End:edit
+
+	#Method:update
+	def update
+		@wtax = Wtax.find(params[:id])
+
+		@wtax.modified_by = 1
+
+		if @wtax.update_attributes(params[:wtax])
+			flash[:notice] = 'Water Tax Record successfully Updated.'
+			redirect_to :action => 'show', :id => @wtax
+		else
+			render :action => 'edit'
+		end
+	end  
+	#End:update
+
+	#Method:delete
+	def delete
+		Wtax.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+
+	#Method:calculate --- Method calculate the water tax (model Wtax)
+	def calculate
+	#TODO Need to improve more with arrers
+
+		@zone = Zone.find(:all)
+		@ward = Ward.find(:all)
+		@colony = Colony.find(:all)
+		@pipesize = Pipesize.find(:all)
+		@connectiontype = Connectiontype.find(:all)
+		@wtax = Wtax.find(params[:id])
+	end
+	#End:create
+
+	#Method:updateinvoice -- Which update the table with Water tax 
+	def updateinvoice
+		@wtax = Wtax.find(params[:id])
+		@wtax.modified_by = 1
+		if @wtax.update_attributes(params[:wtax])
+			flash[:notice] = 'Water Tax Record successfully Updated.'
+			redirect_to :action => 'showinvoice', :id => @wtax
+		else
+			render :action => 'calculate'
+		end
+	end 
+	#End:updateinvoice
+
+	#Method:showinvoice -- Which show generated invoice
+	def showinvoice
+		@wtax = Wtax.find(params[:id])
+		@wtax.tax_amount = @wtax.invoice
+		@wtax.update_attributes(params[:wtax])
+	end
+	#End:showinvoice
+
+	#Method:search
+	def search
+		 @query = params[:query]
+		 @wtaxes = Wtax.search @query, :page => params[:page], :per_page => 10
+	end
+	#End:search
+end

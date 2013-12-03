@@ -1,0 +1,17 @@
+<!--Shoing the Structure Factor Details-->
+<h1> <%= I18n.t "structure_factor_details" %>:<br>Structured Factor Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "structure_factor" %>:<br>Name:</td>
+		<td><%= @structurefactor.name %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "value" %>:<br>Factor Value: </td>
+		<td><%= @structurefactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @structurefactor.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

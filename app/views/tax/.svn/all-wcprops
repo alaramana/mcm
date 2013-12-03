@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/muncipalerp/!svn/ver/437/trunk/app/views/tax
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/309/trunk/app/views/tax/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/437/trunk/app/views/tax/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/221/trunk/app/views/tax/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/309/trunk/app/views/tax/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/437/trunk/app/views/tax/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/309/trunk/app/views/tax/show.html.erb
+END

@@ -1,0 +1,16 @@
+#Author: Chaitanya
+#============
+class Pipesize < ActiveRecord::Base
+	has_many :wtaxes
+
+	
+	#method : indexing on Pipesize
+	define_index do
+		indexes name
+		indexes amount
+		
+
+	#with{}
+		
+	end
+end

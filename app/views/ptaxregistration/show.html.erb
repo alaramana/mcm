@@ -1,0 +1,67 @@
+<!--Showing the data of Property Registration Details-->
+<h1><%= I18n.t "property_tax_details" %><br>Property Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Assessment Number:</td>
+		<td><%= @ptaxregistration.number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name"%>:<br>First Name:</td>
+		<td><%= @ptaxregistration.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name"%>:<br>Last Name:</td>
+		<td><%= @ptaxregistration.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "door_number"%>:<br>Door Number:</td>
+		<td><%= @ptaxregistration.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "area"%>:<br>Area: </td>
+		<td><%= @ptaxregistration.area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "apartment_name"%>:<br>Apartment Name: </td>
+		<td><%= @ptaxregistration.apartment_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "email"%>:<br>Email: </td>
+		<td><%= @ptaxregistration.email %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Phone: </td>
+		<td><%= @ptaxregistration.phone%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Mobile: </td>
+		<td><%= @ptaxregistration.mobile %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "zone"%>:<br>Zone: </td>
+		<td><%= @ptaxregistration.zone.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "ward"%>:<br>Ward: </td>
+		<td><%= @ptaxregistration.ward.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "street"%>:<br>Street: </td>
+		<td><%= @ptaxregistration.street.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description"%>:<br>Description: </td>
+		<td><%= @ptaxregistration.description %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description"%>:<br>Number of Floor: </td>
+		<td><%= @ptaxregistration.floors %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description"%>:<br>Water Connection: </td>
+		<td><%= @ptaxregistration.waterconnection %></td>
+	</tr>
+
+	</table>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %>
+

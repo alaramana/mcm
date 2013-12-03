@@ -1,0 +1,13 @@
+<!--showing each Rationcard Type Details  -->
+<h1><%= I18n.t 'rationcard_type_details' %><br>Ration Card Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'rationcard_type' %><br>Ration Card Type:</td>
+		<td><%= @rationcardtype.card_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @rationcardtype.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

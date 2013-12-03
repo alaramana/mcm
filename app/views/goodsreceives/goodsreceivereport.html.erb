@@ -1,0 +1,29 @@
+<% if @goodsreceives.blank? %>
+ 	<p align="center>><%= I18n.t "goods_received_details_no" %>:<br>There are no Goods Receives currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "goods_received_details" %><br>Goods Received Report</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "item_group" %><br>Item Name</td>
+		<td><%= I18n.t "quantity" %><br>Quantity</td>
+  <td><%= I18n.t "goods_amount" %><br>Amount</td>
+  <td><%= I18n.t "received_date" %><br>Date</td>
+  <td><%= I18n.t "dscription" %><br>Description</td>
+ </tr>
+	<% @goodsreceives.each do |c| %>
+	
+	<tr>
+  <td><%= c.itemmaster.item_name %></td>
+  <td><%= c.quantity%></td>  
+		<td><%= c.amount %></td>
+  <td><%= c.received_date%></td>
+		<td><%= c.description %></td>
+ 	</tr>
+	<% end %>
+	</table>
+<% end %>
+

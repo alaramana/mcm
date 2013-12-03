@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx
+END
+attribute_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/attribute_spec.rb
+END
+search_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/search_spec.rb
+END
+configuration_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/configuration_spec.rb
+END
+facet_search_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/facet_search_spec.rb
+END
+index_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/index_spec.rb
+END
+rails_additions_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/rails_additions_spec.rb
+END
+active_record_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/active_record_spec.rb
+END
+association_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/association_spec.rb
+END
+auto_version_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/auto_version_spec.rb
+END
+facet_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/facet_spec.rb
+END
+field_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/field_spec.rb
+END
+context_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/context_spec.rb
+END
+search_methods_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/search_methods_spec.rb
+END
+source_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/source_spec.rb
+END
+excerpter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/spec/thinking_sphinx/excerpter_spec.rb
+END

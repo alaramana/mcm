@@ -1,0 +1,36 @@
+<!--entering the data for creating Complaints Details-->
+<h1><%= I18n.t 'enter_complaint_details' %><br>Enter Complaints Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>	
+	<tr>
+		<td><%= I18n.t 'complaint_number' %>:<br><label for="complaint_number">Complaints Number</label>:*</td>
+		<td><%= text_field 'complaint', 'complaint_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'complaint_type' %>:<br><label for="complaint_type">Complaints Type</label>:*</td>
+		<td><%= collection_select(:complaint, :complainttype_id,@complainttypes, :id, :complaint_type) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'department' %>:<br><label for="department">Department</label>:*</td>
+		<td><%= collection_select(:complaint, :department_id,@departments, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'complaint_dec' %>:<br><label for="complaint_dec">Complaint Description</label>:</td>
+		<td><%= text_area 'complaint', 'complaint_dec',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'complaint_date' %>:<br><label for="complaint_date">Complaint Date</label>:</td>
+		<td><%= calendar_date_select_tag 'complaint[complaint_date]' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'resolve_time' %>:<br><label for="resolve_time">Resolve time</label>:</td>
+		<td><%= text_field 'complaint', 'resolve_time',:class=>'title' %>(in days)</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t 'save' %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

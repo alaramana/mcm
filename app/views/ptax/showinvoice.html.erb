@@ -1,0 +1,8 @@
+<h1><%= I18n.t "property_tax_invoice" %><br>Property Tax Invoice:</h1>
+<table>
+	<tr>
+		<td><%= I18n.t "total_tax" %><br>Total Tax: (including Service <del>&#2352;</del>.75/-)</td>
+		<td> <del>&#2352;</del> <%= @ptax.invoice %></td>
+	</tr>
+</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,22 @@
+#Author: Chaitanya
+#Table: designationgroupmasters
+#belongs:
+#==================
+
+class CreateDesignationgroupmasters < ActiveRecord::Migration
+  def self.up
+    create_table :designationgroupmasters do |t|
+
+	t.string  :name, :null=>false, :limit=>50
+	t.text	  :description
+	t.integer :created_by, :null=>false
+	t.integer :modified_by, :null=>false
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :designationgroupmasters
+  end
+end

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations
+END
+create_tags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_tags.rb
+END
+create_betas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_betas.rb
+END
+create_taggings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_taggings.rb
+END
+create_gammas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_gammas.rb
+END
+create_alphas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_alphas.rb
+END
+create_developers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_developers.rb
+END
+create_posts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_posts.rb
+END
+create_robots.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_robots.rb
+END
+create_authors_posts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_authors_posts.rb
+END
+create_boxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_boxes.rb
+END
+create_extensible_betas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_extensible_betas.rb
+END
+create_music.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_music.rb
+END
+create_genres.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_genres.rb
+END
+create_animals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_animals.rb
+END
+create_people.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_people.rb
+END
+create_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_comments.rb
+END
+create_categories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_categories.rb
+END
+create_authors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/support/db/migrations/create_authors.rb
+END

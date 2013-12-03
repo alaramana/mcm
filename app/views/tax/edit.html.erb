@@ -1,0 +1,23 @@
+<!--editing the data of Tax Details-->
+<h1><%= I18n.t 'edit_service_tax_details' %><br>Edit Tax Detail</h1>
+<%= form_tag :action => 'update', :id => @tax %>
+	<table>
+	<tr>
+		<td><%= I18n.t "tax" %>:<br><label for="tax">Tax</label>:* </td>
+		<td><%= text_field 'tax', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br><label for="amount">Amount</label>:*</td>
+		<td><%= text_field 'tax', 'amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'tax', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list' } %>

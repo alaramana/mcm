@@ -1,0 +1,17 @@
+<!--Showing the Street Details-->
+<h1><%= I18n.t "street_details" %>:<br>Street Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "street" %>:<br>Name:</td>
+		<td><%= @street.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "ward" %>:<br>Ward:</td>
+		<td><%= @street.ward.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @street.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

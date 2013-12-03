@@ -1,0 +1,100 @@
+<!--Showing the data of Property Registration Details-->
+<h1>Property Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Assessment Number:</td>
+		<td><%= @ptax.assessment_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Register Number:</td>
+		<td><%= @ptax.ptaxregistration.number %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>First Name:</td>
+		<td><%= @ptax.ptaxregistration.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Last Name:</td>
+		<td><%= @ptax.ptaxregistration.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Door Number:</td>
+		<td><%= @ptax.ptaxregistration.door_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Area:</td>
+		<td><%= @ptax.ptaxregistration.area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Zone Name:</td>
+		<td><%= @ptax.ptaxregistration.zone.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Ward Name:</td>
+		<td><%= @ptax.ptaxregistration.ward.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Colony Name:</td>
+		<td><%= @ptax.ptaxregistration.colony.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Street Name:</td>
+		<td><%= @ptax.ptaxregistration.street.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Tax Year From:</td>
+		<td><%= @ptax.start_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Tax Year To:</td>
+		<td><%= @ptax.end_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Total Area :</td>
+		<td><%= @ptax.total_area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Build Area:</td>
+		<td><%= @ptax.build_area %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Use Factor:</td>
+		<td><%= @ptax.usefactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Age Factor:</td>
+		<td><%= @ptax.agefactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Occupancy Factor:</td>
+		<td><%= @ptax.occupancyfactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Exemption Factor:</td>
+		<td><%= @ptax.exemptionfactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Structure Factor:</td>
+		<td><%= @ptax.structurefactor.factor %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Tax Category:</td>
+		<td><%= @ptax.taxcategory.category %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Unit Value :</td>
+		<td><%= @ptax.unitvalue.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Owner Type:</td>
+		<td><%= @ptax.ownertype.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number"%>:<br>Tax Rate:</td>
+		<td><%= @ptax.ptaxrate.percentage %></td>
+	</tr>
+
+	</table>
+<%= link_to I18n.t "back", {:action => 'list' } %>:<br><%= link_to 'Back', {:action => 'list'} %>
+

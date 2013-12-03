@@ -1,0 +1,29 @@
+<% if @hospitals.blank? %>
+ 	<p align="center"><%= I18n.t "hospital_details_no" %>:<br>There are no Hospitals currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "hospital_details" %><br>Report of Hospitals</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+		<td><%= I18n.t "name" %><br>Name</td>
+		<td><%= I18n.t "address" %><br>Address</td>
+		<td><%= I18n.t "doctor_name" %><br>Doctor Name</td>
+		<td><%= I18n.t "phone_number" %><br>Phone</td>
+	</tr>
+	<% @hospitals.each do |c| %>
+	
+	<tr>
+		<td><%= c.name%></td>
+		<td><%=c.address %></td>
+		<td><%=c.doctor %></td>
+		<td><%=c.phone1 %></td>
+
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+

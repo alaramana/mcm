@@ -1,0 +1,36 @@
+<!--Listing all the  Delivery Methods-->
+<% if @deliverymethods.blank? %>
+	<p><%= I18n.t 'delivery_method_details_no' %>:<br><%= link_to 'Back', {:action => 'list' } %>There are no Delivery Methods currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Delivery Method Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Delivery Method Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Delivery Method" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t 'delivery_method_details' %>:<br>These are the current:</p>
+	<table>
+<tr>
+		<td><%= I18n.t "name" %>:<br>Delivery Method Name</td>		
+		<td><%= I18n.t "description" %>:<br>Description</td>
+	</tr>
+	<% @deliverymethods.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @deliverymethods %>
+<%= I18n.t 'add_new' %>:<br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

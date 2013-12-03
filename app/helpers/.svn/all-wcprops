@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/muncipalerp/!svn/ver/342/trunk/app/helpers
+END
+designationgroup_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/muncipalerp/!svn/ver/205/trunk/app/helpers/designationgroup_helper.rb
+END
+deliverymethod_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/muncipalerp/!svn/ver/205/trunk/app/helpers/deliverymethod_helper.rb
+END
+death_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/205/trunk/app/helpers/death_helper.rb
+END
+workplace_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/205/trunk/app/helpers/workplace_helper.rb
+END
+usefactor_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/205/trunk/app/helpers/usefactor_helper.rb
+END
+ownertype_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/205/trunk/app/helpers/ownertype_helper.rb
+END
+tax_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/muncipalerp/!svn/ver/218/trunk/app/helpers/tax_helper.rb
+END
+caste_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/205/trunk/app/helpers/caste_helper.rb
+END
+colony_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/205/trunk/app/helpers/colony_helper.rb
+END
+organization_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/205/trunk/app/helpers/organization_helper.rb
+END
+gender_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/205/trunk/app/helpers/gender_helper.rb
+END
+designation_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/muncipalerp/!svn/ver/205/trunk/app/helpers/designation_helper.rb
+END
+organizationtype_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/muncipalerp/!svn/ver/205/trunk/app/helpers/organizationtype_helper.rb
+END
+birth_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/205/trunk/app/helpers/birth_helper.rb
+END
+registration_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/205/trunk/app/helpers/registration_helper.rb
+END
+zone_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/205/trunk/app/helpers/zone_helper.rb
+END
+employee_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/helpers/employee_helper.rb
+END
+employeetype_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/205/trunk/app/helpers/employeetype_helper.rb
+END
+wtax_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/342/trunk/app/helpers/wtax_helper.rb
+END
+hospital_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/helpers/hospital_helper.rb
+END
+occupancyfactor_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/muncipalerp/!svn/ver/205/trunk/app/helpers/occupancyfactor_helper.rb
+END
+property_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/helpers/property_helper.rb
+END
+propertytype_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/205/trunk/app/helpers/propertytype_helper.rb
+END
+pipesize_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/225/trunk/app/helpers/pipesize_helper.rb
+END
+ptaxrate_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/helpers/ptaxrate_helper.rb
+END
+marital_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/205/trunk/app/helpers/marital_helper.rb
+END
+taxcategory_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/muncipalerp/!svn/ver/205/trunk/app/helpers/taxcategory_helper.rb
+END
+agefactor_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/205/trunk/app/helpers/agefactor_helper.rb
+END
+ward_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/205/trunk/app/helpers/ward_helper.rb
+END
+designationgroupmaster_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/muncipalerp/!svn/ver/205/trunk/app/helpers/designationgroupmaster_helper.rb
+END
+structurefactor_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/muncipalerp/!svn/ver/205/trunk/app/helpers/structurefactor_helper.rb
+END
+connectiontype_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/muncipalerp/!svn/ver/341/trunk/app/helpers/connectiontype_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/2/trunk/app/helpers/application_helper.rb
+END
+department_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/muncipalerp/!svn/ver/205/trunk/app/helpers/department_helper.rb
+END
+street_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/205/trunk/app/helpers/street_helper.rb
+END
+exemptionfactor_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/muncipalerp/!svn/ver/205/trunk/app/helpers/exemptionfactor_helper.rb
+END
+religion_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/helpers/religion_helper.rb
+END
+bank_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/muncipalerp/!svn/ver/205/trunk/app/helpers/bank_helper.rb
+END
+unitvalue_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/205/trunk/app/helpers/unitvalue_helper.rb
+END
+shift_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/muncipalerp/!svn/ver/205/trunk/app/helpers/shift_helper.rb
+END

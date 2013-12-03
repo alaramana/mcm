@@ -1,0 +1,25 @@
+<!--showing each Goods Receive Details depending the ids -->
+<h1><%= I18n.t "goods_received_details" %><br>Goods Receive Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "item_name" %>:<br>Item master Name:</td>
+		<td><%= @goodsreceive.itemmaster.item_name -%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "quantity" %>:<br>Quantity: </td>
+		<td><%= @goodsreceive.quantity %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "goods_amount" %>:<br>Amount: </td>
+		<td><%= @goodsreceive.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "received_date" %>:<br>Goods Received Date: </td>
+		<td><%= @goodsreceive.received_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @goodsreceive.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

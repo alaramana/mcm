@@ -1,0 +1,17 @@
+<!--Showing the Unit Value Details-->
+<h1><%= I18n.t "unit_value_details" %>:<br> Unit Values Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "tax_category" %>:<br>Tax Category:</td>
+		<td><%= @unitvalue.taxcategory.category %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Amount: </td>
+		<td><%= @unitvalue.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @unitvalue.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

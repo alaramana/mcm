@@ -1,0 +1,19 @@
+<!-- Search about License Types-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @licensetypes.blank? %>
+	<p>There are no License Types currently in the system.</p>
+<% else %>
+	<p>These are the current License Types:</p>
+	<table>
+
+	<% @licensetypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.lic_type, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.licensegroup.group-%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @licensetypes %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,32 @@
+<!--Listing all the approved deaths information -->
+<% if @approves.blank? %>
+	<p>There are no Approved Birth Registration Data currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Death Registration" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Death Registration'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Deaths" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p>These are the current Approved :</p>
+	<table>
+	<% @approves.each do |c| %>
+	<tr>
+		<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+<%= link_to "back", {:action => 'list' }%>
+
+
+

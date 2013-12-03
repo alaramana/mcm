@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features
+END
+sphinx_scopes.feature
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/sphinx_scopes.feature
+END
+attribute_updates.feature
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/attribute_updates.feature
+END
+attribute_transformation.feature
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/attribute_transformation.feature
+END
+alternate_primary_key.feature
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/alternate_primary_key.feature
+END
+excerpts.feature
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/excerpts.feature
+END
+facets_across_model.feature
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/facets_across_model.feature
+END
+extensible_delta_indexing.feature
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/extensible_delta_indexing.feature
+END
+deleting_instances.feature
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/deleting_instances.feature
+END
+facets.feature
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/facets.feature
+END
+sphinx_detection.feature
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/sphinx_detection.feature
+END
+abstract_inheritance.feature
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/abstract_inheritance.feature
+END
+handling_edits.feature
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/handling_edits.feature
+END
+retry_stale_indexes.feature
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/retry_stale_indexes.feature
+END
+searching_by_model.feature
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/searching_by_model.feature
+END
+direct_attributes.feature
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/direct_attributes.feature
+END
+searching_across_models.feature
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/searching_across_models.feature
+END
+sti_searching.feature
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/sti_searching.feature
+END
+searching_with_find_arguments.feature
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/searching_with_find_arguments.feature
+END
+searching_by_index.feature
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/features/searching_by_index.feature
+END

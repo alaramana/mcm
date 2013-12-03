@@ -1,0 +1,33 @@
+<!--entering the data for Goods Return Details -->
+<h1><%= I18n.t "enter_goods_return_details" %> <br>Enter Goods Return Detail</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "item_group" %>: <br><label for="item_name"> Item name</label>*: </td>
+		<td><%= collection_select(:goodsreturn, :itemmaster_id,@itemmaster, :id, :item_name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "quantity" %>: <br><label for="quntity">Quantity</label>:* </td>
+		<td><%= text_field 'goodsreturn', 'quantity',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "goods_amount" %> :<br><label for="amount">Amount</label>:* </td>
+		<td><%= text_field 'goodsreturn', 'amount',:class=>'title' %></td>
+	</tr>
+<tr>
+		<td><%= I18n.t "return_date" %>: <br><label for="return_date">Return Date</label>:* </td>
+		<td><%= calendar_date_select_tag 'goodsreturn[return_date]' %></td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t "description" %> :<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'goodsreturn', 'description', :cols=>30, :rows=>5 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %> <br> <%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+
+<%= form_tag %>
+

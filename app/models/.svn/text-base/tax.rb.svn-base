@@ -1,0 +1,14 @@
+#Author: Chaitanya
+#====================
+class Tax < ActiveRecord::Base
+	has_many :ptaxes
+	 #Method: Indexing on Tax
+	define_index do
+		indexes :name
+		indexes amount
+
+		#with{}
+		
+		
+	end
+end

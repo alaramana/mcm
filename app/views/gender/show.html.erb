@@ -1,0 +1,13 @@
+<!--Showing the details of Gender-->
+<h1><%= I18n.t "gender_details" %>:<br>Gender Details:</h1>
+	<table>
+	<tr>
+	<td><%= I18n.t "gender" %>:<br>Gender Name:</td>
+	<td><%= @gender.name %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "description" %>:<br>Description: </td>
+	<td><%= @gender.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" , {:action => 'list' }%><br><%= link_to 'Back', {:action => 'list'} %>

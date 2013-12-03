@@ -1,0 +1,45 @@
+<!--Listing all the Complaints Details-->
+<% if @complaints.blank? %>
+	<p><%= I18n.t 'complaint_details_no' %><br>There are no Complaints currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+	<%= form_tag :action => 'search' %>
+		<table>
+		<tr>
+			<td><%= I18n.t "search" %>:<br>Search: </td>
+			<td>
+	<%= text_field_tag :query ,@query ||="Enter Complaint No " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Complaint No'" %></td>
+			<td><%= I18n.t "search" %>:<br><%= submit_tag "Complaint No" %></td>
+		</tr>
+		</table>
+	<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t 'complaint_details' %><br>These are the current Complaints:</p>
+	<table>
+	<tr>    
+                <td><%= I18n.t 'complaint_number' %><br>Complaint Number</td>
+		<td><%= I18n.t 'complaint_type' %><br>Complaint Type</td>		
+		<td><%= I18n.t 'department' %><br>Department</td>
+		<td><%= I18n.t 'complaint_date' %><br>Complaint Date</td>
+		<td><%= I18n.t 'resolve_time' %><br>Resolve Time</td>		
+		<td><%= I18n.t 'edit' %><br>Edit</td>
+	</tr>
+	<% @complaints.each do |c| %>
+	<tr>    <td><%= c.complaint_number -%></td>
+		<td><%= link_to c.complainttype.complaint_type, {:action => 'show', :id => c.id} -%></td>
+		<td><%= c.department.name -%></td>
+		<td><%= c.complaint_date -%></td>
+		<td><%= c.resolve_time -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<br>
+<table>
+<tr>
+<td><%= link_to I18n.t "add_new", {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%> </td>
+<td><%= link_to I18n.t "print_report", {:action => 'complaintsreport' } %> <br><%= link_to "Print Report", {:action => 'complaintsreport' }%> </td>
+</tr>
+</table>

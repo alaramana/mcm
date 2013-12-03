@@ -1,0 +1,22 @@
+<!-- Search about Itemmasters-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+<% if @itemmasters.blank? %>
+ 	<p><%= I18n.t "item_group_details_no" %><br>There are no Itemmasters currently in the system:</p>
+<% else %>
+	<p><%= I18n.t "item_group_details" %><br>These are the current Itemmasters:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "item_name" %><br>Item Name</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @itemmasters.each do |c| %>
+	
+	<tr>
+		<td><%= link_to c.item_name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @itemmasters %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

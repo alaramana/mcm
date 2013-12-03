@@ -1,0 +1,16 @@
+#Author: Chaitanya
+#---------------
+class Deliverymethod < ActiveRecord::Base
+	has_many :births
+
+
+
+	#method : indexing on delivery method name
+	
+	define_index do
+		indexes name
+
+	end
+		
+
+end

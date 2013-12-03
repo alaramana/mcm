@@ -1,0 +1,21 @@
+<!-- Search about Department-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @departments.blank? %>
+	<p><%= I18n.t "department_details_no" %>:<br>There are no Births currently in the system.</p>
+<% else %>
+	<p> <%= I18n.t "department_details" %>:<br>These are the current Departments:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "name" %><br>Name</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @departments.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @departments %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

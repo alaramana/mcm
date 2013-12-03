@@ -1,0 +1,25 @@
+<!--showing each Bill Pay Details depending the ids -->
+<h1><%= I18n.t "bill_pay_details" %> <br>Bill Pay Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_number" %>: <br>Invoice Number:</td>
+		<td><%= @billpay.invoice_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date" %>: <br>Date:</td>
+		<td><%= @billpay.date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "goods_amount" %>: <br>Amount:</td>
+		<td><%= @billpay.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "paid_amount" %>: <br>Payed Amount:</td>
+		<td><%= @billpay.paid_amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @billpay.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,20 @@
+#Author: Chaitanya
+#-----------------
+class CreateZones < ActiveRecord::Migration
+  def self.up
+    create_table :zones do |t|
+
+	t.string  :name , :limit=>'25'		# Name of Zone
+	t.text    :description			# Description of Zone
+
+	t.integer :created_by, :null=>false
+	t.integer :modified_by, :null=>false
+  
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :zones
+  end
+end

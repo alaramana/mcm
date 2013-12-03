@@ -1,0 +1,24 @@
+<!--editing the data for Item category Details -->
+<h1><%= I18n.t 'edit_item_category_details' %><br>Edit Item category Detail</h1>
+<%= form_tag :action => 'update', :id => @itemcategory %>
+	<table>
+	<table>
+	<tr>
+		<td><%= I18n.t "item_category" %>:<br> <label for="category_name">Item category</label>:* </td>
+		<td><%= text_field 'itemcategory', 'category_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "short_desc" %>:<br><label for="short_description">Short Description</label>:</td>
+		<td><%= text_area 'itemcategory', 'short_description' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br><label for="description">Description</label>:</td>
+		<td><%= text_area 'itemcategory', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

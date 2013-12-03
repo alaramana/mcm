@@ -1,0 +1,9 @@
+/* forms.css */
+label {font-weight:bold;}
+input[type=text], input.text, input.title, textarea, select {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {border-color:#666;}
+input[type=text], input.text, input.title, textarea, select {margin:0.5em 0;}
+input.text, input.title {width:300px;padding:5px;font-size:1.5em;}
+textarea {width:300px;height:100px;padding:5px;font-size:1.5em;}
+input[type=checkbox], input[type=radio], input.checkbox, input.radio {position:relative;top:.25em;}
+

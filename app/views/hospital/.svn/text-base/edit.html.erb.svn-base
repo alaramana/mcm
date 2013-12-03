@@ -1,0 +1,47 @@
+<!--editing the data of Hospital Details-->
+<h1><%= I18n.t "edit_hospital_details" %>:<br>Edit Work Place Detail</h1>
+<%= form_tag :action => 'update', :id => @hospital %>
+	<table>
+	<tr>
+		<td><label for="name"> <%= I18n.t "hospital_name" %>:<br>Hospital Name</label>:* </td>
+		<td><%= text_field 'hospital', 'name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="address"><%= I18n.t "address" %>:<br> Address</label>:</td>
+		<td><%= text_area 'hospital', 'address' %></td>
+	</tr>
+	<tr>
+		<td><label for="city"><%= I18n.t "city" %>:<br> City</label>:* </td>
+		<td><%= text_field 'hospital', 'city',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="tehsil"><%= I18n.t "tehsil" %>:<br>  Tehsil</label>:* </td>
+		<td><%= text_field 'hospital', 'tehsil',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="district"><%= I18n.t "district" %>:<br>District</label>:* </td>
+		<td><%= text_field 'hospital', 'district',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="phone1"> <%= I18n.t "phone_number" %>:<br>Phone Number</label>:* </td>
+		<td><%= text_field 'hospital', 'phone1',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="phone2"><%= I18n.t "phone_number" %>:<br>Phone Number</label>:* </td>
+		<td><%= text_field 'hospital', 'phone2',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="doctor"><%= I18n.t "doctor_name" %>:<br>  Doctor Name</label>:* </td>
+		<td><%= text_field 'hospital', 'doctor' ,:class=>'title'%> </td>
+	</tr>
+	<tr>
+		<td><label for="education"><%= I18n.t "qualification" %>:<br>  Qualification</label>:* </td>
+		<td><%= text_field 'hospital', 'education',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

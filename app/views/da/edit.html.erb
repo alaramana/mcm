@@ -1,0 +1,19 @@
+<!--entering the data for creating DA Details-->
+<h1>Edit DA Details:</h1>
+<%= form_tag :action => 'update', :id => @da %>
+	<table>
+	<tr>
+		<td><%= I18n.t "da_amount" %>:<br><label for="da_amount"> Percentage</label>:* </td>
+		<td><%= text_field 'da', 'da_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><
+	<tr>
+		<td></td>
+		<td><%= I18n.t "savechanges" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>
+

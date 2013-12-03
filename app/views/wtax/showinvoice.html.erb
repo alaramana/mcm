@@ -1,0 +1,44 @@
+<h1><%= I18n.t "water_tax_details" %>:<br>Water Tax Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "water_tax_number" %>:<br>Water Tax Number:</td>
+		<td><%= @wtax.wtax_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name"%>:<br>Name:</td>
+		<td><%= @wtax.name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "door_number"%>:<br>Door Number:</td>
+		<td><%= @wtax.door_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Phone: </td>
+		<td><%= @wtax.phone%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "email"%>:<br>Email: </td>
+		<td><%= @wtax.email %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Mobile: </td>
+		<td><%= @wtax.mobile %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_year" %>:<br>Start year:</td>
+		<td><%= @wtax.start_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_year" %>:<br>End Year:</td>
+		<td><%= @wtax.end_year %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "connection_name" %>:<br>Connection Type: </td>
+		<td><%= @wtax.connectiontype.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "total_tax" %>:<br> Total Tax:</td>
+		<td> <del>&#2352;</del> <%= @wtax.invoice %></td>
+	</tr>
+	</table>
+<%= I18n.t "back"%>:<br><%= link_to 'Back', {:action => 'list'} %>

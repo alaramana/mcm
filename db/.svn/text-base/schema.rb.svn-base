@@ -1,0 +1,614 @@
+# This file is auto-generated from the current state of the database. Instead of editing this file, 
+# please use the migrations feature of Active Record to incrementally modify your database, and
+# then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your database schema. If you need
+# to create the application database on another system, you should be using db:schema:load, not running
+# all the migrations from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended to check this file into your version control system.
+
+ActiveRecord::Schema.define(:version => 20100826053140) do
+
+  create_table "agefactors", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.float    "factor",                     :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "banks", :force => true do |t|
+    t.string   "name",            :limit => 50, :null => false
+    t.string   "branch",          :limit => 50, :null => false
+    t.integer  "branch_code",                   :null => false
+    t.text     "address",                       :null => false
+    t.string   "phone1",          :limit => 11, :null => false
+    t.string   "phone2",          :limit => 11
+    t.string   "manager",         :limit => 50
+    t.string   "manager_contact", :limit => 50
+    t.integer  "created_by",                    :null => false
+    t.integer  "modified_by",                   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "births", :force => true do |t|
+    t.date     "birth_date",                                            :null => false
+    t.string   "first_name",          :limit => 50
+    t.string   "middle_name",         :limit => 50
+    t.string   "last_name",           :limit => 50
+    t.string   "father_name",         :limit => 100,                    :null => false
+    t.string   "mother_name",         :limit => 100,                    :null => false
+    t.integer  "gender_id",                                             :null => false
+    t.text     "address",                                               :null => false
+    t.string   "birth_place",         :limit => 20,                     :null => false
+    t.integer  "hospital_id",                                           :null => false
+    t.string   "city",                :limit => 50,                     :null => false
+    t.string   "tehsil",              :limit => 50,                     :null => false
+    t.string   "district",            :limit => 50,                     :null => false
+    t.string   "applicant",           :limit => 100,                    :null => false
+    t.integer  "religion_id",                                           :null => false
+    t.string   "mother_native",       :limit => 50,                     :null => false
+    t.string   "father_education",    :limit => 50,                     :null => false
+    t.string   "mother_education",    :limit => 50,                     :null => false
+    t.string   "father_occupation",   :limit => 50,                     :null => false
+    t.string   "mother_occupation",   :limit => 50,                     :null => false
+    t.integer  "mother_age_marriage", :limit => 2,                      :null => false
+    t.integer  "mother_age_delivery", :limit => 2,                      :null => false
+    t.float    "weight",                                                :null => false
+    t.integer  "total_children",      :limit => 2,                      :null => false
+    t.integer  "delivery_id",                                           :null => false
+    t.integer  "total_time",          :limit => 2,                      :null => false
+    t.string   "helper",              :limit => 50,                     :null => false
+    t.integer  "register_id",                                           :null => false
+    t.date     "register_date",                                         :null => false
+    t.string   "remarks",             :limit => 100
+    t.string   "unit",                :limit => 50,                     :null => false
+    t.integer  "employee_id",                                           :null => false
+    t.integer  "approved_by"
+    t.date     "approved_on"
+    t.integer  "created_by",                                            :null => false
+    t.integer  "modified_by",                                           :null => false
+    t.boolean  "approved",                           :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "castes", :force => true do |t|
+    t.string   "name",        :limit => 20, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "colonies", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.integer  "ward_id"
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "connectiontypes", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "amount"
+    t.integer  "created_by",  :null => false
+    t.integer  "modified_by", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "deaths", :force => true do |t|
+    t.date     "death_date",                                               :null => false
+    t.string   "first_name",             :limit => 50
+    t.string   "middle_name",            :limit => 50
+    t.string   "last_name",              :limit => 50
+    t.string   "father_name",            :limit => 100,                    :null => false
+    t.integer  "gender_id",                                                :null => false
+    t.integer  "age",                    :limit => 3,                      :null => false
+    t.text     "address",                                                  :null => false
+    t.string   "death_place",            :limit => 20,                     :null => false
+    t.integer  "hospital_id",                                              :null => false
+    t.string   "city",                   :limit => 50,                     :null => false
+    t.string   "tehsil",                 :limit => 50,                     :null => false
+    t.string   "district",               :limit => 50,                     :null => false
+    t.string   "applicant",              :limit => 100,                    :null => false
+    t.integer  "religion_id",                                              :null => false
+    t.string   "death_before_treatment", :limit => 50
+    t.string   "death_with_illness",     :limit => 5
+    t.string   "desease_name",           :limit => 50
+    t.string   "death_delivery",         :limit => 5
+    t.string   "death_cause_smoke",      :limit => 5
+    t.integer  "death_smoke_age",        :limit => 2
+    t.string   "death_cause_supari",     :limit => 5
+    t.integer  "death_supari_age",       :limit => 2
+    t.string   "death_cause_drink",      :limit => 5
+    t.integer  "death_drink_age",        :limit => 2
+    t.integer  "register_id",                                              :null => false
+    t.date     "register_date",                                            :null => false
+    t.string   "remarks",                :limit => 100
+    t.string   "unit",                   :limit => 50,                     :null => false
+    t.integer  "employee_id",                                              :null => false
+    t.integer  "approved_by"
+    t.date     "approved_on"
+    t.integer  "created_by",                                               :null => false
+    t.integer  "modified_by",                                              :null => false
+    t.boolean  "approved",                              :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "deliverymethods", :force => true do |t|
+    t.string   "name",        :limit => 10, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "departments", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.string   "short_code",  :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "designationgroupmasters", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "designationgroups", :force => true do |t|
+    t.string   "group_name",  :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "designations", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employees", :force => true do |t|
+    t.integer  "employment_id",                      :null => false
+    t.string   "name",                :limit => 100, :null => false
+    t.integer  "gender_id",                          :null => false
+    t.string   "father_name",         :limit => 50,  :null => false
+    t.date     "dob",                                :null => false
+    t.date     "date_join",                          :null => false
+    t.integer  "religion_id",                        :null => false
+    t.integer  "caste_id",                           :null => false
+    t.integer  "marital_id",                         :null => false
+    t.string   "education",           :limit => 50,  :null => false
+    t.string   "blood_group",         :limit => 5,   :null => false
+    t.string   "nationality",         :limit => 20,  :null => false
+    t.text     "address",                            :null => false
+    t.string   "phone",               :limit => 11,  :null => false
+    t.string   "mobile",              :limit => 11,  :null => false
+    t.string   "email",               :limit => 75,  :null => false
+    t.string   "photo",               :limit => 100, :null => false
+    t.string   "pan",                 :limit => 11
+    t.string   "pf_number",           :limit => 10,  :null => false
+    t.string   "bank_account_number", :limit => 20,  :null => false
+    t.integer  "bank_id",                            :null => false
+    t.integer  "employeetype_id",                    :null => false
+    t.integer  "designation_id",                     :null => false
+    t.integer  "designationgroup_id",                :null => false
+    t.integer  "department_id"
+    t.integer  "workplace_id",                       :null => false
+    t.integer  "shift_id",                           :null => false
+    t.string   "UID",                 :limit => 15,  :null => false
+    t.integer  "created_by",                         :null => false
+    t.integer  "modified_by",                        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employeetypes", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exemptionfactors", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.float    "factor",                     :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genders", :force => true do |t|
+    t.string   "name",        :limit => 10, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hospitals", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.text     "address",                   :null => false
+    t.string   "city",        :limit => 50, :null => false
+    t.string   "tehsil",      :limit => 50, :null => false
+    t.string   "district",    :limit => 50, :null => false
+    t.string   "phone1",      :limit => 11, :null => false
+    t.string   "phone2",      :limit => 11, :null => false
+    t.string   "doctor",      :limit => 50, :null => false
+    t.string   "education",   :limit => 50, :null => false
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licensegroups", :force => true do |t|
+    t.string   "group"
+    t.text     "description"
+    t.integer  "created_by",  :null => false
+    t.integer  "modified_by", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licenses", :force => true do |t|
+    t.integer  "lisecse_number"
+    t.string   "first_name",      :limit => 50
+    t.string   "last_name",       :limit => 50
+    t.string   "father_name",     :limit => 50
+    t.string   "shop_name",       :limit => 50
+    t.string   "shop_address1",   :limit => 50
+    t.integer  "street_id"
+    t.integer  "colony_id"
+    t.integer  "ward_id"
+    t.integer  "zone_id"
+    t.integer  "licencetype_id"
+    t.integer  "licensegroup_id"
+    t.integer  "invoice_number"
+    t.integer  "department_id"
+    t.date     "period_from"
+    t.date     "period_to"
+    t.float    "surchange"
+    t.float    "net_amount"
+    t.text     "description"
+    t.integer  "created_by",                    :null => false
+    t.integer  "modified_by",                   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licensetypes", :force => true do |t|
+    t.string   "lic_type"
+    t.integer  "licensegroup_id"
+    t.text     "description"
+    t.integer  "created_by",      :null => false
+    t.integer  "modified_by",     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "maritals", :force => true do |t|
+    t.string   "status",      :limit => 20, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "occupancyfactors", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.float    "factor",                     :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string   "long_name",           :limit => 50, :null => false
+    t.string   "short_name",          :limit => 50, :null => false
+    t.integer  "organizationtype_id", :limit => 3
+    t.text     "address",                           :null => false
+    t.string   "city",                :limit => 50, :null => false
+    t.string   "tehsil",              :limit => 50, :null => false
+    t.string   "district",            :limit => 50, :null => false
+    t.string   "state",               :limit => 50, :null => false
+    t.string   "country",             :limit => 50, :null => false
+    t.integer  "pin",                               :null => false
+    t.string   "phone_number1",       :limit => 11, :null => false
+    t.string   "phone_number2",       :limit => 11
+    t.string   "phone_number3",       :limit => 11
+    t.string   "fax_number1",         :limit => 11, :null => false
+    t.string   "fax_number2",         :limit => 11
+    t.string   "toll_free1",          :limit => 15
+    t.string   "toll_free2",          :limit => 15
+    t.string   "service_line",        :limit => 15
+    t.string   "email",               :limit => 75, :null => false
+    t.string   "web",                 :limit => 50, :null => false
+    t.text     "about"
+    t.text     "info"
+    t.string   "coordinates",         :limit => 50
+    t.integer  "created_by",                        :null => false
+    t.integer  "modified_by",                       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizationtypes", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ownertypes", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pipesizes", :force => true do |t|
+    t.string   "name"
+    t.float    "pipesize_id"
+    t.float    "amount"
+    t.integer  "created_by",  :null => false
+    t.integer  "modified_by", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", :force => true do |t|
+    t.string   "name",            :limit => 100, :null => false
+    t.integer  "propertytype_id",                :null => false
+    t.text     "description"
+    t.integer  "created_by",                     :null => false
+    t.integer  "modified_by",                    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "propertytypes", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ptaxes", :force => true do |t|
+    t.integer  "registration_id"
+    t.date     "invoice_date"
+    t.integer  "start_year"
+    t.integer  "end_year"
+    t.float    "total_area"
+    t.float    "build_area"
+    t.integer  "propertytype_id"
+    t.integer  "taxcategory_id"
+    t.integer  "usefactor_id"
+    t.integer  "occupancyfactor_id"
+    t.integer  "agefactor_id"
+    t.integer  "structurefactor_id"
+    t.integer  "exemptionfactor_id"
+    t.integer  "unitvalue_id"
+    t.integer  "ptaxrate_id"
+    t.integer  "owner_id"
+    t.integer  "category_id"
+    t.float    "total"
+    t.string   "payment_mode"
+    t.string   "number"
+    t.string   "bank_name"
+    t.float    "paid_amount"
+    t.text     "remarks"
+    t.integer  "created_by",         :null => false
+    t.integer  "modified_by",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ptaxrates", :force => true do |t|
+    t.integer  "propertytype_id", :null => false
+    t.float    "percentage",      :null => false
+    t.integer  "start_year"
+    t.integer  "end_year"
+    t.text     "description"
+    t.integer  "created_by",      :null => false
+    t.integer  "modified_by",     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "registrations", :force => true do |t|
+    t.date     "register_date"
+    t.integer  "assessment_no"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "area"
+    t.string   "door_number"
+    t.string   "apartment_name"
+    t.string   "email"
+    t.integer  "phone"
+    t.integer  "mobile"
+    t.text     "description"
+    t.integer  "zone_id"
+    t.integer  "ward_id"
+    t.integer  "colony_id"
+    t.integer  "street_id"
+    t.integer  "created_by",     :null => false
+    t.integer  "modified_by",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "religions", :force => true do |t|
+    t.string   "name",        :limit => 20, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shifts", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.float    "start_time",                :null => false
+    t.float    "end_time",                  :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "streets", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.integer  "colony_id"
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "structurefactors", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.float    "factor",                     :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taxcategories", :force => true do |t|
+    t.string   "category",    :limit => 25, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taxes", :force => true do |t|
+    t.string   "name",        :null => false
+    t.float    "amount",      :null => false
+    t.text     "description"
+    t.integer  "created_by",  :null => false
+    t.integer  "modified_by", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "unitvalues", :force => true do |t|
+    t.integer  "taxcategory_id", :null => false
+    t.float    "amount",         :null => false
+    t.text     "description"
+    t.integer  "created_by",     :null => false
+    t.integer  "modified_by",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usefactors", :force => true do |t|
+    t.string   "name",        :limit => 100, :null => false
+    t.float    "factor",                     :null => false
+    t.text     "description"
+    t.integer  "created_by",                 :null => false
+    t.integer  "modified_by",                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wards", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.integer  "zone_id",                   :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workplaces", :force => true do |t|
+    t.string   "name",        :limit => 50, :null => false
+    t.string   "location",    :limit => 50, :null => false
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wtaxes", :force => true do |t|
+    t.date     "register_date"
+    t.string   "wtax_number"
+    t.string   "name"
+    t.string   "door_number"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "mobile"
+    t.integer  "zone_id"
+    t.integer  "ward_id"
+    t.integer  "colony_id"
+    t.integer  "pipesize_id"
+    t.integer  "connectiontype_id"
+    t.float    "total_area"
+    t.float    "tax_amount"
+    t.float    "charges"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "watertank"
+    t.integer  "created_by",        :null => false
+    t.integer  "modified_by",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "zones", :force => true do |t|
+    t.string   "name",        :limit => 25
+    t.text     "description"
+    t.integer  "created_by",                :null => false
+    t.integer  "modified_by",               :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+end

@@ -1,0 +1,8 @@
+	<h1>Property Tax Invoice:</h1>
+	<table>
+		<tr>
+			<td>Total Tax: (including Service <del>&#2352;</del>.75/-)</td>
+			<td> <del>&#2352;</del> <%= @ptax.invoice %></td>
+		</tr>
+	</table>
+	<%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,21 @@
+<!--Listing all the Birth Registration Details-->
+<% if @births.blank? %>
+	<p>There are no Births currently in the system.</p>
+<% else %>
+	<p>These are the current Births:</p>
+<% end %>
+<p><%= link_to "Approved", {:action => 'approve_ok' } %></p>
+<p><%= link_to "Not Approved", {:action => 'not_approved' } %></p>
+<p><%= link_to "Add new", {:action => 'new' } %></p>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Birth Registration" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Birth Registration'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Births" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->

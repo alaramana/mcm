@@ -1,0 +1,40 @@
+<!--Listing all Property Registrations-->
+<% if @ptaxes.blank? %>
+	<p><%= I18n.t 'property_tax_details_no' %>:<br>There are no Taxes currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Property Tax" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Property Tax'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Property Tax" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t 'property_tax_details' %>:<br>These are the current:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "assesment_number" %><br>Assessment Number</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+		<td><%= I18n.t "edit" %><br>Show Invoice</td>
+
+	</tr>
+	<% @ptaxes.each do |c| %>
+	<tr>
+		<td><%= link_to c.assessment_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+		<td><%= link_to 'Show Invoice', {:action => 'showinvoice', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @ptaxes %>
+<%= I18n.t "add_new" %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+
+

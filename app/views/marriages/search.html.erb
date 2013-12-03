@@ -1,0 +1,33 @@
+<!-- Search about  Marriage Registration infos-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @marriages.blank? %>
+	<p> <%= I18n.t "marriage_details_no" %>:<br > There are no Marriage Registration currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "marriage_details" %>:<br > These are the current Marriage Registration:</p>
+	<table>
+	 <tr>
+		<td><%= I18n.t "marriage_reg_number" %>:<br >marriage Register Number</td>
+		<td><%= I18n.t "groom_name" %>:<br >Groom Name</td>
+		<td><%= I18n.t "groom_birth_date" %>:<br >Groom Date Of Birth</td>
+		<td><%= I18n.t "bride_name" %>:<br >Bride Name</td>
+		<td><%= I18n.t "bride_birth_date" %>:<br >Bride Date Of Birth</td>
+		<td><%= I18n.t "marriage_date" %>:<br >marriage Date</td>
+		<td><%= I18n.t "marriage_place" %>:<br >marriage Place</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @marriages.each do |c| %>
+	<tr>
+		<td><%= link_to c.marriage_reg_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.groom_name -%></td>
+		<td><%=  c.groom_birth_date -%></td>
+		<td><%=  c.bride_name -%></td>                           
+		<td><%=  c.bride_birth_date -%></td>
+		<td><%=  c.marriage_date -%></td>
+		<td><%=  c.marriage_place -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @marriages %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,32 @@
+<!--showing each Bill Passing Details depending the ids -->
+<h1><%= I18n.t "bill_passing_details" %> <br>Bill Passing Details:</h1>
+	<table>
+         
+	<tr>
+		<td><%= I18n.t "invoice_number" %>:<br>Invoice Number:</td>
+		<td><%= @billpassing.invoice_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "invoice_date" %>:<br>Invoice Date:</td>
+		<td><%= @billpassing.invoice_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Amount:</td>
+		<td><%= @billpassing.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "organization_name" %>:<br>Organization Nmae:</td>
+		<td><%= @billpassing.org_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address:</td>
+		<td><%= @billpassing.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @billpassing.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>
+
+headers["Content-Disposition"] = "attachment; filename=\"#{@birth.middle_name}\""

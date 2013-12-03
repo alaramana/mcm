@@ -1,0 +1,13 @@
+<!--Showing the details of Designation Details-->
+<h1><%= I18n.t "designation_details" %>:<br>Designation Details:</h1>
+	<table>
+	<tr>
+		<td>Designation Name:</td>
+		<td><%= @designation.name %></td>
+	</tr>
+	<tr>
+		<td>Description: </td>
+		<td><%= @designation.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" , {:action => 'list' }%><br><%= link_to 'Back',{:action => 'list'} %>

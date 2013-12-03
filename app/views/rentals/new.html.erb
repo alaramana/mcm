@@ -1,0 +1,51 @@
+<!--entering the data for creating Rentals Details-->
+<h1><%= I18n.t "enter_rental_registration_details" %><br>Enter Rental Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "rental_number" %>:<br><label for="rental_number">Rental Number</label>:*</td>
+		<td><%= text_field 'rental', 'rental_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rental_type" %>:<br><label for="rental_type">rental Types</label>:*</td>
+		<td><%= collection_select(:rental, :rentaltype_id,@rentaltypes, :id, :rental_type) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br><label for="first_name">First Name</label>:* </td>
+		<td><%= text_field 'rental', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br><label for="last_name">Last Name</label>:* </td>
+		<td><%= text_field 'rental', 'last_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br><label for="father_name">Father Name</label>:* </td>
+		<td><%= text_field 'rental', 'father_name',:class=>'title' %></td>
+	</tr>
+		<tr>
+		<td><%= I18n.t "period_from" %>:<br><label for="period_from">Period From</label>:* </td>
+		<td><%= text_field 'rental', 'period_from',:class=>'title' %></td>	
+		
+	</tr>
+	<tr>
+		<td><%= I18n.t "period_to" %>:<br><label for="period_to ">Period To</label>:* </td>
+		<td><%= text_field 'rental', 'period_to',:class=>'title' %></td>		
+	</tr>
+	<tr>
+		<td><%= I18n.t "ward" %>:<br><label for="ward">Ward</label>*: </td>
+		<td><%= collection_select(:rental, :ward_id,@wards, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "street" %>:<br><label for="street">Street</label>*: </td>
+		<td><%= collection_select(:rental, :street_id,@streets, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'rental', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>

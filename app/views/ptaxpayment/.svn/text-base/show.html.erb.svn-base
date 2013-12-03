@@ -1,0 +1,26 @@
+<!--Showing the Property Tax Payment Details-->
+<h1><%= I18n.t "property_tax_details" %>:<br> Property Tax Payment Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "property_type" %>:<br> Assessment Number :</td>
+		<td><%= @ptaxpayment.ptax.assessment_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "percentage" %>:<br>Total Amount: </td>
+		<td><%= @ptaxpayment.total_amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "percentage" %>:<br>Paid Amount: </td>
+		<td><%= @ptaxpayment.paid_amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "percentage" %>:<br>Balance Amount: </td>
+		<td><%= @ptaxpayment.balance_amount %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @ptaxpayment.remark %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

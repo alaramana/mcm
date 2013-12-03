@@ -1,0 +1,20 @@
+<!--entering the data for creating DA Details-->
+<h1><%= I18n.t "enter_da_amount_details" %><br>Enter DA Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "da_amount" %>:<br><label for="da_amount"> Percentage</label>:* </td>
+		<td><%= text_field 'da', 'da_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'da', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

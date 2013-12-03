@@ -1,0 +1,13 @@
+class Property < ActiveRecord::Base
+	belongs_to :propertytype
+
+
+	#method : indexing on Property
+	define_index do
+		indexes name		
+		indexes propertytype.name
+
+	#with{}
+		has propertytype_id	
+	end
+end

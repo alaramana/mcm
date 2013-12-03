@@ -1,0 +1,27 @@
+<!-- Search about Deaths-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @deaths.blank? %>
+	<p>Oops! No Death Registration Found in the system.</p>
+<% else %>
+	<p>The Result:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "registration_number" %><br>Register Number</td>
+		<td><%= I18n.t "date_of_death" %><br>Death Date</td>
+		<td><%= I18n.t "first_name" %><br>First Name</td>
+		<td><%= I18n.t "last_name" %><br>Last Name</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @deaths.each do |c| %>
+	<tr>
+		<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+		<td><%=c.death_date%></td>
+		<td><%=c.first_name%></td>
+		<td><%=c.last_name %></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @deaths %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

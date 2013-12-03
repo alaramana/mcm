@@ -1,0 +1,26 @@
+<!--Showing the details of Complaints-->
+<h1><%= I18n.t 'complaint_details' %><br>Complaints Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'complaint_type' %>:<br>Complaint Type:</td>
+		<td><%= @complaint.complainttype.complaint_type %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'department' %>:<br>Department: </td>
+		<td><%= @complaint.department.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'complaint_date' %>:<br>Complaint Date:</td>
+		<td><%= @complaint.complaint_date %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'resolve_time' %>:<br>Resolve Time: </td>
+		<td><%= @complaint.resolve_time %>(in days)</td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %><br><%= link_to 'Back', {:action => 'list'} %>
+<% if (@complaint.approved == false) %>
+<%= I18n.t 'approve' %><br><%= link_to 'Approve It', {:action => 'approve', :id => @complaint.id} %>
+<% end %>
+
+<!-- TODO have to set only cmo will be approve the compaints  -->

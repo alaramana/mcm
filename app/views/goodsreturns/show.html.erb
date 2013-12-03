@@ -1,0 +1,25 @@
+<!--showing each Goods Return Details depending the ids -->
+<h1>Goods Return Details:</h1>
+	<table>
+	<tr>
+		<td>Item master Name:</td>
+		<td><%= @goodsreturn.itemmaster.item_name -%></td>
+	</tr>
+	<tr>
+		<td>Quantity: </td>
+		<td><%= @goodsreturn.quantity %></td>
+	</tr>
+	<tr>
+		<td>Amount: </td>
+		<td><%= @goodsreturn.amount %></td>
+	</tr>
+	<tr>
+		<td>Goods Return Date: </td>
+		<td><%= @goodsreturn.return_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @goodsreturn.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,188 @@
+<% if @employees.blank? %>
+ 	<p align="center"><%= I18n.t "employee_details_no" %>:<br>There are no Employees currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "employee_details" %><br>Employee Report</h2>
+<br>
+<% @employees.each do |c| %>
+<TABLE STYLE="page-break-after: always" align="center">
+<TR VALIGN=TOP>
+<TD >
+<P>Employee ID</P>
+</TD>
+<TD>
+<P><%= c.employee_id %></P>
+</TD>
+<TD ROWSPAN=21>
+<P><%= image_tag c.photo,:size => "100x120"%></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD >
+<P>Employee Name</P>
+</TD>
+<TD>
+<P><%= c.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>DOB</P>
+</TD>
+<TD>
+<P><%= c.dob.strftime("%d-%m-%Y ") %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>DOB</P>
+</TD>
+<TD>
+<P><%= c.date_join.strftime("%d-%m-%Y ") %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Sex</P>
+</TD>
+<TD>
+<P><%= c.gender.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Father Name</P>
+</TD>
+<TD>
+<P><%= c.father_name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Religion</P>
+</TD>
+<TD>
+<P><%= c.religion.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Caste</P>
+</TD>
+<TD>
+<P><%= c.caste.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Marital Status</P>
+</TD>
+<TD>
+<P><%= c.marital.status %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Blood Group</P>
+</TD>
+<TD>
+<P><%= c.blood_group %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Address</P>
+</TD>
+<TD>
+<P><%= c.address %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Phone</P>
+</TD>
+<TD>
+<P><%= c.phone %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Mobile</P>
+</TD>
+<TD>
+<P><%= c.mobile %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Email</P>
+</TD>
+<TD>
+<P><%= c.email %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>PAN</P>
+</TD>
+<TD>
+<P><%= c.pan %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>PF Number</P>
+</TD>
+<TD>
+<P><%= c.pf_number %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Bank Account</P>
+</TD>
+<TD>
+<P><%= c.bank_account_number %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Bank Name</P>
+</TD>
+<TD>
+<P><%= c.bank.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Designation</P>
+</TD>
+<TD>
+<P><%= c.designation.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Department</P>
+</TD>
+<TD>
+<P><%= c.department.name %></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD>
+<P>Employee Type</P>
+</TD>
+<TD>
+<P><%= c.employeetype.name %>
+</P>
+</TD>
+</TR>
+</TABLE>
+<br>
+<br>
+<br>
+<% end %>
+<% end %>

@@ -1,0 +1,47 @@
+<!--Showing the Ssc pension Details -->
+<h1><%= I18n.t "ssc_details" %><br>Ssc pension Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "social_security_category" %>:<br>SSC Number:</td>
+		<td><%= @spension.spension_number %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "social_security_category" %>:<br>SSC Category Name:</td>
+		<td><%= @spension.ssccategory.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @spension.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= @spension.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address:</td>
+		<td><%= @spension.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Date of Birth:</td>
+		<td><%= @spension.date_of_birth.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Date of Registration:</td>
+		<td><%= @spension.reg_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @spension.description %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br>Description: </td>
+		<td><%= @spension.ssccategory.amount %></td>
+	</tr>
+
+	</table>
+<%= I18n.t "back" %>)<br><%= link_to 'Back', {:action => 'list'} %>  | 
+<% if (@spension.approved == false) %>
+<%= I18n.t 'approve' %><br><%= link_to 'Approve It', {:action => 'approve', :id => @spension.id} %>  
+<% end %>

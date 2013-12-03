@@ -1,0 +1,19 @@
+<!-- Search about Property Types-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @propertytypes.blank? %>
+	<p><%= I18n.t "property_type_details_no" %>:<br>There are no Property Types currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "property_type_details" %>:<br>These are the current Property Types:</p>
+	<table>
+	<tr><td><%= I18n.t "property_type" %><br>Name</td<td><%= I18n.t "edit" %><br>Edit</td></tr>
+	<% @propertytypes.each do |c| %>
+	<tr>
+	<td>
+	<%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+	<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @propertytypes %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

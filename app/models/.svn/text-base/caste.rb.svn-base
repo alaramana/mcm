@@ -1,0 +1,21 @@
+#Author: Chaitanya
+#=========================
+
+class Caste < ActiveRecord::Base
+	has_many :employees
+	belongs_to :religion
+	validates_presence_of :name
+
+
+	#method : indexing on castes
+	define_index do
+		indexes name
+		indexes religion.name
+
+		#with{}
+		has religion_id
+
+	end
+
+
+end

@@ -1,0 +1,82 @@
+class LicensegroupController < ApplicationController
+	#Method:new
+	   def new
+	      @licensegroup = Licensegroup.new
+	   end
+	#End:new
+
+	#Method:create
+	   def create
+	      @licensegroup = Licensegroup.new(params[:licensegroup])
+
+	      @licensegroup.created_by = 1
+	      @licensegroup.modified_by = 1
+
+	    if @licensegroup.save
+		flash[:notice] = 'Record successfully created.'
+	     	redirect_to :action => 'list'
+
+	      else
+		    render :action => 'new'
+	    end
+	    
+	    end 
+	 # End of create
+	
+	#Method:list	
+	   def list
+	     @licensegroups = Licensegroup.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @licensegroups }	#Render to XML File
+		end
+	   end
+	#End:list
+
+	#Method:show
+	 def show
+	      @licensegroup = Licensegroup.find(params[:id])
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @licensegroups }	#Render to XML File
+		end
+	 end
+	#End:show
+
+	#Method:edit
+	  def edit
+	      @licensegroup = Licensegroup.find(params[:id])
+	   
+	  end
+	#End:edit
+
+	#Method:update
+	  def update
+	      @licensegroup = Licensegroup.find(params[:id])
+
+	      @licensegroup.created_by = 1
+	      @licensegroup.modified_by = 1
+
+	      if @licensegroup.update_attributes(params[:licensegroup])
+		 redirect_to :action => 'show', :id => @licensegroup
+	      else
+		 render :action => 'edit'
+	      end
+	   end
+	#End:update
+
+	#Method:delete
+	def delete
+		Licensegroup.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+
+	#method: search
+	def search
+		@query = params[:query]
+		@licensegroups = Licensegroup.search @query, :page => params[:page], :per_page => 10
+	end
+	#End Method: search
+
+end

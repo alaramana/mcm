@@ -1,0 +1,23 @@
+<!--editing the data of Department Details-->
+<h1> <%= I18n.t "edit_department_details" %><br>Edit Department Type Detail</h1>
+<%= form_tag :action => 'update', :id => @department %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "department" %>:<br>Department Name</label>: </td>
+		<td><%= text_field 'department', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="shortcode"><%= I18n.t "short_desc" %>: <br>Department Short Code</label>: </td>
+		<td><%= text_field 'department', 'short_code',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>: <br>Description</label>:</td>
+		<td><%= text_field 'department', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

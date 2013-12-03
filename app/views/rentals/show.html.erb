@@ -1,0 +1,17 @@
+<!--Showing the details of Rentals-->
+<h1><%= I18n.t "rental_registration_details" %><br>Rental Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "rental_number" %>:<br>Rental Number:</td>
+		<td><%= @rental.rental_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rental_type" %>:<br>Rental Type:</td>
+		<td><%= @rental.rentaltype.rental_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @rental.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

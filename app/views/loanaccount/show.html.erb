@@ -1,0 +1,33 @@
+<!--Showing the details of LoanAccount-->
+<h1><%= I18n.t "loanaccount_registration_details" %><br>LoanAccount Details:</h1>
+	<table>
+ <tr>
+		<td><%= I18n.t 'emoloyee_number' %><br>EmployeeNumber:</td>
+		<td><%= @loanaccount.employee.employee_id %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'loanaccountno' %><br>AccountNumber:</td>
+		<td><%= @loanaccount.loanaccountno %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'loan_amount' %><br>LoanAmount:</td>
+		<td><%= @loanaccount.loan_amount%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'interest' %><br>Interest:</td>
+		<td><%= @loanaccount.interest %></td>
+	</tr>
+ <tr>
+		<td><%= I18n.t 'number_of_emis' %><br>NumberOfEmi's: </td>
+		<td><%= @loanaccount.emi %></td>
+	</tr>
+ <tr>
+		<td><%= I18n.t 'paid_amount' %><br>PaidAmount: </td>
+		<td><%= @loanaccount.paid_amount %></td>
+	</tr>
+ <tr>
+		<td><%= I18n.t 'balance_amount' %><br>BalanceAmount: </td>
+		<td><%= @loanaccount.balance_amount %></td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %><br><%= link_to 'Back', {:action => 'list'} %>

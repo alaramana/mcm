@@ -1,0 +1,114 @@
+<!--Showing the details of Death Registrat-->
+<h1><%= I18n.t "death_details" %>:<br>Death Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'registration_date' %>:<br>Register Date:</td>
+		<td><%= @death.register_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @death.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_death" %>:<br>Date of Death:</td>
+		<td><%= @death.death_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Sex:</td>
+		<td><%= @death.gender.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address: </td>
+		<td><%= @death.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "city" %>:<br>City:</td>
+		<td><%= @death.city %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tehsil" %>:<br>Tehsil:</td>
+		<td><%= @death.tehsil %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "district" %>:<br>District:</td>
+		<td><%= @death.district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "father_name" %>:<br>Father Name:</td>
+		<td><%= @death.father_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "age" %>:<br>Age:</td>
+		<td><%= @death.age %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_place" %>:<br>Death Palce:</td>
+		<td><%= @death.death_place %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br>Religion:</td>
+		<td><%= @death.religion.name%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "religion" %>:<br>Religion:</td>
+		<td><%= @death.caste.name%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "hospital" %>:<br>Hospital Name:</td>
+		<td><%= @death.hospital.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_before_treatment" %>:<br>Death Before Treatment:</td>
+		<td><%= @death.death_before_treatment %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_with_illness" %>:<br>Death With Illness:</td>
+		<td><%= @death.death_with_illness %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "illness_name" %>:<br>Desease Name:</td>
+		<td><%= @death.desease_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_at_deliverytime" %>:<br>Death Delivery:</td>
+		<td><%= @death.death_delivery %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_smoke" %>:<br>Death Cause Smoke:</td>
+		<td><%= @death.death_cause_smoke %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "smoke_age" %>:<br>Smoke Period :</td>
+		<td><%= @death.death_smoke_age %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_supari" %>:<br>Death Cause Supari:</td>
+		<td><%= @death.death_cause_supari %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "supari_age" %>:<br>Supari Period:</td>
+		<td><%= @death.death_supari_age %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "death_cause_drink" %>:<br>Death Cause Drink:</td>
+		<td><%= @death.death_cause_drink %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "drink_age" %>:<br>Drink Period:</td>
+		<td><%= @death.death_drink_age %></td>
+	</tr>
+	
+	<tr>
+		<td><%= I18n.t "applicant_name" %>:<br>Applied By:</td>
+		<td><%= @death.applicant %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'register_remark' %>:<br>Remarks:</td>
+		<td><%= @death.remarks %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'amount' %>:<br>Amount:</td>
+		<td><%= @death.amount %></td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %>:<br><%= link_to 'Back', {:action => 'list'} %>

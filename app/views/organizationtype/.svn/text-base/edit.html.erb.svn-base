@@ -1,0 +1,18 @@
+<!--editing the data of Organization Type Details-->
+<h1><%= I18n.t "edit_orgnanization_type_details" %>:<br>Edit Organization Type Detail</h1>
+<%= form_tag :action => 'update', :id => @organizationtype %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "orgnanization_type" %>:<br> Organization Type</label>: </td>
+		<td><%= text_field 'organizationtype', 'name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_field 'organizationtype', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %>:<br><%= submit_tag "Save Changes" %></td>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

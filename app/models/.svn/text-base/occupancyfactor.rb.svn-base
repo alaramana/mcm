@@ -1,0 +1,15 @@
+#Author: Chaitanya
+#======================
+class Occupancyfactor < ActiveRecord::Base
+	has_many :registrations
+
+
+	#method : indexing on Occupancyfactor
+	define_index do
+		indexes name
+		indexes factor
+
+	#with{}
+	end
+	has_many :ptaxes
+end

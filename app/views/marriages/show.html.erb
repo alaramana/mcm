@@ -1,0 +1,92 @@
+<!--Showing the details of Marriage Registration Information--> 
+<h1>Marriage Registration Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "marriage_reg_number" %>:<br >Marriage Registration Number: </td>
+		<td><%= @marriage.marriage_reg_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_name" %>:<br >Groom Name: </td>
+		<td><%= @marriage.groom_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_father" %>:<br >Groom Father Name: </td>
+		<td><%= @marriage.groom_father %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_mother" %>:<br >Groom Mother Name: </td>
+		<td><%= @marriage.groom_mother %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_birth_date" %>:<br Groom Birth Date: </td>
+		<td><%= @marriage.groom_birth_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_photo" %>:<br >Groom Photo: </td>
+		<td><%= @marriage.groom_photo %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_address" %>:<br >Groom Address: </td>
+		<td><%= @marriage.groom_address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_district" %>:<br >Groom District: </td>
+		<td><%= @marriage.groom_district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_state" %>:<br >Groom State: </td>
+		<td><%= @marriage.groom_state %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "groom_country" %>:<br >Groom Country: </td>
+		<td><%= @marriage.groom_country %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_name" %>:<br >Bride Name: </td>
+		<td><%= @marriage.bride_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_father" %>:<br >Bride Father Name: </td>
+		<td><%= @marriage.bride_father %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_mother" %>:<br >Bride Mother Name: </td>
+		<td><%= @marriage.bride_mother %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_birth_date" %>:<br >Bride Birth Date: </td>
+		<td><%= @marriage.bride_birth_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_address" %>:<br >Bride Address: </td>
+		<td><%= @marriage.bride_address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_district" %>:<br >Bride District: </td>
+		<td><%= @marriage.bride_district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_state" %>:<br >Bride State: </td>
+		<td><%= @marriage.bride_state %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "bride_country" %>:<br >Bride Country: </td>
+		<td><%= @marriage.bride_country %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "marriage_date" %>:<br >Marriage Date: </td>
+		<td><%= @marriage.marriage_date.strftime("%d-%m-%Y") %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "marriage_place" %>:<br >Marriage Place: </td>
+		<td><%= @marriage.marriage_place %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %></td>
+		<td><% if (@marriage.approved == false) %>
+<%= I18n.t "approved_it" %><br><%= link_to 'Approve It', {:action => 'approve', :id => @marriage.id} %>
+<% end %></td>
+	</tr>
+
+	</table>
+

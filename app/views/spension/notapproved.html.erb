@@ -1,0 +1,35 @@
+<!--Listing all the data of Not approved SSC Pension Details-->
+<% if @notapproves.blank? %>
+	<p><%= I18n.t "ssc_details_no" %><br>There are no Not Approved SSC Pension  Data currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter SSC Pension  " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter SSC Pension '" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "SSC Pension " %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "ssc_details" %><br>These are the current Not Approved SSC Pension :</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "social_security_category" %>:<br>SSC Number </td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @notapproves.each do |c| %>
+	<tr>
+		<td><%= link_to c.spension_number, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= I18n.t "back" %><br><%= link_to "back", {:action => 'list' }%>
+
+
+

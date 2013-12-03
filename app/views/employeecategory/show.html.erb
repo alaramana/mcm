@@ -1,0 +1,13 @@
+<!--Showing the details of Employee Type-->
+<h1> <%= I18n.t "employee_type_details" %>:<br>Employee Type Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "employee_type" %>:<br>Employee Type:</td>
+		<td><%= @employeecategory.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @employeecategory.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

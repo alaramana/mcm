@@ -1,0 +1,25 @@
+<!-- Search about Bank-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @banks.blank? %>
+	<p>There are no Bank currently in the system.</p>
+<% else %>
+	<p>These are the current Bank:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "name" %><br>Name</td>
+		<td><%= I18n.t "branch" %><br>Branch</td>
+		<td><%= I18n.t "branch_code" %><br>Branch Code</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @banks.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%=  c.branch -%></td>
+		<td><%=  c.branch_code -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @banks %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

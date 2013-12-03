@@ -1,0 +1,82 @@
+#Author: Chaitanya
+#Controller: Work Places of Employee
+#====================================
+class WorkplaceController < ApplicationController
+	#Method: New
+	def new
+		@workplace = Workplace.new
+	end
+	#End Method: New
+
+	#Method: Crate
+	def create
+		@workplace = Workplace.new(params[:workplace])
+		@workplace.created_by = 1
+		@workplace.modified_by = 1
+
+		if @workplace.save
+			flash[:notice] = 'Work Place Created Sucessfully.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	#End Method: Create
+
+	#Method: List
+	def list
+		@workplace = Workplace.paginate :page => params[:page], :per_page => 10 #Pagination
+    	respond_to do |format|		
+     		format.html # list.html.erb
+    		format.xml  { render :xml => @workplaces }		#Render to XML File
+    	end
+		
+	end
+	#End Method: List
+
+	#Method: Show
+	def show
+		@workplace = Workplace.find(params[:id])
+    	respond_to do |format|		
+     		format.html # show.html.erb
+      		format.xml  { render :xml => @workplaces }		#Render to XML File
+    	end
+		
+	end
+	#End Method: Show
+
+	#Method: Edit
+	def edit
+		@workplace = Workplace.find(params[:id])
+	end
+	#End Method: Edit
+
+	#Method:Update
+	def update
+		@workplace = Workplace.find(params[:id])
+
+		@workplace.modified_by = 1
+
+		if @workplace.update_attributes(params[:workplace])
+			flash[:notice] = 'Work Place Updated Sucessfully.'
+			redirect_to :action => 'show', :id => @workplace
+		else
+			render :action => 'edit'
+		end
+	end
+	#End Method: Update
+
+	#Method: Delete
+	def delete
+		Workplace.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End Method:Delete
+
+	#Method:search
+	def search
+		 @query = params[:query]
+		 @workplaces = Workplace.search @query, :page => params[:page], :per_page => 10
+	end
+	#End:search
+end

@@ -1,0 +1,36 @@
+<!--entering the data for Bill Passing Details -->
+<h1><%= I18n.t "enter_bill_passing_details" %> <br>Enter Bill Passing Detail</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_number" %>:<br><label for="invoice_number">Invoice Numbaer</label>:* </td>
+		<td><%= text_field 'billpassing', 'invoice_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "invoice_date" %>:<br><label for="date">Invoice Date</label>:* </td>
+		<td><%= calendar_date_select_tag 'billpassing[invoice_date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "goods_amount" %>:<br><label for="goods_amount">Amount</label>:* </td>
+		<td><%= text_field 'billpassing', 'amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "organization_name" %>: <br><label for="org_name">Organization Name</label>:* </td>
+		<td><%= text_field 'billpassing', 'org_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>: <br><label for="address">Address</label>:* </td>
+		<td><%= text_area 'billpassing', 'address' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>: <br><label for="description">Description</label>:</td>
+		<td><%= text_area 'billpassing', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %> <br> <%= submit_tag "Create" %></td>
+	</tr>	
+	</table>
+
+<%= form_tag %>
+

@@ -1,0 +1,49 @@
+<h1><%= I18n.t "edit_water_tax_details" %>:<br>Edit water tax Detail</h1>
+<%= form_tag :action => 'update', :id => @wtax %>
+	<table>
+	<tr>
+		<td><%= I18n.t "registration_date" %>:<br> <label for="register_date">Regster Date</label>:* </td>
+		<td><%=  text_field 'wtax', 'register_date',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "water_tax_number" %>:<br><label for="wtax_number">Water Tax Number</label>:* </td>
+		<td><%= text_field 'wtax', 'wtax_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %>:<br><label for="name">Name</label>:* </td>
+		<td><%= text_field 'wtax', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "door_number" %>:<br><label for="door_number">Door Number</label>:* </td>
+		<td><%= text_field 'wtax', 'door_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br><label for="address">Address</label>:* </td>
+		<td><%= text_area 'wtax', 'address',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "phone_number" %>:<br><label for="phone">Phone</label>:* </td>
+		<td><%= text_field 'wtax', 'phone',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "email" %>:<br><label for="email">Email</label>:* </td>
+		<td><%= text_field 'wtax', 'email',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "email" %>:<br><label for="mobile">Mobile</label>:* </td>
+		<td><%= text_field 'wtax', 'mobile',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_year" %>:<br><label for="start_year">Start year</label>:* </td>
+		<td><%=  text_field 'wtax', 'start_year',:class=>'title' %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_year" %>:<br><label for="end_year">End Year</label>:* </td>
+		<td><%=  text_field 'wtax', 'end_year',:class=>'title' %>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list' } %>

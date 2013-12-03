@@ -1,0 +1,68 @@
+<h1>Water Tax Details:</h1>
+<table>
+<tr>
+<td><p><%= I18n.t "assesment_number"%>:<br>Water Tax Number:</p></td>
+<td><%= @wtax.wtax_number %></td>
+</tr>
+
+<tr>
+<td><p><%= I18n.t "first_name"%>:<br>Name:</p></td>
+<td><%= @wtax.name %></td>
+</tr>
+
+<tr>
+<td><p><%= I18n.t "last_name"%>:<br>Address:</p></td>
+<td><%= @wtax.address %></td>
+</tr>
+<tr>
+<td><p><%= I18n.t "door_number"%>:<br>Door Number:</p></td>
+<td><%= @wtax.door_number %></td>
+</tr>
+<tr>
+<td>Email: </td>
+<td><%= @wtax.email %></td>
+</tr>
+<tr>
+<td>Phone: </td>
+<td><%= @wtax.phone%></td>
+</tr>
+<tr>
+<td>Mobile: </td>
+<td><%= @wtax.mobile %></td>
+</tr>
+<tr>
+<td>Zone: </td>
+<td><%= @wtax.zone.name %></td>
+</tr>
+<tr>
+<td>Ward: </td>
+<td><%= @wtax.ward.name %></td>
+</tr>
+<tr>
+<td>Colony: </td>
+<td><%= @wtax.colony.name %></td>
+</tr>
+<tr>
+<td>Total Area: (Sq. Meters)</td>
+<td><%= @wtax.total_area %></td>
+</tr>
+<tr>
+<td>Pipe Size: </td>
+<td><%= @wtax.pipesize.name %></td>
+</tr>
+<tr>
+<td>Connection Type: </td>
+<td><%= @wtax.connectiontype.name %></td>
+</tr>
+<tr>
+<td>Water Tank: </td>
+<td><%= @wtax.watertank %></td>
+</tr>
+
+<tr>
+<td>Total Tax: (including Service <del>&#2352;</del>.75/-)</td>
+<td> <del>&#2352;</del> <%= @wtax.invoice %></td>
+</tr>
+
+</table>
+<%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,33 @@
+class CreateLicenses < ActiveRecord::Migration
+  def self.up
+    create_table :licenses do |t|
+      t.integer :lisecse_number
+      t.string   :first_name, :limit=>50
+      t.string   :last_name, :limit=>50
+      t.string   :father_name, :limit=>50
+      t.string   :shop_name, :limit=>50
+      t.string   :shop_address1, :limit=>50
+      t.string   :shop_address1, :limit=>50
+      t.integer   :street_id, :limit=>50
+      t.integer   :colony_id, :limit=>50	
+      t.integer   :ward_id, :limit=>50	
+      t.integer   :zone_id, :limit=>50		
+      t.integer :licencetype_id
+      t.integer :licensegroup_id
+      t.integer :invoice_number
+      t.integer :department_id
+      t.date :period_from
+      t.date :period_to     
+      t.float :surchange
+      t.float :net_amount
+      t.text :description
+      t.integer :created_by, :null=>false
+      t.integer :modified_by, :null=>false
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :licenses
+  end
+end

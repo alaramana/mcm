@@ -1,0 +1,17 @@
+<!--Showing the dettails of Occupancy Factor--> 
+<h1><%= I18n.t "occupancy_factor_details" %>:<br>Occupancy Factor Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "occupancy_factor" %><br>Name:</td>
+		<td><%= @occupancyfactor.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "value %><br>Factor Value: </td>
+		<td><%= @occupancyfactor.factor %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "description" %><br>Description: </td>
+		<td><%= @occupancyfactor.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

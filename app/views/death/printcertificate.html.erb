@@ -1,0 +1,27 @@
+<h1 align="center">मध्य प्रदेश शासन </h1>
+<br>
+	<h2 align="center">(योजना, आर्थिक एवं सांख्यिकी विभाग)
+<br>आर्थिक एवं सांख्यिकी संचालनालय <br>
+मृत्यु प्रमाण - पत्र  <br>
+(धारा १२/१७ के  अधीन जारी किया गया)
+</h2>
+<br>
+
+<table border="1" align="center">
+<tr>
+<td>
+<p align="justify">
+याह प्रमाणित किया जाता है  कि निम्नलिखित  जानकारी मूल  मृत्यु अभीलेख जो <u><%= @death.city%></u>(रजिस्ट्रीकरण इकाई का नाम) स्थनीय  क्षेत्र  <u><%= @death.tehsil %></u>  तहसील <u><%= @death.district %></u> जिला  के रजिस्टर से  ली गई   है ! 
+</p>
+<br>
+<p align="justify">
+नाम <u><%= @death.first_name %>  <% @death.middle_name %>   <%@death.last_name %></u>  लिंग  <u><%= @death.gender.name %></u>  मृत्यु  स्थान <u> <%= @death.hospital.name %></u>  पिता का नाम <u><%= @death.father_name %></u>  रजिस्ट्रीकरण  क्रमाक <%= @death.register_id %></u> रजिस्ट्रीकरण  दिनांक <u><%= @death.register_date %></u></p>
+<br>
+<br>
+<br>
+
+<p align="right">रजिस्ट्रार (जन्म - मृत्यु) <br>
+मुहर </p>
+</tr>
+</table>
+

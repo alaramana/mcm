@@ -1,0 +1,21 @@
+#Author: Chaitanya
+#Model: Colony
+#---------
+class Colony < ActiveRecord::Base
+	belongs_to :organization
+	belongs_to :ward
+	has_many   :streets
+	has_many   :wtaxes  #Water Tax
+
+
+	  #Method: Indexing on colony name
+	define_index do
+		indexes :name
+		indexes ward.name
+		
+
+		#with{}
+		has ward_id
+	end
+	
+end

@@ -1,0 +1,17 @@
+<!--Showing the details of Water Connection Types-->
+<h1><%= I18n.t "connection_details" %>:<br>Water Connection Type Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "connection_name" %>:<br>Water Connection Name:</td>
+		<td><%= @connectiontype.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description:</td>
+		<td><%= @connectiontype.description %>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Amount:</td>
+		<td><%= @connectiontype.amount %>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

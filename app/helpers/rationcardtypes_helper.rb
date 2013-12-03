@@ -1,0 +1,2 @@
+module RationcardtypesHelper
+end

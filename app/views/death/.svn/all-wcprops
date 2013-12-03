@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/muncipalerp/!svn/ver/470/trunk/app/views/death
+END
+approve_ok.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/muncipalerp/!svn/ver/470/trunk/app/views/death/approve_ok.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/286/trunk/app/views/death/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/448/trunk/app/views/death/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/muncipalerp/!svn/ver/205/trunk/app/views/death/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/muncipalerp/!svn/ver/286/trunk/app/views/death/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/445/trunk/app/views/death/list.html.erb
+END
+not_approved.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/muncipalerp/!svn/ver/470/trunk/app/views/death/not_approved.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/muncipalerp/!svn/ver/286/trunk/app/views/death/show.html.erb
+END

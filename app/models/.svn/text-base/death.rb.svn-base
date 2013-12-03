@@ -1,0 +1,25 @@
+#Author: Chaitnaya
+#--------------
+
+class Death < ActiveRecord::Base
+	belongs_to :gender
+	belongs_to :religion
+	belongs_to :hospital
+
+
+	#Method: Indexing on Name
+	define_index do
+		indexes death_date
+		indexes first_name
+		indexes last_name
+		indexes city
+		indexes father_name
+		indexes	death_place
+		indexes gender.name
+		indexes religion.name
+		indexes hospital.name
+
+	#with{}
+	has gender_id,religion_id,hospital_id
+	end
+end

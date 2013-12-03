@@ -1,0 +1,2 @@
+module GoodsreceivesHelper
+end

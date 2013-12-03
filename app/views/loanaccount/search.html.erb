@@ -1,0 +1,21 @@
+<!-- Search about LoanAccount-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @loanaccounts.blank? %>
+	<p><%= I18n.t "loanaccount_registration_details_no" %><br>There are no LoanAccounts with that Tag .</p>
+<% else %>
+	<p><%= I18n.t "loanaccount_registration_details" %><br>These are the current Loan Accounts:</p>
+	<table>
+	<tr>
+			<td><%= I18n.t 'loanaccountno' %><br>LoanAccountNumber</td>				
+	 	<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @loanaccounts.each do |c| %>
+	<tr>
+  <td><%= link_to c.loanaccountno, {:action => 'show', :id => c.id} -%></td>	
+ 	<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @loanaccounts %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

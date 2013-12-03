@@ -1,0 +1,33 @@
+<!--Listing all the Age Factors-->
+
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Bank Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Bank Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Bank" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+
+<% if @banks.blank? %>
+	<p>There are no Banks currently in the system.</p>
+<% else %>
+	<p>These are the current Banks:</p>
+	<table>
+	<% @banks.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @banks %>
+<%= link_to "Add new", {:action => 'new' }%>
+
+
+

@@ -1,0 +1,14 @@
+#Author: Chaitanya
+#================
+class Exemptionfactor < ActiveRecord::Base
+	has_many :registrations
+
+
+	#Method: Indexing on Name
+	define_index do
+		indexes name
+		indexes factor
+
+	end
+	has_many :ptaxes
+end

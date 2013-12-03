@@ -1,0 +1,21 @@
+<!-- Search about License Types-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @complainttypes.blank? %>
+	<p><%= I18n.t 'complaint_type_details_no' %><br>There are no Complaint Types currently in the system.</p>
+<% else %>
+	<p><%= I18n.t 'complaint_type_details' %><br>These are the current Complaint Types:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t 'complaint_type' %><br>Complaint Type</td>		
+		<td><%= I18n.t 'edit' %><br>Edit</td>
+	</tr>
+	<% @complainttypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.complaint_type, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @complainttypes %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

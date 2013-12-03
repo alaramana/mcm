@@ -1,0 +1,23 @@
+<!--editing the data for Ssc Category Details -->
+<h1><%= I18n.t 'edit_ssc_details' %><br>Edit Ssc Category Detail</h1>
+<%= form_tag :action => 'update', :id => @ssccategory %>
+	<table>
+	<tr>
+		<td><%= I18n.t 'social_security_category' %>:<br><label for="name">Ssc Category</label>:* </td>
+		<td><%= text_field 'ssccategory', 'name',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'amount' %>:<br><label for="amount">Amount</label>:* </td>
+		<td><%= text_field 'ssccategory', 'amount',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br><label for="description"> Description</label>:</td>
+		<td><%= text_area 'ssccategory', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

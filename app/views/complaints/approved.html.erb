@@ -1,0 +1,43 @@
+<!--Listing all the data of approved Complaint Details-->	
+<% if @complaints.blank? %>
+	<p><%= I18n.t 'complaint_details_no' %><br>There are no Approved Complaint Data currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+	<%= form_tag :action => 'search' %>
+		<table>
+		<tr>
+			<td><%= I18n.t "search" %>:<br>Search: </td>
+			<td>
+	<%= text_field_tag :query ,@query ||="Enter department Number" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter department'" %></td>
+			<td><%= I18n.t "search" %>:<br><%= submit_tag "Department" %></td>
+		</tr>
+		</table>
+	<%= form_tag %>
+<!--end of search text box -->
+	<p><%= I18n.t 'complaint_details' %><br>List of Current Approved Complaints :</p>
+	<table>
+	<tr>
+		<td><%= I18n.t 'department' %>:<br><label for="department">Department</label>:*</td>
+		<td><%= collection_select(:complaint, :department_id,@departments, :id, :name) %></td>
+	</tr>	
+	</table>
+	<table>
+	<tr>
+		<td><%= I18n.t 'complaint_type' %><br>Complaint Type</td>		
+		<td><%= I18n.t 'department' %><br>Department</td>
+		<td><%= I18n.t 'complaint_date' %><br>Complaint Date</td>
+		<td><%= I18n.t 'resolve_time' %><br>Resolve Time</td>	
+		
+	</tr>
+	<% @complaints.each do |c| %>
+	<tr>
+		<td><%= link_to c.complainttype.complaint_type, {:action => 'show', :id => c.id} -%></td>
+		<td><%= c.department.name -%></td>
+		<td><%= c.complaint_date -%></td>
+		<td><%= c.resolve_time -%></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= I18n.t 'back' %><br><%= link_to "back", {:action => 'list' }%>
+<!-- TODO have to set when the department selected,have to show all the approved complaints list that perticular department wise  , call a parsial-->

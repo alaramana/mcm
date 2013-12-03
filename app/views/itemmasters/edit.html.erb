@@ -1,0 +1,27 @@
+<!--editing the data for Itemmaster Details -->
+<h1><%= I18n.t "edit_item_group_details" %><br>Edit Itemmaster Detail</h1>
+<%= form_tag :action => 'update', :id => @itemmaster %>
+	<table>
+	<tr>
+		<td><%= I18n.t "category_name" %> :<br><label for="category_name"> Item Category</label>*: </td>
+		<td><%= collection_select(:itemmaster, :itemcategory_id,@itemcategory, :id, :category_name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "item_name" %> :<br><label for="item_name">Item Name</label>:* </td>
+		<td><%= text_field 'itemmaster', 'item_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "quantity" %> :<br><label for="quantity">Quantity</label>:* </td>
+		<td><%= text_field 'itemmaster', 'quantity',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %> :<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'itemmaster', 'description', :cols=>30, :rows=>5 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

@@ -1,0 +1,13 @@
+<!--Showing the details of Marital Information--> 
+<h1><%= I18n.t "marital_details" %>:<br>Marital Status Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "marital" %>:<br >Status:</td>
+		<td><%= @marital.status %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @marital.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back", {:action => 'list' } %>:<br><%= link_to 'Back', {:action => 'list'} %>

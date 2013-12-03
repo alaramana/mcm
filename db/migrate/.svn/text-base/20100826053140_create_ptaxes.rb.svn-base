@@ -1,0 +1,38 @@
+class CreatePtaxes < ActiveRecord::Migration
+  def self.up
+    create_table :ptaxes do |t|
+    
+    t.integer :registration_id
+    t.date	  :invoice_date
+    t.integer :start_year
+    t.integer :end_year
+	t.float   :total_area
+	t.float   :build_area
+    t.integer :propertytype_id
+	t.integer :taxcategory_id
+	t.integer :usefactor_id
+	t.integer :occupancyfactor_id
+	t.integer :agefactor_id
+	t.integer :structurefactor_id
+	t.integer :exemptionfactor_id
+	t.integer :unitvalue_id
+	t.integer :ptaxrate_id
+	t.integer :owner_id
+	t.float   :total
+	t.string  :payment_mode
+	t.string  :number
+	t.string  :bank_name
+	t.float	  :paid_amount
+	t.text	  :remarks	
+	
+	t.integer  :created_by, :null=>false
+	t.integer  :modified_by, :null=>false
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :ptaxes
+  end
+end

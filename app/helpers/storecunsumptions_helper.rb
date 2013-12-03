@@ -1,0 +1,2 @@
+module StorecunsumptionsHelper
+end

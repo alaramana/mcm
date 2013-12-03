@@ -1,0 +1,15 @@
+#Author: Chaitanya
+#=====================
+class Usefactor < ActiveRecord::Base
+	has_many :ptaxes
+	
+	#Method: Indexing on Usefactor
+	define_index do
+		indexes name
+		indexes factor	
+
+		#with{}
+		
+		
+	end
+end

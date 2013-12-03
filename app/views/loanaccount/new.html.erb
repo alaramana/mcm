@@ -1,0 +1,30 @@
+<!--entering the data for creating Loanaccount Details-->
+<h1><%= I18n.t 'enter_loan_registration_details' %><br>Enter Loan Account Details:</h1>
+<%= form_tag :action => 'create' %>
+<table>
+<tr>
+<td><%= I18n.t 'emoloyee_number' %>:<br><label for="employee_id">EmployeeNumber</label>:*</td>
+<td><%= collection_select(:loanaccount,:employee_id,@employee,:id,:employee_id) %></td>
+</tr>
+<tr>
+<td><%= I18n.t 'loanaccountno'%>:<br><label for="loanaccountno">LoanAccountNumber</label>:*</td>
+<td><%= text_field 'loanaccount', 'loanaccountno',:class=>'title' %></td>
+</tr>
+<tr>
+<td><%= I18n.t "loan_amount" %>:<br><label for="loan_amount">LoanAmount</label>:* </td>
+<td><%= text_field 'loanaccount', 'loan_amount',:class=>'title' %></td>
+</tr>
+<tr>
+<td><%= I18n.t "interest" %>:<br><label for="interest">Interest</label>:* </td>
+<td><%= text_field 'loanaccount', 'interest',:class=>'title' %></td>
+</tr>
+<tr>
+<td><%= I18n.t "number_of_emis" %>:<br><label for="number_of_emis">NumberOfEmi's</label>:* </td>
+<td><%= text_field 'loanaccount', 'emi',:class=>'title' %></td>
+</tr>
+<tr>
+<td></td>
+<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+</tr>
+</table>
+<%= form_tag %>

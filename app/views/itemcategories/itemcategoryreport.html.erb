@@ -1,0 +1,23 @@
+<% if @itemcategories.blank? %>
+ 	<p align="center>><%= I18n.t "item_category_details_no" %>:<br>There are no itemcategories currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "item_category_details" %><br>Report of Item Categories</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "item_category" %><br>ItemCategory</td>
+		<td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @itemcategories.each do |c| %>
+	
+	<tr>
+		<td><%= c.category_name%></td>
+		<td><%= c.description %></td>
+ 	</tr>
+	<% end %>
+	</table>
+<% end %>
+

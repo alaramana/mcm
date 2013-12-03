@@ -1,0 +1,42 @@
+<!--Listing all the Connection Types-->
+<% if @connectiontypes.blank? %>
+	<p><%= I18n.t "connection_details_no" %>:<br>There are no Water Connection Type currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Connection Type Name" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Connection Type Name'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Connection Type" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+	<p><%= I18n.t "connection_details" %>:<br>These are the current Connection Types:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "connection_name" %>:<br>Connection Type</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @connectiontypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @connectiontypes %>
+
+<br>
+<table>
+<tr>
+<td><%= I18n.t  "new" %> <br><%= link_to "Add new", {:action => 'new' }%>
+</td>
+<td><%= I18n.t  "print_report" %> <br><%= link_to "Print Report", {:action => 'connectiontypereport'}%>
+</td>
+</tr>
+</table>

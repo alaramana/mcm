@@ -1,0 +1,25 @@
+<% if @licensetypes.blank? %>
+ 	<p align="center>><%= I18n.t "license_type_details_no" %>:<br>There are no Licensetypes currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "license_type_details" %><br>Report of License Types</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+		<td><%= I18n.t "license_type" %><br>License Type</td>
+  <td><%= I18n.t "amount" %><br>Amount</td>
+  <td><%= I18n.t "description" %><br>Descrioption</td>
+ </tr>
+	<% @licensetypes.each do |c| %>
+	
+	<tr>
+		<td><%= c.lic_type%></td>
+		<td><%= c.amount %></td>
+  <td><%= c.description %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+

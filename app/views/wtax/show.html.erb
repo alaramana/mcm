@@ -1,0 +1,38 @@
+<!--Showing all the water tax detail -->
+<h1><%= I18n.t "water_tax_details" %>:<br>Water Tax Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "registration_date" %>:<br> Regster Date:</td>
+		<td><%= @ptaxregistration.register_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "water_tax_number" %>:<br>Water Tax Number:</td>
+		<td><%= @ptaxregistration.number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "name" %>:<br><%= I18n.t "name"%>:<br>Name:</td>
+		<td><%= @ptaxregistration.first_name %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "door_number" %>:<br><%= I18n.t "door_number"%>:<br>Door Number:</td>
+		<td><%= @ptaxregistration.door_number %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "address"%>:<br>Address:</td>
+		<td><%= @ptaxregistration.area %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Phone: </td>
+		<td><%= @ptaxregistration.phone%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "email"%>:<br>Email: </td>
+		<td><%= @ptaxregistration.email %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "phone_number"%>:<br>Mobile: </td>
+		<td><%= @ptaxregistration.mobile %></td>
+	</tr>
+
+	</table>
+<%=  I18n.t "back"  %>:<br><%= link_to 'Back', {:action => 'list'} %>

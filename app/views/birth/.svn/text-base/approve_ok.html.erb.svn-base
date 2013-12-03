@@ -1,0 +1,23 @@
+<!--Listing all the data of approved Birth Registration Details-->
+
+<% if @approves.blank? %>
+	<p>There are no Approved Birth Registration Data currently in the system.</p>
+<% else %>
+	<p>These are the current Approved :</p>
+
+Search for Birth Registration Numbers:<%= text_field_with_auto_complete :birth,:register_id %>
+
+	<table>
+	<% @approves.each do |c| %>
+	<tr>
+		<td><%= link_to c.register_id, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+<%= link_to "back", {:action => 'list' }%>
+
+
+

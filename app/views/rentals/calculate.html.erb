@@ -1,0 +1,28 @@
+<h1><%= I18n.t "enter_rental_registration_details" %><br>Enter Rental Details:</h1>
+<%= form_tag :action => 'updateinvoice', :id => @rental %>
+	<table>
+	<tr>
+		<td><%= I18n.t "rental_number" %>:<br><label for="rentals_number">Rental Number</label>:* </td>
+		<td><%= text_field 'rentals', 'rental_number',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_from" %>:<br><label for="period_from">Period From</label>*: </td>
+		<td><%= text_field 'rentals', 'period_from',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "period_to" %>:<br><label for="period_to">Period To</label>*: </td>
+		<td><%= text_field 'rentals', 'period_to',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "amount" %>:<br><label for="amount">Rental Types Amount</label>:*</td>
+		<td><%= collection_select(:rentals, :rentaltype_id,@rentaltypes, :id, :amount) %></td>
+	</tr>	
+	<tr>
+		<td></td>
+		<td><%= I18n.t "make_invoice" %>:<br><%= submit_tag "Make Invoice" %></td>
+	</tr>
+	</table>
+
+<%= form_tag %>
+
+

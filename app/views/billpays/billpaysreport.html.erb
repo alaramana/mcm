@@ -1,0 +1,29 @@
+<% if @billpays.blank? %>
+ 	<p align="center>><%= I18n.t "bill_pay_details_no" %>:<br>There are no Bill Pays  currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "bill_pay_details" %><br>Bill Pay Report</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "invoice_number" %> <br>Invoice Number</td>
+  <td><%= I18n.t "invoice_date" %><br>Date</td>
+		<td><%= I18n.t "goods_amount" %> <br>Amount</td>		
+		<td><%= I18n.t "paid_amount" %> <br>Paid Amount</td>
+	 <td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @billpays.each do |c| %>
+	
+	<tr>
+		<td><%= c.invoice_number%></td>
+		<td><%= c.date %></td>
+  <td><%= c.amount%></td>
+  <td><%= c.paid_amount%></td>
+  <td><%= c.description %></td>
+ 	</tr>
+	<% end %>
+	</table>
+<% end %>
+

@@ -1,0 +1,97 @@
+<!--Showing the details of Organizations-->
+<h1><%= I18n.t 'orgnanization_details' %><br>Organization Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'organization_name' %>:<br>Organization Full Name:</td>
+		<td><%= @organization.long_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'short_name' %>:<br>Organization Short Name:</td>
+		<td><%= @organization.short_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'orgnanization_type' %>:<br>Organization Type:</td>
+		<td><%= @organization.organizationtype.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'address' %>:<br>Address: </td>
+		<td><%= @organization.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'city' %>:<br>City:</td>
+		<td><%= @organization.city %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'tehsil' %>:<br>Tehsil:</td>
+		<td><%= @organization.tehsil %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'district' %>:<br>District:</td>
+		<td><%= @organization.district %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'state' %>:<br>State:</td>
+		<td><%= @organization.state %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'country' %>:<br>Country:</td>
+		<td><%= @organization.country %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'pin_number' %>:<br>PIN:</td>
+		<td><%= @organization.pin %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'phone_number' %>:<br>Phone1:</td>
+		<td><%= @organization.phone_number1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'contact_number' %>:<br>Phone2:</td>
+		<td><%= @organization.phone_number2 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'contact_number' %>:<br>Phone3:</td>
+		<td><%= @organization.phone_number3 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'fax' %>:<br>Fax1:</td>
+		<td><%= @organization.fax_number1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'fax' %>:<br>Fax2:</td>
+		<td><%= @organization.fax_number1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'toll_free' %>:<br>Toll-Free1:</td>
+		<td><%= @organization.toll_free1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'toll_free' %>:<br>Toll-Free2:</td>
+		<td><%= @organization.toll_free1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'service' %>:<br>Serive Line:</td>
+		<td><%= @organization.service_line %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'email' %>:<br>Email:</td>
+		<td><%= @organization.email %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'website' %>:<br>Homepage:</td>
+		<td><%= @organization.web %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'about_organization' %>:<br>About:</td>
+		<td><%= @organization.about %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'information' %>:<br>Info:</td>
+		<td><%= @organization.info %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'geographic_co_ordinates' %>:<br>Coordinates:</td>
+		<td><%= @organization.coordinates %></td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %><br><%= link_to 'Back', {:action => 'list'} %>

@@ -1,0 +1,64 @@
+Enter Property wtax Details:
+<%= form_tag :action => 'updateinvoice', :id => @wtax %>
+<table>
+<tr>
+<td>
+<p><label for="name">Water Tax Number</label>:* </td>
+<td>
+<%= text_field 'wtax', 'wtax_number',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Total Area</label>:* </td>
+<td>
+<%= text_field 'wtax', 'total_area',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td><label for="zone">Zone</label>*: </td>
+<td><%= collection_select(:wtax, :zone_id,@zone, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Ward</label>*: </td>
+<td><%= collection_select(:wtax, :ward_id,@ward, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Colony</label>*: </td>
+<td><%= collection_select(:wtax, :colony_id,@colony, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Start Date</label>*: </td>
+<td><%= calendar_date_select_tag 'wtax[start_date]' %></td>
+</tr>
+<tr>
+
+<tr>
+<td><label for="zone">End Date</label>*: </td>
+<td><%= calendar_date_select_tag 'wtax[end_date]' %></td>
+</tr>
+<tr>
+<td><label for="zone">Pipe Size</label>*: </td>
+<td><%= collection_select(:wtax, :pipesize_id,@pipesize, :id, :name) %></td>
+</tr>
+<tr>
+<td><label for="zone">Connection Type</label>*: </td>
+<td><%= collection_select(:wtax, :connectiontype_id,@connectiontype, :id, :name) %></td>
+</tr>
+<tr>
+<td><label for="zone">Water Tank</label>*: </td>
+<td><%= text_field 'wtax', 'watertank',:class=>'title' %></td>
+</tr>
+<tr>
+<tr>
+<td></td>
+<td>
+<%= submit_tag "Make Invoice" %></td>
+</table>
+
+<%= form_tag %>
+
+

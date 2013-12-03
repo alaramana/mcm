@@ -1,0 +1,13 @@
+<!--shoing each Tax Category details  -->
+<h1><%= I18n.t "tax_category_details" %>:<br> Tax Category Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "tax_category" %>:<br> Tax Category:</td>
+		<td><%= @taxcategory.category %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @taxcategory.description %></td>
+	</tr>
+	</table>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list'} %>

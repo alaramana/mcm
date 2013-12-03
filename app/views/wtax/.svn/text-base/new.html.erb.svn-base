@@ -1,0 +1,88 @@
+Enter Property wtax Details:
+<%= form_tag :action => 'create' %>
+<table>
+<tr>
+<td>
+<p><label for="name">Regster Date</label>:* </td>
+<td>
+<%= calendar_date_select_tag 'wtax[register_date]' %></td>
+</tr>
+<tr>
+<td>
+<p><label for="name">Assesment Number</label>:* </td>
+<td>
+<%= text_field 'wtax', 'wtax_number',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Name</label>:* </td>
+<td>
+<%= text_field 'wtax', 'name',:class=>'title' %></p> </td>
+</tr>
+<tr>
+<td>
+<p><label for="name">Door Number</label>:* </td>
+<td>
+<%= text_field 'wtax', 'door_number',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Address</label>:* </td>
+<td>
+<%= text_field 'wtax', 'address',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Email</label>:* </td>
+<td>
+<%= text_field 'wtax', 'email',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Phone</label>:* </td>
+<td>
+<%= text_field 'wtax', 'phone',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Mobile</label>:* </td>
+<td>
+<%= text_field 'wtax', 'mobile',:class=>'title' %></p> </td>
+</tr>
+</tr>
+<tr>
+<td>
+<p><label for="name">Total Area</label>:* </td>
+<td>
+<%= text_field 'wtax', 'total_area',:class=>'title' %></p> </td>
+</tr>
+<tr>
+<td><label for="zone">Zone</label>*: </td>
+<td><%= collection_select(:wtax, :zone_id,@zone, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Ward</label>*: </td>
+<td><%= collection_select(:wtax, :ward_id,@ward, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Colony</label>*: </td>
+<td><%= collection_select(:wtax, :colony_id,@colony, :id, :name) %></td>
+</tr>
+
+
+<tr>
+<td></td>
+<td>
+<%= submit_tag "Create" %></td>
+</table>
+
+<%= form_tag %>
+
+

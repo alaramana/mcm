@@ -1,0 +1,104 @@
+<h1>Edit Property Detail</h1>
+<%= form_tag :action => 'update', :id => @registration %>
+<table>
+<tr>
+<td>
+<p><label for="name">Regster Date</label>:* </td>
+<td>
+<%= text_field 'registration', 'register_date',:class=>'title' %></p> </td>
+</tr>
+<tr>
+<td>
+<p><label for="name">Assesment Number</label>:* </td>
+<td>
+<%= text_field 'registration', 'assessment_no',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">First Name</label>:* </td>
+<td>
+<%= text_field 'registration', 'first_name',:class=>'title' %></p> </td>
+</tr>
+<tr>
+<td>
+<p><label for="name">Last Name</label>:* </td>
+<td>
+<%= text_field 'registration', 'last_name',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Door Number</label>:* </td>
+<td>
+<%= text_field 'registration', 'door_number',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Area</label>:* </td>
+<td>
+<%= text_field 'registration', 'area',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Name of Apartment</label>:* </td>
+<td>
+<%= text_field 'registration', 'apartment_name',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Email</label>:* </td>
+<td>
+<%= text_field 'registration', 'email',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Phone</label>:* </td>
+<td>
+<%= text_field 'registration', 'phone',:class=>'title' %></p> </td>
+</tr>
+
+<tr>
+<td>
+<p><label for="name">Mobile</label>:* </td>
+<td>
+<%= text_field 'registration', 'mobile',:class=>'title' %></p> </td>
+</tr>
+</tr>
+<tr>
+<td>
+<p><label for="name">Description</label>:* </td>
+<td>
+<%= text_area 'registration', 'description',:class=>'title' %></p> </td>
+</tr>
+<tr>
+<td><label for="zone">Zone</label>*: </td>
+<td><%= collection_select(:registration, :zone_id,@zone, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Ward</label>*: </td>
+<td><%= collection_select(:registration, :ward_id,@ward, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Colony</label>*: </td>
+<td><%= collection_select(:registration, :colony_id,@colony, :id, :name) %></td>
+</tr>
+
+<tr>
+<td><label for="zone">Street</label>*: </td>
+<td><%= collection_select(:registration, :street_id,@street, :id, :name) %></td>
+</tr>
+
+
+<tr>
+<td></td>
+<td>
+<%= submit_tag "Save Changes" %></td>
+</table>
+<%= link_to 'Back', {:action => 'list' } %>

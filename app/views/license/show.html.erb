@@ -1,0 +1,17 @@
+<!--Showing the details of License-->
+<h1><%= I18n.t "license_registration_details" %><br>License Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'license_number' %><br>License Number:</td>
+		<td><%= @license.license_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'license_type' %><br>License Type:</td>
+		<td><%= @license.licensetype.lic_type%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'description' %><br>Description: </td>
+		<td><%= @license.description %></td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %><br><%= link_to 'Back', {:action => 'list'} %>

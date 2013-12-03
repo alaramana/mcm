@@ -1,0 +1,87 @@
+#Author: Krishnaveni
+#Refine: Chaitanya
+#Controller: Street
+#-----------------
+class StreetController < ApplicationController
+
+	#Method: New
+	def new
+		@street = Street.new
+		@colony = Colony.find(:all)	# Show all Colonies
+	end
+	#End Method: New
+
+	#Method: Create
+	def create
+		@street = Street.new(params[:street])
+
+		@street.created_by = 1
+		@street.modified_by = 1
+
+		if @street.save
+			flash[:notice] = 'Street Created Sucessfully.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	# End Method: Crate
+
+	#Method: List
+	def list
+		@streets = Street.paginate :page => params[:page], :per_page => 10	#pagination
+    	respond_to do |format|
+    		    format.html # show.html.erb
+      			format.xml  { render :xml => @streets }	#Render XML Files
+    	end
+
+	end
+	#End Method: List
+
+	#Method: Show
+	def show
+		@street = Street.find(params[:id])
+		respond_to do |format|
+     		    format.html # show.html.erb
+      			format.xml  { render :xml => @streets }		#Render XML File
+    	end
+
+	end
+	#End of Method: Show
+
+	#Method: Edit
+	def edit
+		@street = Street.find(params[:id])
+		@colony = Colony.find(:all)
+	end
+	#End of Method: Edit
+
+	#Method: Update
+	def update
+		@street = Street.find(params[:id])
+	
+		@street.modified_by = 1
+
+		if @street.update_attributes(params[:street])
+			flash[:notice] = 'Street Updated Sucessfully.'
+			redirect_to :action => 'show', :id => @street
+		else
+			render :action => 'edit'
+		end
+	end
+	#End of Method: Update
+
+	#Method: Delete
+	def delete
+		Street.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End of Method: Delete
+
+	#Method:search
+	def search		
+		 @query = params[:query]
+		 @streets = Street.search @query, :page => params[:page], :per_page => 10		
+	end	
+	#End:search
+end

@@ -1,0 +1,15 @@
+#Author: Chaitanya
+#=========================
+
+class Shift < ActiveRecord::Base
+	has_many :employees
+
+	validates_presence_of :name
+
+
+	#Method indexing on Shift name
+	define_index do
+		indexes name
+	end
+
+end

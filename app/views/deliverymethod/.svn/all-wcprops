@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/muncipalerp/!svn/ver/400/trunk/app/views/deliverymethod
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/muncipalerp/!svn/ver/368/trunk/app/views/deliverymethod/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/muncipalerp/!svn/ver/399/trunk/app/views/deliverymethod/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/muncipalerp/!svn/ver/222/trunk/app/views/deliverymethod/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/muncipalerp/!svn/ver/368/trunk/app/views/deliverymethod/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/muncipalerp/!svn/ver/400/trunk/app/views/deliverymethod/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/muncipalerp/!svn/ver/368/trunk/app/views/deliverymethod/show.html.erb
+END

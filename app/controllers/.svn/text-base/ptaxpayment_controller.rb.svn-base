@@ -1,0 +1,78 @@
+#Author: Chaitanya
+#controller: Property Tax Payment
+#=========================================================
+class PtaxpaymentController < ApplicationController
+	#Method:new
+	def new
+		@ptaxpayment = Ptaxpayment.new
+		@ptax = Ptax.find(:all) #List all Invoices 
+	end
+	#End:new
+
+	#Method:create
+	def create
+		@ptaxpayment = Ptaxpayment.new(params[:ptaxpayment])
+
+		@ptaxpayment.created_by = 1
+		@ptaxpayment.modified_by = 1
+		
+		@ptaxpayment.balance_amount = @ptaxpayment.total_amount - @ptaxpayment.paid_amount
+
+		if @ptaxpayment.save
+			flash[:notice] = 'Property Tax Payment successfully created.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	#End:create
+
+	#Method:list
+	def list
+		@ptaxpayments = Ptaxpayment.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|
+			format.html 
+			format.xml  { render :xml => @ptaxpayments } #Render to XML 
+		end 
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@ptaxpayment = Ptaxpayment.find(params[:id])
+		respond_to do |format|
+			format.html 
+			format.xml  { render :xml => @ptaxpayments } #Render to XML 
+		end 
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@ptaxpayment = Ptaxpayment.find(params[:id])
+	end
+	#End:edit
+
+	#Method:update
+	def update
+		@ptaxpayment = Ptaxpayment.find(params[:id])
+
+		@ptaxpayment.modified_by = 1
+
+		if @ptaxpayment.update_attributes(params[:ptaxpayment])
+			flash[:notice] = 'Property Tax Payment successfully Updated.'
+			redirect_to :action => 'show', :id => @ptaxpayment
+		else
+			render :action => 'edit'
+		end
+	end
+	#End:update
+
+	#Method:delete
+	def delete
+		Ptaxpayment.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+
+end

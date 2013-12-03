@@ -1,0 +1,24 @@
+<!--entering the data for creating Street Details-->
+<h1><%= I18n.t "enter_street_details" %><br>Enter Street Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "street" %>:<br> Street Name</label>:* </td>
+		<td><%= text_field 'street', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="colony"><%= I18n.t "colony" %>:<br>Colony</label>*: </td>
+		<td><%= collection_select(:street, :colony_id,@colony, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'street', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	<tr>
+	</table>
+<%= form_tag %>
+
+

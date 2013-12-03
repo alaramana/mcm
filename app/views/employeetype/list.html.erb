@@ -1,0 +1,37 @@
+<!--Listing all the Employee Type Details-->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Employee Type" ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Employee Type'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Search Employee Type" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<br>
+
+<% if @employeetypes.blank? %>
+	<p><%= I18n.t "employee_type_details_no" %>:<br>There are no Employee Types currently in the system.</p>
+<% else %>
+<!--Start of search text box -->
+	<p><%= I18n.t "employee_type_details" %>:<br>These are the current Employee Types:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "employee_type" %><br>Employee Type</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @employeetypes.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @employeetypes %>
+<%= link_to I18n.t "add_new" , {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

@@ -1,0 +1,17 @@
+<!--showing each Ssc Category Details depending the ids -->
+<h1><%= I18n.t 'ssc_details' %><br>Ssc Category Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'social_security_category' %><br>Ssc Category:</td>
+		<td><%= @ssccategory.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'amount' %><br>Amount: </td>
+		<td><%= @ssccategory.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'description' %><br>Description: </td>
+		<td><%= @ssccategory.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

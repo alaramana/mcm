@@ -1,0 +1,36 @@
+<% if @licenses.blank? %>
+ 	<p align="center>><%= I18n.t "license_registration_details_no" %>:<br>There are no Licenses currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "seasonal_license_details" %><br>Report of Licenses</h2>
+<br>
+
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "license_number" %><br>LicenseNumber</td>
+  <td><%= I18n.t "license_type" %><br>LicenseType</td>
+  <td><%= I18n.t "name" %><br>Name</td>
+  <td><%= I18n.t "shop_name" %><br>ShopName</td>
+  <td><%= I18n.t "shop_address" %><br>ShopAddress</td>
+  <td><%= I18n.t "period_from" %><br>PeriodFrom</td>
+  <td><%= I18n.t "period_to" %><br>PeriodTo</td>
+  <td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @licenses.each do |c| %>
+	
+	<tr>
+		<td><%= c.license_number %></td>
+		<td><%= c.licensetype.lic_type %></td>
+  		<td><%= c.last_name%></td>
+		<td><%= c.shop_name%></td>
+		<td><%= c.shop_address1%></td>  
+		<td><%= c.period_from %></td>
+		<td><%= c.period_to%></td>
+		<td><%= c.description %></td>
+ 	</tr>
+	<% end %>
+	</table>
+<% end %>
+

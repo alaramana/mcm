@@ -1,0 +1,21 @@
+<!-- Search about Rationcard Types-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+<% if @rationcardtypes.blank? %>
+ 	<p><%= I18n.t 'rationcard_type_details_no' %><br>There are no Rationcard Types currently in the system:</p>
+<% else %>
+	<p><%= I18n.t 'rationcard_type_details' %><br>List of  current Rationcard Types:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "rationcard_type" %><br>Card Type Name</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @rationcardtypes.each do |c| %>	
+	<tr>
+		<td><%= link_to c.card_type, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @rationcardtypes %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

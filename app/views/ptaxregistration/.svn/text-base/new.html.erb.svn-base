@@ -1,0 +1,73 @@
+<!--entering the data for creating Property Registration Details-->
+<h1>Enter Property Registration Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><label for="register_date">Regster Date</label>:* </td>
+		<td><%= calendar_date_select_tag 'ptaxregistration[register_date]' %></td>
+	</tr>
+	<tr>
+		<td><label for="assessment_no"><%= I18n.t "assesment_number" %>:<br>Register Number</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="first_name"><%= I18n.t "first_name" %>:<br>First Name</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="last_name"><%= I18n.t "last_name" %>:<br>Last Name</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'last_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="door_number"><%= I18n.t "door_number" %>:<br>Door Number</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'door_number',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="area"><%= I18n.t "area" %>:<br>Area</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'area',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="apartment_name"><%= I18n.t "name" %>:<br>Name of Apartment</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'apartment_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="email"><%= I18n.t "email" %>:<br>Email</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'email',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="phone"><%= I18n.t "phone_number" %>:<br>Phone</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'phone',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mobile"><%= I18n.t "phone_number" %>:<br>Mobile</label>:* </td>
+		<td><%= text_field 'ptaxregistration', 'mobile',:class=>'title' %></td>
+	</tr>	
+	<tr>
+		<td><label for="description">Description</label>:* </td>
+		<td><%= text_area 'ptaxregistration', 'description',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="zone"><%= I18n.t "zone" %>:<br>Zone</label>*: </td>
+		<td><%= collection_select(:ptaxregistration, :zone_id,@zone, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="ward"><%= I18n.t "ward" %>:<br>Ward</label>*: </td>
+		<td><%= collection_select(:ptaxregistration, :ward_id,@ward, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="colony"><%= I18n.t "colony" %>:<br>Colony</label>*: </td>
+		<td><%= collection_select(:ptaxregistration, :colony_id,@colony, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="street"><%= I18n.t "street" %>:<br>Street</label>*: </td>
+		<td><%= collection_select(:ptaxregistration, :street_id,@street, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %>:<br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+
+

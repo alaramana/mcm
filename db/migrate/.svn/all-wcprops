@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/muncipalerp/!svn/ver/464/trunk/db/migrate
+END
+20100807053451_create_organizations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/326/trunk/db/migrate/20100807053451_create_organizations.rb
+END
+20100817045457_create_wards.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817045457_create_wards.rb
+END
+20100817052234_create_exemptionfactors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817052234_create_exemptionfactors.rb
+END
+20100806102837_create_designations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806102837_create_designations.rb
+END
+20100806094900_create_genders.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806094900_create_genders.rb
+END
+20100827042058_create_ptaxregistrations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/muncipalerp/!svn/ver/464/trunk/db/migrate/20100827042058_create_ptaxregistrations.rb
+END
+20100826053140_create_ptaxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/382/trunk/db/migrate/20100826053140_create_ptaxes.rb
+END
+20100806103435_create_designationgroups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806103435_create_designationgroups.rb
+END
+20100827053026_create_ptaxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/464/trunk/db/migrate/20100827053026_create_ptaxes.rb
+END
+20100817052126_create_occupancyfactors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817052126_create_occupancyfactors.rb
+END
+20100821082600_create_pipesizes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/muncipalerp/!svn/ver/446/trunk/db/migrate/20100821082600_create_pipesizes.rb
+END
+20100823064112_create_wtaxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/240/trunk/db/migrate/20100823064112_create_wtaxes.rb
+END
+20100806101224_create_castes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/447/trunk/db/migrate/20100806101224_create_castes.rb
+END
+20100812091656_create_deliverymethods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100812091656_create_deliverymethods.rb
+END
+20100806104458_create_workplaces.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806104458_create_workplaces.rb
+END
+20100821032552_create_taxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/muncipalerp/!svn/ver/228/trunk/db/migrate/20100821032552_create_taxes.rb
+END
+20100806102435_create_departments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806102435_create_departments.rb
+END
+20100807060218_create_organizationtypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100807060218_create_organizationtypes.rb
+END
+20100817051954_create_structurefactors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817051954_create_structurefactors.rb
+END
+20100806101727_create_religions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806101727_create_religions.rb
+END
+20100817052305_create_properties.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817052305_create_properties.rb
+END
+20100806110554_create_banks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806110554_create_banks.rb
+END
+20100806104245_create_shifts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/381/trunk/db/migrate/20100806104245_create_shifts.rb
+END
+20100823121720_create_licenses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/muncipalerp/!svn/ver/277/trunk/db/migrate/20100823121720_create_licenses.rb
+END
+20100817045904_create_streets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817045904_create_streets.rb
+END
+20100817052811_create_unitvalues.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817052811_create_unitvalues.rb
+END
+20100817045234_create_zones.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/muncipalerp/!svn/ver/326/trunk/db/migrate/20100817045234_create_zones.rb
+END
+20100823122116_create_licensetypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/muncipalerp/!svn/ver/277/trunk/db/migrate/20100823122116_create_licensetypes.rb
+END
+20100823055958_create_connectiontypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/muncipalerp/!svn/ver/240/trunk/db/migrate/20100823055958_create_connectiontypes.rb
+END
+20100817050524_create_taxcategories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817050524_create_taxcategories.rb
+END
+20100817051012_create_propertytypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817051012_create_propertytypes.rb
+END
+20100810112739_create_employeetypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100810112739_create_employeetypes.rb
+END
+20100807064449_create_births.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/381/trunk/db/migrate/20100807064449_create_births.rb
+END
+20100827082922_create_ptaxpayments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/muncipalerp/!svn/ver/464/trunk/db/migrate/20100827082922_create_ptaxpayments.rb
+END
+20100817053032_create_ptaxrates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/muncipalerp/!svn/ver/326/trunk/db/migrate/20100817053032_create_ptaxrates.rb
+END
+20100807071136_create_deaths.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/muncipalerp/!svn/ver/235/trunk/db/migrate/20100807071136_create_deaths.rb
+END
+20100818074709_create_registrations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/381/trunk/db/migrate/20100818074709_create_registrations.rb
+END
+20100817052051_create_usefactors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817052051_create_usefactors.rb
+END
+20100806085645_create_employees.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/muncipalerp/!svn/ver/326/trunk/db/migrate/20100806085645_create_employees.rb
+END
+20100823122053_create_licensegroups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/muncipalerp/!svn/ver/277/trunk/db/migrate/20100823122053_create_licensegroups.rb
+END
+20100806103714_create_designationgroupmasters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806103714_create_designationgroupmasters.rb
+END
+20100817050722_create_ownertypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817050722_create_ownertypes.rb
+END
+20100807063909_create_hospitals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100807063909_create_hospitals.rb
+END
+20100806095514_create_maritals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100806095514_create_maritals.rb
+END
+20100817045738_create_colonies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817045738_create_colonies.rb
+END
+20100817051838_create_agefactors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/muncipalerp/!svn/ver/205/trunk/db/migrate/20100817051838_create_agefactors.rb
+END

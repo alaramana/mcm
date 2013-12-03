@@ -1,0 +1,24 @@
+<!--entering the data for Ward Details -->
+<h1><%= I18n.t "enter_ward_details" %>:<br>Enter Ward Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "ward" %>:<br> <label for="name">Ward Name</label>:* </td>
+		<td><%= text_field 'ward', 'name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="zone"><%= I18n.t "zone" %>:<br> zone</label>*: </td>
+		<td><%= collection_select(:ward, :zone_id,@zone, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'ward', 'description'%></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+        </tr>
+	</table>
+<%= form_tag %>
+
+

@@ -1,0 +1,49 @@
+<STYLE TYPE="text/css">
+
+TD{font-size: 7pt;}
+.break { page-break-before: always; }
+</STYLE>
+<% if @births.blank? %>
+ 	<p align="center"><%= I18n.t "birth_details_no" %>:<br>There are no Records currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "birth_details" %><br>Caste wise Birth Report</h2>
+<br>
+	<table border="1" align="center" width="100%">
+	<tr>
+		<td><%= I18n.t "description" %><br>Register ID</td>
+		<td><%= I18n.t "description" %><br>Register Date</td>
+		<td><%= I18n.t "description" %><br>Birth Date</td>
+		<td><%= I18n.t "description" %><br>Name</td>
+		<td><%= I18n.t "description" %><br>Father Name</td>
+		<td><%= I18n.t "description" %><br>Mother Name</td>
+		<td><%= I18n.t "description" %><br>Address</td>
+		<td><%= I18n.t "description" %><br>Gender</td>
+		<td><%= I18n.t "description" %><br>Caste</td>
+		<td><%= I18n.t "description" %><br>Religion</td>
+		<td><%= I18n.t "description" %><br>Birth Place</td>
+
+	</tr>
+	<% @births.each do |c| %>
+	
+	<tr>
+		<td><%=c.register_id %></td>
+		<td><%=c.register_date.strftime("%d-%m-%Y") %></td>
+		<td><%=c.birth_date.strftime("%d-%m-%Y") %></td>
+		<td><%=c.last_name %> &nbsp; <%=c.first_name %></td>
+		<td><%=c.father_name %></td>
+		<td><%=c.mother_name %></td>
+		<td><%=c.address %></td>
+		<td><%=c.gender.name %></td>
+		<td><%=c.caste.name %></td>
+		<td><%=c.religion.name %></td>
+		<td><%=c.hospital.name %></td>
+
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+

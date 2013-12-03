@@ -1,0 +1,78 @@
+#Author: Chaitanya
+#----
+class UsefactorController < ApplicationController
+	#Method:new
+	def new
+		@usefactor = Usefactor.new
+	end
+	#End:new
+
+	#Method:create
+	def create
+		@usefactor = Usefactor.new(params[:usefactor])
+		@usefactor.created_by = 1
+		@usefactor.modified_by = 1
+
+		if @usefactor.save
+			flash.now[:notice] = 'Use Factor Created Sucessfully.'
+			redirect_to :action => 'list'
+		else
+			render :action => 'new'
+		end
+	end  
+	#End:create
+
+	#Method:list
+	def list
+		@usefactors = Usefactor.paginate :page => params[:page], :per_page => 10
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @usefactors }		#Render to XML File
+		end
+	end
+	#End:list
+
+	#Method:show
+	def show
+		@usefactor = Usefactor.find(params[:id])
+		respond_to do |format|		
+			format.html 
+			format.xml  { render :xml => @usefactors }		#Render to XML File
+		end
+	end
+	#End:show
+
+	#Method:edit
+	def edit
+		@usefactor = Usefactor.find(params[:id])
+	end
+	#End:edit
+
+	#Method:update
+	def update
+		@usefactor = Usefactor.find(params[:id])
+		@usefactor.modified_by = 1
+
+		if @usefactor.update_attributes(params[:usefactor])
+			flash.now[:notice] = 'Use Factor updated Sucessfully.'
+			redirect_to :action => 'show', :id => @usefactor
+		else
+			render :action => 'edit'
+		end
+	end
+	#End:update
+
+	#Method:delete
+	def delete
+		Usefactor.find(params[:id]).destroy
+		redirect_to :action => 'list'
+	end
+	#End:delete
+
+	#Method:search
+	def search		
+		 @query = params[:query]
+		 @usefactors = Usefactor.search @query, :page => params[:page], :per_page => 10		
+	end	
+	#End:search
+end

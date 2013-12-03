@@ -1,0 +1,28 @@
+<!--entering the data for creating Basic Pay Details-->
+<h1><%= I18n.t "enter_basic_pay_details" %><br> Enter Basic Pay Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "department" %>:<br><label for="sex">Department</label>*: </td>
+		<td><%= collection_select(:bpay,:department_id,@department,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "designation" %>:<br><label for="sex">Designation</label>*: </td>
+		<td><%= collection_select(:bpay,:designation_id,@designation,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td> <%= I18n.t "amount" %>:<br><label for="name">Amount</label>:* </td>
+		<td><%= text_field 'bpay', 'bpay_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br><label for="description">Description</label>:</td>
+		<td><%= text_area 'bpay', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+

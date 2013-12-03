@@ -1,0 +1,13 @@
+#Author: Chaitanya
+#Model: Property Tax Registrations
+#-----
+
+class Registration < ActiveRecord::Base
+
+	belongs_to :zone
+	belongs_to :ward
+	belongs_to :colony
+	belongs_to :street
+	belongs_to :ptax	#Property Tax Calculation
+
+end

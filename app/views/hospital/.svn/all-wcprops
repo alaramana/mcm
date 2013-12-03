@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/muncipalerp/!svn/ver/418/trunk/app/views/hospital
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/muncipalerp/!svn/ver/295/trunk/app/views/hospital/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/muncipalerp/!svn/ver/417/trunk/app/views/hospital/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/muncipalerp/!svn/ver/205/trunk/app/views/hospital/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/muncipalerp/!svn/ver/295/trunk/app/views/hospital/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/muncipalerp/!svn/ver/418/trunk/app/views/hospital/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/muncipalerp/!svn/ver/295/trunk/app/views/hospital/show.html.erb
+END

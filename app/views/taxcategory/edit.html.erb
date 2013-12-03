@@ -1,0 +1,19 @@
+<!--editing the data of Tax Category Details-->
+<h1> <%= I18n.t "edit_tax_category_details" %>:<br>Edit Tax Category Detail</h1>
+<%= form_tag :action => 'update', :id => @taxcategory %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "tax_category" %>:<br> Tax Category</label>:* </td>
+		<td><%= text_field 'taxcategory', 'category',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'taxcategory', 'description' %></td>
+	</tr
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %>:<br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+ <%= link_to I18n.t "back" , {:action => 'list' }%>:<br><%= link_to 'Back', {:action => 'list' } %>

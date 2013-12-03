@@ -1,0 +1,17 @@
+<!--Showing the details of License Types-->
+<h1><%= I18n.t 'license_type_details' %><br>License Types Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t 'license_type' %><br>License Type:</td>
+		<td><%= @licensetype.lic_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t 'amount' %><br>Amount:</td>
+		<td><%= @licensetype.amount %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t 'description' %><br>Description: </td>
+		<td><%= @licensetype.description %></td>
+	</tr>
+	</table>
+<%= I18n.t 'back' %><br><%= link_to 'Back', {:action => 'list'} %>

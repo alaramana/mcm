@@ -1,0 +1,14 @@
+<!--Showing the HRA Details-->
+<h1> <%= I18n.t "hra_amount_details" %>:<br>HRA  Details:</h1>
+	<table>
+	<tr>
+		<td> <%= I18n.t "hra_amount" %>:<br>HRA Amount:</td>
+		<td><%= @hra.hra_amount %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @hra.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

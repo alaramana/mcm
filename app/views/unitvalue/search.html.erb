@@ -1,0 +1,19 @@
+<!-- Search about  Unit Values-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @unitvalues.blank? %>
+	<p><%= I18n.t "unit_value_details_no" %>:<br>There are no Unit Values currently in the system.</p><br>
+<% else %>
+	<p><%= I18n.t "unit_value_details" %>:<br>These are the current:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "tax_category" %><br>Tac Category</td<td><%= I18n.t "edit" %><br>Edit</td></tr>
+	<% @unitvalues.each do |c| %>
+	<tr>
+		<td><%= link_to c.taxcategory.category, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @unitvalues %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

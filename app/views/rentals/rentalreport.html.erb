@@ -1,0 +1,31 @@
+<% if @rentals.blank? %>
+ 	<p align="center>><%= I18n.t "rental_details_no" %>:<br>There are no Rentals currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "rental_registration_details" %><br>Report of Rentals</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+	    <td><%= I18n.t "rental_number" %><br>Rental ID</td>
+		<td><%= I18n.t "rental_type" %><br>RentalType</td>
+	    <td><%= I18n.t "name" %><br>Name</td>
+	    <td><%= I18n.t "period_from" %><br>PeriodFrom</td>
+ 	    <td><%= I18n.t "period_to" %><br>PeriodTo</td>
+	    <td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @rentals.each do |c| %>
+	
+	<tr>
+		<td><%= c.rental_number %></td>
+		<td><%= c.rentaltype.rental_type%></td>
+  	    <td><%= c.last_name%></td>
+		<td><%= c.period_from %></td>
+        <td><%= c.period_to%></td>
+		<td><%= c.description %></td>
+ 	</tr>
+	<% end %>
+	</table>
+<% end %>
+

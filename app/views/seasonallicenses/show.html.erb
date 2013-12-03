@@ -1,0 +1,46 @@
+<!--Showing the details of Seasonal licenses Types-->
+<h1><%= I18n.t "seasonal_license_details" %><br>Seasonal licenses Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "first_name" %>:<br>First Name:</td>
+		<td><%= @seasonallicense.first_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "last_name" %>:<br>Last Name:</td>
+		<td><%= @seasonallicense.last_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Gender:</td>
+		<td><%= @seasonallicense.gender.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "address" %>:<br>Address:</td>
+		<td><%= @seasonallicense.address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_name" %>:<br>Shop Name:</td>
+		<td><%= @seasonallicense.shop_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_number" %>:<br>Shop Number:</td>
+		<td><%= @seasonallicense.shop_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "shop_address" %>:<br>Shop Address:</td>
+		<td><%= @seasonallicense.shop_address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_date" %>:<br>Start Date:</td>
+		<td><%= @seasonallicense.start_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_date" %>:<br>End Date:</td>
+		<td><%= @seasonallicense.end_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Amount:</td>
+		<td><%= @seasonallicense.amount %></td>
+	</tr>	
+	
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list'} %>

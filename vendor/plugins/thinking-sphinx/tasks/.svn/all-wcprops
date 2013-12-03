@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/tasks
+END
+testing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/tasks/testing.rb
+END
+distribution.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/tasks/distribution.rb
+END
+rails.rake
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/tasks/rails.rake
+END

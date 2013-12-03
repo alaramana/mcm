@@ -1,0 +1,25 @@
+<!--Listing all Religions-->
+<% if @religions.blank? %>
+	<p><%= I18n.t "religion_details_no" %>:<br>There are no Religions currently in the system.</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "religion_details" %><br>Religion Report</h2>
+<br>
+	<table align="center">
+	<tr>
+		<td><%= I18n.t "religion" %><br>Name</td>
+		<td><%= I18n.t "description" %><br>Description</td>
+	</tr>
+	<% @religions.each do |c| %>
+	
+	<tr>
+		<td><%= c.name %></td>
+		<td><%= c.description  %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+
+

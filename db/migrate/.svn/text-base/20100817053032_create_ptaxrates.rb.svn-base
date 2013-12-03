@@ -1,0 +1,20 @@
+class CreatePtaxrates < ActiveRecord::Migration
+  def self.up
+    create_table :ptaxrates do |t|
+
+	t.integer :propertytype_id, :null=>false 
+	t.float   :percentage, :null=>false
+	t.integer :start_year							#TODO confirm with Client Reg. Year
+	t.integer :end_year
+	t.text    :description
+	t.integer :created_by, :null=>false
+	t.integer :modified_by, :null=>false
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :ptaxrates
+  end
+end

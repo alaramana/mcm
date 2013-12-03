@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="language" content="en" />
+    <title>ERP Central</title>
+   
+<link rel="shortcut icon" href="/images/favicon.ico" />
+
+
+<%= javascript_include_tag :defaults, 'scriptaculous', 'menu', 'swfobject' ,"/javascripts/calendar_date_select/calendar_date_select.js?1233647410", "/javascripts/calendar_date_select/format_italian_date.js" %>
+   
+
+ <%= stylesheet_link_tag "styles", "menu", "screen","/stylesheets/calendar_date_select/red.css?1233647414",:media => 'all' %>
+  
+
+</head>
+  <body>
+  <div class="headline">
+  	  <h1>Muncipal Council Malanjkhand</h1>
+  </div>
+  <div class="info-container">
+  	<div class="info">
+		<em>Welcome to Muncipal Council Malanjkhand | <%= Time.now.strftime("%A  %d %B %Y ") %></em> 		
+  	</div>
+
+  </div>
+  <div class="menu-container">
+    <div id="menu">
+	<ul class="level1" id="root">
+	    <li class="sep"></li>
+	    <li><a href="/home">Home</a></li>
+	    <li class="sep"></li>
+		<li><%= link_to 'Settings', '#', :alt=>"Settings" %>
+		<ul class="level2">
+	        <li><%= link_to 'संस्था / Organization','/organization/list' %></li>
+		<li><%= link_to 'संस्था वर्गीकरण / Organization Type','/organizationtype/list' %></li>
+			<li><%= link_to 'अंचल /  Zone' , '/zone/list' %></li>
+			<li><%= link_to 'वॉर्ड  / Wards', '/ward/list' %></li>
+			<li><%= link_to 'गली  / Streets', '/street/list' %></li>
+			<li><%= link_to 'विभाग / Department', '/department/list' %></li>
+			<li><%= link_to 'पदनाम  / Designation', '/designation/list' %></li>
+			<li><%= link_to 'लिंग / Gender', '/gender/list' %></li>
+			<li><%= link_to 'विवाह संबंधी   /  Marital Status', '/marital/list' %></li>
+			<li><%= link_to 'धर्म / Religion', '/religion/list' %></li>
+			<li><%= link_to 'जाति / Caste', '/caste/list' %></li>
+		</ul>
+		</li>
+
+		<li><%= link_to 'RBD', '#'  %>
+		<ul class="level2">
+			<li><%= link_to 'जन्म / Birth Registration', '/birth/list' %></li>
+			<li><%= link_to 'मृत्यु / Death Registration', '/death/list' %></li>
+			<li><%= link_to 'शादी / Marriage Registration', '/marriages/list' %></li>
+			<li><%= link_to 'दवाखाना  / List of Hospitals', '/hospital/list' %></li>
+			<li><%= link_to 'प्रसव का तरीका  / Delivery Methods','/deliverymethod/list' %></li>
+			<li><%= link_to 'दवाखाना  / Other RBD Reports', '/rbdreport/list' %></li>
+
+		</ul>
+		</li>
+		<li><%= link_to 'HRM', '#'  %>
+		<ul class="level2">
+			<li><%= link_to 'नौकर / Employee Registration ', '/employee/list' %></li>
+			<li><%= link_to 'नौकर का प्रकार / Employee Type', '/employeetype/list' %></li>
+			 <li><%= link_to 'वर्गीकरण / Employee Category', '/employeecategory/list' %></li>
+		     <li><%= link_to 'मूल वेतन / Basic Pay', '/bpay/list' %></li>
+		     <li><%= link_to 'दैनिक भत्ता / DA', '/da/list' %></li>
+		 	 <li><%= link_to 'भत्ता यात्रा / TA', '/ta/list' %></li>
+		     <li><%= link_to 'मकान किराया भत्ता / HRA', '/hra/list' %></li>
+		</ul>
+		</li>
+		<li><%= link_to 'Property Tax', '#' %>
+		<ul class="level2">
+		<li><%= link_to 'पंजीकरण / Property Registrations','/ptaxregistration/list' %></li>
+			<li><%= link_to 'जायदाद का वर्गीकरण  / Property Type', '/propertytype/list' %></li>
+			<li><%= link_to 'जायदाद / Properties', '/property/list' %></li>
+			<li><%= link_to 'शुल्क का विभाग  / Tax Category', '/taxcategory/list' %></li>
+			<li><%= link_to 'दखलकारी अंश  / Occupancy Factor','/occupancyfactor/list' %></li>
+			<li><%= link_to 'बनावट का अंश  / Structure Factor','/structurefactor/list' %></li>
+			<li><%= link_to 'इकाई का मूल्य  /  Unit Values', '/unitvalue/list' %></li>
+			<li><%= link_to 'सेवा का शुल्क / Service Tax', '/tax/list' %></li>
+			<li><%= link_to 'जायदाद चालान / Property Invoice', '/ptax/list' %></li>
+			<li><%= link_to 'जायदाद भुगतान / Property Payment', '/ptaxpayment/list' %></li>
+		</ul>
+		</li>
+		<li><%= link_to 'Water Tax', '#'  %>
+		<ul class="level2">
+		<li><%= link_to 'जल कर / Water Registration','/wtax/list' %></li>		     	 
+			<li><%= link_to 'कनेक्शन / Connection Type', '/connectiontype/list' %></li>
+		</ul>
+		</li>		
+		<li><%= link_to 'License/Rental', '#'  %>
+		<ul class="level2">		     	
+			<li><%= link_to 'लाइसेंस वर्गीकरण / License Type', '/licensetype/list' %></li>
+			<li><%= link_to 'लाइसेंस / License Registration', '/license/list' %></li>
+		<li><%= link_to 'मौसमी लाइसेंस / Seasonal License', '/seasonallicenses/list' %></li>
+			<li><%= link_to 'किराया वर्गीकरण / Rental Type', '/rentaltypes/list' %></li>
+			<li><%= link_to 'किराया / Rental Registration', '/rentals/list' %></li>
+		</ul>
+		</li>		     
+		<li><%= link_to 'Stores', '#'  %>
+		<ul class="level2">			 
+			<li><%= link_to 'वस्तु समूह / Item Master', '/itemmasters/list' %></li>
+			<li><%= link_to 'वस्तुओं का प्राप्त / Goods recived', '/goodsreceives/list' %></li>
+			<li><%= link_to 'बिल पास  / Bill Passing', '/billpassings/list' %></li>
+			<li><%= link_to 'वस्तुओं का वापस / Goods Return', '/goodsreturns/list' %></li>
+			<li><%= link_to 'गोदाम खर्च / Stores Consumption','/storecunsumptions/list' %></li>
+			<li><%= link_to 'वस्तु का श्रेणी / Item Category', '/itemcategories/list' %></li>
+			<li><%= link_to 'बिल रकम / Bill Pay', '/billpays/list' %></li>
+		</ul>
+		</li>
+		<li><%= link_to 'Ration Cards', '#'  %>
+		<ul class="level2">		     	
+			<li><%= link_to 'राशन कार्ड वर्गीकरण / Card Type', '/rationcardtypes/list' %></li>
+			<li><%= link_to 'राशन कार्ड  / Card Registration', '/rationcards/list' %></li>
+		</ul>
+		</li>
+		<li><%= link_to 'Complaints', '#'  %>
+		<ul class="level2">		     	
+			<li><%= link_to 'शिकायत वर्गीकरण/  Complaint Type', '/complainttypes/list' %></li>
+			<li><%= link_to 'शिकायत / Complaint', '/complaints/list' %></li>
+			<li><%= link_to 'शिकायतों का सूची  / View Complaint', '/complaints/approved' %></li>
+		</ul>
+		</li>
+		<li><%= link_to 'SSC', '#'  %>
+		<ul class="level2">		     	
+			<li><%= link_to 'सामाजिक सुरक्षा / SSC Category', '/ssccategory/list' %></li>
+			<li><%= link_to 'सुरक्षा पेंशन / SSC Pencsion', '/spension/list' %></li>
+		</ul>
+		</li>
+	   </ul>
+	</div>
+  </div>
+  <div class="page-body-container">
+	<div class="page-body">
+		  <%= yield %>		
+	</div>
+  </div>
+  <div class="footer">
+	  Powered by: SARK Systems Limited.
+  </div>
+  </body>
+</html>
+

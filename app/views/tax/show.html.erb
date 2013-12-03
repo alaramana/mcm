@@ -1,0 +1,17 @@
+<!--Showing the Tax Details-->
+<h1><%= I18n.t "service_tax_details" %>:<br>Tax Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "tax" %>:<br>Tax:</td>
+		<td><%= @tax.name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "amount" %>:<br>Amount: </td>
+		<td><%= @tax.amount %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "description" %>:<br>Description: </td>
+		<td><%= @tax.description %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %>:<br><%= link_to 'Back', {:action => 'list'} %>

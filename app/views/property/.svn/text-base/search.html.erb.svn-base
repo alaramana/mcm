@@ -1,0 +1,21 @@
+<!-- Search about  Property Details-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @properties.blank? %>
+	<p><%= I18n.t "property_details_no" %>:<br>There are no Property currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "property_details" %>:<br>These are the current properties:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "property" %><br>Name</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @properties.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></b></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @properties %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

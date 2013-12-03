@@ -1,0 +1,18 @@
+#Author: Chaitnya
+#-------
+
+class Employeetype < ActiveRecord::Base
+	has_many :employees
+
+
+	#method : indexing on Employeetype
+	define_index do
+		indexes name
+
+
+
+	#with{}
+		
+	end
+
+end

@@ -1,0 +1,39 @@
+<!--editing the data of LoanAccount Details-->
+<h1><%= I18n.t 'edit_loanaccount_registration_details' %><br>Edit LoanAccount Detail</h1>
+<%= form_tag :action => 'update', :id => @loanaccount %>
+<table>
+	<tr>
+	<td><%= I18n.t 'emoloyee_number' %>:<br><label for="employee_id">EmployeeNumber</label>:*</td>
+	<td><%= text_field 'loanaccount', 'employee_id',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t 'loanaccountno'%>:<br><label for="loanaccountno">LoanAccountNumber</label>:*</td>
+	<td><%= text_field 'loanaccount', 'loanaccountno',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "loan_amount" %>:<br><label for="loan_amount">LoanAmount</label>:* </td>
+	<td><%= text_field 'loanaccount', 'loan_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "interest" %>:<br><label for="interest">Interest</label>:* </td>
+	<td><%= text_field 'loanaccount', 'interest',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "number_of_emis" %>:<br><label for="number_of_emis">NumberOfEmi's</label>:* </td>
+	<td><%= text_field 'loanaccount', 'emi',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "paid_amount" %>:<br><label for="paid_amount">PaidAmount</label>:*</td>
+	<td><%= text_field 'loanaccount', 'paid_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td><%= I18n.t "balance_amount" %>:<br><label for="balance_amount">BalanceAmount</label>:</td>
+	<td><%= text_field 'loanaccount', 'balance_amount',:class=>'title' %></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+</table>		
+<%= form_tag %>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>

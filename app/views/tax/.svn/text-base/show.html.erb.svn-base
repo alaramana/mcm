@@ -1,0 +1,17 @@
+<!--Showing the Tax Details-->
+<h1>Tax Details:</h1>
+	<table>
+	<tr>
+		<td>Tax:</td>
+		<td><%= @tax.name %></td>
+	</tr>
+	<tr>
+		<td>Amount: </td>
+		<td><%= @tax.amount %></td>
+	</tr>
+	<tr>
+		<td>Description: </td>
+		<td><%= @tax.description %></td>
+	</tr>
+	</table>
+<%= link_to 'Back', {:action => 'list'} %>

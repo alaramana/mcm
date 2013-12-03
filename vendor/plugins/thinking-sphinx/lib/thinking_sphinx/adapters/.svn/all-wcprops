@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/adapters
+END
+abstract_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/adapters/abstract_adapter.rb
+END
+postgresql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/adapters/postgresql_adapter.rb
+END
+mysql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/adapters/mysql_adapter.rb
+END

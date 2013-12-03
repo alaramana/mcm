@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/active_record
+END
+attribute_updates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/active_record/attribute_updates.rb
+END
+delta.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/active_record/delta.rb
+END
+has_many_association.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/active_record/has_many_association.rb
+END
+scopes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/bookseconomy/!svn/ver/115/vendor/plugins/thinking-sphinx/lib/thinking_sphinx/active_record/scopes.rb
+END

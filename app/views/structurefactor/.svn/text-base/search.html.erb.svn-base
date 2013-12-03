@@ -1,0 +1,20 @@
+<!-- Search about  Structure Factors-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+	<% if @structurefactors.blank? %>
+	<p><%= I18n.t "structure_factor_details_no" %>:<br>There are no Structure Factor currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "structure_factor_details" %>:<br>These are the current Structure Factor:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "structure_factor" %><br>Structure</td<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @structurefactors.each do |c| %>
+	<tr>
+		<td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @structurefactors %>	
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br> <%= link_to 'Back', {:action => 'list'} %>

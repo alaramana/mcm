@@ -1,0 +1,24 @@
+<% if @rationcardtypes.blank? %>
+ 	<p align="center>><%= I18n.t "rationcard_reg_details_no" %>:<br>There are no Rationcards currently in the system:</p>
+<% else %>
+		<h1 align="center"><%= I18n.t "mcm" %></h1>
+		<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+		<hr>
+	<h2 align="center"><%= I18n.t "rationcard_reg_details" %><br>Report of Ration Card Type</h2>
+<br>
+	<table border="1" align="center">
+	<tr>
+		<td><%= I18n.t "rationcard_type" %><br>RationCard Type</td>
+		<td><%= I18n.t "rationcard_type" %><br>Description</td>
+
+	</tr>
+	<% @rationcardtypes.each do |c| %>
+	
+	<tr>
+		<td><%= c.card_type %></td>
+		<td><%= c.description %></td>
+   	</tr>
+	<% end %>
+	</table>
+<% end %>
+

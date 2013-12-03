@@ -1,0 +1,32 @@
+<% if @spensions.blank? %>
+ 	<p align="center>><%= I18n.t "ssc_details_no" %>:<br>There are no Spensions currently in the system:</p>
+<% else %>
+<h1 align="center"><%= I18n.t "mcm" %></h1>
+<h2 align="center"><%= I18n.t "mcm_address" %> <h2>
+<hr>
+
+<h2 align="center"><%= I18n.t "ssc_details" %><br>Report of Pensions</h2>
+<br>
+
+	<table border="1" align="center">
+	<tr>
+  <td><%= I18n.t "spension_number" %><br>Pension Id</td>
+  <td><%= I18n.t "social_security_category" %><br>Category</td>
+  <td><%= I18n.t "last_name" %><br>Name</td>
+  <td><%= I18n.t "address" %><br>Address</td>
+  <td><%= I18n.t "address" %><br>Pension Amount</td>
+
+	</tr>
+	<% @spensions.each do |c| %>
+	
+	<tr>
+		<td><%= c.spension_number %></td>
+		<td><%= c.ssccategory.name%></td>
+		<td><%= c.last_name%></td>
+		<td><%= c.address %></td>
+		<td><%= c.ssccategory.amount %></td>
+   	</tr>
+	<% end %>
+	</table>
+<% end %>
+

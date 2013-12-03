@@ -1,0 +1,57 @@
+<!--editing the data of Property Tax Details-->
+<h1><%= I18n.t 'edit_property_tax_details' %><br>Edit Property Detail</h1>
+<%= form_tag :action => 'update', :id => @ptaxregistration %>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_date" %>:<br><label for="register_date">Invoice Date</label>:* </td>
+		<td><%= calendar_date_select_tag 'ptax[invoice_date]' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "assesment_number" %>:<br><label for="assessment_no">Assesment Number</label>:* </td>
+		<td><%= collection_select(:ptax, :ptaxregistration_id,@ptaxregistration, :id, :number) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "start_date" %>:<br><label for="start_year">Start Year</label>:* </td>
+		<td><%= text_field 'ptax', 'start_year',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "end_date" %>:<br><label for="end_year">End Year</label>:* </td>
+		<td><%= text_field 'ptax', 'end_year',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "total_area" %>:<br><label for="total_area">Total Area</label>:* </td>
+		<td><%= text_field 'ptax', 'total_area',:class=>'title' %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "built_area" %>:<br><label for="build_area">Build Area</label>:* </td>
+		<td><%= text_field 'ptax', 'build_area',:class=>'title' %></td>
+	</tr>
+
+	<tr>
+		<td><%= I18n.t "property_type" %>:<br><label for="propertytype">Property Tyype</label>*: </td>
+		<td><%= collection_select(:ptax, :propertytype_id,@propertytype, :id, :name) %></td>
+	</tr>	
+	<tr>
+		<td><%= I18n.t "structure_factor"%>:<br><label for="structurefactor">Structure Factor</label>*: </td>
+		<td><%= collection_select(:ptax, :structurefactor_id,@structurefactor, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "occupancy_factor"%>:<br><label for="occupancyfactor">Occupancy Factor</label>*: </td>
+		<td><%= collection_select(:ptax, :occupancyfactor_id,@occupancyfactor, :id, :name) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "tax_category"%>:<br><label for="taxcategory">Tax Category</label>*: </td>
+		<td><%= collection_select(:ptax, :taxcategory_id,@taxcategory, :id, :category) %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "unit_value"%>:<br><label for="unitvalue">Unit Value</label>*: </td>
+		<td><%= collection_select(:ptax, :unitvalue_id,@unitvalue, :id, :amount) %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br><%= link_to 'Back', {:action => 'list' } %>
+

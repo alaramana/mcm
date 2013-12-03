@@ -1,0 +1,62 @@
+<%= form_tag :action => 'bdatereport' %>
+	<table>
+	<tr>
+		<td>Birth Report Register Date Wise</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date From:*: </td>
+		<td><%= calendar_date_select_tag 'from_date',  nil, :year_range => [60.years.ago, 0.years.from_now],:popup => "force" %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "date_of_birth" %>:<br>Date To:*: </td>
+		<td><%= calendar_date_select_tag 'end_date', nil, :year_range => [60.years.ago, 0.years.from_now],:popup => "force" %></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td><%= I18n.t 'save' %>:<br><%= submit_tag "Create Report" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+
+
+<br>
+
+	<table>
+	<tr>
+		<td>Birth Report Caste Wise</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %><br>Name</td>
+	<% @castes.each do |c| %>	
+		<td><%= link_to c.name, {:action => 'bcastereport', :id => c.id} -%></td>
+	<% end %>
+	</tr>
+	</table>
+
+<br>
+
+
+<table>
+	<tr>
+		<td>Death Report Religion Wise</td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "caste" %><br>Name</td>
+	<% @castes.each do |c| %>	
+		<td><%= link_to c.name, {:action => 'dcastereport', :id => c.id} -%></td>
+	<% end %>
+	</tr>
+	</table>
+
+<br>
+
+	<table>
+	<tr>
+		<td>Birth and Death Report Staticits</td>
+		<td><%= link_to "Statistical Report", {:action => 'sreport'} -%></td>
+
+	</tr>
+	</table>
+

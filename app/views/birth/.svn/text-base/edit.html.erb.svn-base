@@ -1,0 +1,142 @@
+<!--entering the data for creating Birth Registration Details-->
+<h1>Enter Birth Registration Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><label for="birth_date">Date Of Birth</label>*: </td>
+		<td><%= calendar_date_select_tag 'birth[birth_date]' %></td>
+	</tr>
+	<tr>
+		<td><label for="first_name">First Name</label>: </td>
+		<td><%= text_field 'birth', 'first_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="middle_name">Middle Name</label>: </td>
+		<td><%= text_field 'birth', 'middle_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="last_name">Last Name</label>: </td>
+		<td><%= text_field 'birth', 'last_name' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="sex">Sex</label>*: </td>
+		<td><%= collection_select(:birth,:gender_id,@gender,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="father_name">Father Name</label>*: </td>
+		<td><%= text_field 'birth', 'father_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_name">Mother Name</label>*: </td>
+		<td><%= text_field 'birth', 'mother_name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="address">Address</label>*: </td>
+		<td><%=text_area 'birth', 'address'%></td>
+	</tr>
+	<tr>
+		<td><label for="birth_place">Birth Place</label>*: </td>
+		<td><%= text_field 'birth', 'birth_place' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="hospital_id">Hospital Name</label>*: </td>
+		<td><%= collection_select(:birth,:hospital_id,@hospital,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="city">City</label>*: </td>
+		<td><%= text_field 'birth', 'city',:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="district">District</label>*: </td>
+		<td><%= text_field 'birth', 'district',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="tehsil">Tehsil</label>*: </td>
+		<td><%= text_field 'birth', 'tehsil',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="applicant_name">Applicant_name</label>*: </td>
+		<td><%= text_field 'birth', 'applicant',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_place">Mother Native Place</label>*: </td>
+		<td><%= text_field 'birth', 'mother_native',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="religion_id">Religion</label>*: </td>
+		<td><%= collection_select(:birth,:religion_id,@religion,:id,:name) %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_education">Mother Education</label>*: </td>
+		<td><%= text_field 'birth', 'mother_education',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="father_education">Father Education</label>*: </td>
+		<td><%= text_field 'birth', 'father_education',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="father_occupation">Father Occupation</label>*: </td>
+		<td><%= text_field 'birth', 'father_occupation' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="mother_occupation">Mother Occupation</label>*: </td>
+		<td><%= text_field 'birth', 'mother_occupation',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_age_delivery">Mother Age (At Time of Marriage)</label>*: </td>
+		<td><%= text_field 'birth', 'mother_age_marriage',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="mother_age_delivery">Mother Age (At Time of Delivery)</label>*: </td>
+		<td><%= text_field 'birth', 'mother_age_delivery' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="total_childern">Total Childern</label>*: </td>
+		<td><%= text_field 'birth', 'total_children',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="delivery_id">Delivery Method</label>*: </td>
+		<td><%= collection_select(:birth,:deliverymethod_id,@deliverymethod,:id,:name)%></td>
+	</tr>
+	<tr>
+		<td><label for="baby_weight">Baby Weight</label>*: </td>
+		<td><%= text_field 'birth', 'weight',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="total_time">Pregancy Period (in Weeks)</label>*: </td>
+		<td><%= text_field 'birth', 'total_time',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="helper">Helper</label>*: </td>
+		<td><%= text_field 'birth', 'helper',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="register_number">Registration Number</label>*: </td>
+		<td><%= text_field 'birth', 'register_id' ,:class=>'title'%></td>
+	</tr>
+	<tr>
+		<td><label for="register_date">Registeration Date</label>*: </td>
+		<td><%= calendar_date_select_tag 'birth[register_date]' %></td>
+	</tr>
+	<tr>
+		<td><label for="register_remark">Registeration Remark</label>: </td>
+		<td><%= text_field 'birth', 'remarks',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="register_unit">Registeration Unit</label>*: </td>
+		<td><%= text_field 'birth', 'unit',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="employee_id">Employee</label>*: </td>
+		<td><%= text_field 'birth', 'employee_id',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="approved_by">Apporved By</label>*: </td>
+		<td><%= text_field 'birth', 'approved_by',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Update" %></td>
+	</tr>
+	</table>
+<%= form_tag %>

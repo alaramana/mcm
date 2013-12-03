@@ -1,0 +1,35 @@
+<!--Listing all the Marital Information--> 
+<!--Start of search text box -->
+<%= form_tag :action => 'search' %>
+	<table>
+	<tr>
+		<td><%= I18n.t "search" %>:<br>Search: </td>
+		<td>
+<%= text_field_tag :query ,@query ||="Enter Marital Status " ,:class=>'title',:onfocus=>"javascript: this.value=''",:onblur=>"javascript: if(this.value=='') this.value='Enter Marital Status'" %></td>
+		<td><%= I18n.t "search" %>:<br><%= submit_tag "Marital Status" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<!--end of search text box -->
+<% if @maritals.blank? %>
+	<p><%= I18n.t "marital_details_no" %>:<br>There are no Marital info currently in the system.</p>
+<% else %>
+	<p><%= I18n.t "marital_details" %>:<br>These are the current Marital info:</p>
+	<table>
+	 <tr>
+		<td><%= I18n.t "marital" %><br>Status</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @maritals.each do |c| %>
+	<tr>
+		<td><%= link_to c.status, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>	
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @maritals %>
+<%= link_to I18n.t "add_new", {:action => 'new' } %>:<br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

@@ -1,0 +1,17 @@
+#Author: Chaitanya
+#----------------
+class Street < ActiveRecord::Base
+	belongs_to :colony
+	belongs_to :organization
+
+	 #Method: Indexing on street name
+	define_index do
+		indexes :name
+		indexes colony.name
+
+		#with{}
+		has colony_id
+		
+	end
+
+end

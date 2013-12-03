@@ -1,0 +1,23 @@
+<!--editing the data of Occupancy Factor Details--> 
+<h1> <%= I18n.t "edit_occupancy_factor_details" %>:<br>Edit Occupancy Factor Detail</h1>
+<%= form_tag :action => 'update', :id => @occupancyfactor %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "occupancy_factor" %>:<br> Occupancy Factor Name</label>:* </td>
+		<td><%= text_field 'occupancyfactor', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="name"><%= I18n.t "value" %>:<br> Value</label>:* </td>
+		<td><%= text_area 'occupancyfactor', 'factor',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br> Description</label>:</td>
+		<td><%= text_area 'occupancyfactor', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save_changes" %><br><%= submit_tag "Save Changes" %></td>
+	</tr>
+	</table>
+<%= form_tag %>
+<%= link_to I18n.t "back" ,{:action => 'list'}%><br><%= link_to 'Back', {:action => 'list' } %>

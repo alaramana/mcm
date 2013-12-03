@@ -1,0 +1,24 @@
+#Author: Chaitanya
+#table: shifts
+#belongs:
+#=====================
+
+class CreateShifts < ActiveRecord::Migration
+  def self.up
+    create_table :shifts do |t|
+
+	t.string  :name, :null=>false, :limit=>50
+	t.float	  :start_time, :null=>false
+	t.float   :end_time, :null=>false
+	t.text    :description
+	t.integer :created_by, :null=>false
+	t.integer :modified_by, :null=>false
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :shifts
+  end
+end

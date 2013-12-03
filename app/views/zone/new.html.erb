@@ -1,0 +1,21 @@
+<!--entering the data for Zone Details -->
+<h1><%= I18n.t "enter_zone_details" %><br>Enter Zone Detail</h1>
+
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "zone" %>:<br>Zone Name</label>:* </td>
+		<td><%= text_field 'zone', 'name',:class=>'title' %></td>
+	</tr>
+	<tr>
+		<td><label for="description"><%= I18n.t "description" %> <br>Description</label>:</td>
+		<td><%= text_area 'zone', 'description', :cols=>30, :rows=>5 %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %> <br> <%= submit_tag "Create" %></td>
+	</tr>
+	</table>
+
+<%= form_tag %>   
+ 

@@ -1,0 +1,27 @@
+<!-- Search about Goods Returns-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+<% if @goodsreturns.blank? %>
+ 	<p><%= I18n.t "goods_return_details_no" %><br>There are no Goods Returns currently in the system:</p>
+<% else %>
+	<p><%= I18n.t "goods_return_details" %><br>These are the current Goods Returns:</p>
+	<table>
+	<tr><td><%= I18n.t "item_group" %><br>Item master name</td>
+		<td><%= I18n.t "quantity" %><br>Quantiry</td>
+		<td><%= I18n.t "goods_amount" %><br>Amount</td>
+		<td><%= I18n.t "return_amount" %><br>Goods Return Date</td>
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @goodsreturns.each do |c| %>
+	
+	<tr>
+		<td><%= c.itemmaster.item_name -%></td>
+		<td><%= c.quantity -%></td>
+		<td><%= c.amount -%></td>
+		<td><%= link_to c.return_date, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @goodsreturns %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

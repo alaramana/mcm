@@ -1,0 +1,30 @@
+<!-- Search about Bll Passings-->
+<h1><%= I18n.t "search" %>:<br>Search Results </h1>
+<% if @billpassings.blank? %>
+ 	<p><%= I18n.t "bill_passing_details_no" %> <br>There are no Bill Passings currently in the system:</p>
+<% else %>
+	<p><%= I18n.t "bill_passing_details" %> <br>These are the current Bill Passings:</p>
+	<table>
+	<tr>
+		<td><%= I18n.t "invoice_number" %><br>Invoice Numbaer</td>
+		<td><%= I18n.t "invoice_date" %><br>Invoice Numbaer</td>		
+		<td><%= I18n.t "goods_amount" %><br>Amount</td>		
+		<td><%= I18n.t "organization_name" %><br>Organization Name</td>
+		<td><%= I18n.t "address" %><br>Address</td>			
+		<td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @billpassings.each do |c| %>
+	
+	<tr>
+		<td><%= c.invoice_number-%></td>
+		<td><%= c.invoice_date -%></td>
+		<td><%= c.amount -%></td>
+		<td><%= c.org_name -%></td>
+		<td><%= c.address -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @billpassings %>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

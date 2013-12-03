@@ -1,0 +1,45 @@
+<!--showing each RationCard Details -->
+<h1><%= I18n.t 'rationcard_reg_details' %><br>RationCard Details:</h1>
+	<table>
+	<tr>
+		<td><%= I18n.t "rationcard_number" %>:<br>RationCard Number</td>
+		<td><%= @rationcard.rationcard_number %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rationcard_type" %>:<br>RationCard Type: </td>
+		<td><%= @rationcard.rationcardtype.card_type %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_name" %>:<br>Owner Name:</td>
+		<td><%= @rationcard.owner_name %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_date_of_birth" %>:<br>Owner DateOfBirth:</td>
+		<td><%= @rationcard.owner_birth_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "gender" %>:<br>Owner Gender:</td>
+		<td><%= @rationcard.gender.name%></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "owner_address" %>:<br>Owner Address:</td>
+		<td><%= @rationcard.owner_address %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_name" %>:<br>Memeber Name1:</td>
+		<td><%= @rationcard.memeber_name1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "member_date_of_birth" %>:<br>Memeber1 DateOfBirth:</td>
+		<td><%= @rationcard.memeber1_birth_date %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "relation_with_owner" %>:<br>Relation With Owner:</td>
+		<td><%= @rationcard.relation1 %></td>
+	</tr>
+	<tr>
+		<td><%= I18n.t "rationcard_reg_date" %>:<br>Card Registration Date:</td>
+		<td><%= @rationcard.card_reg_date %></td>
+	</tr>
+	</table>
+<%= I18n.t "back" %><br> <%= link_to 'Back', {:action => 'list'} %>

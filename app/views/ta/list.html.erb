@@ -1,0 +1,22 @@
+<!--Listing all DA-->
+<% if @tas.blank? %>
+	<p>There are no TA currently in the system.</p>
+<% else %>
+	<p>These are the current TA:</p>
+	<table>
+	<tr>
+		<td>TA</td><td><%= I18n.t "edit" %><br>Edit</td>
+	</tr>
+	<% @tas.each do |c| %>
+	<tr>
+		<td><%= link_to c.ta_percentage, {:action => 'show', :id => c.id} -%></td>
+		<td><%= link_to 'Edit', {:action => 'edit', :id => c.id} %></td>
+	</tr>
+	<% end %>
+	</table>
+<% end %>
+<%= will_paginate @tas %>
+<%= link_to I18n.t "add_new" , {:action => 'new' } %><br><%= link_to "Add new", {:action => 'new' }%>
+
+
+

@@ -1,0 +1,19 @@
+<!--entering the data for creating Organization Type Details-->
+<h1><%= I18n.t "enter_orgnanization_type_details" %>:<br>Enter Organization Type Details:</h1>
+<%= form_tag :action => 'create' %>
+	<table>
+	<tr>
+		<td><label for="name"><%= I18n.t "orgnanization_type" %>:<br> Organization Type</label>: </td>
+		<td><%= text_field 'organizationtype', 'name',:class=>'title' %> </td>
+	</tr>
+	<tr>
+		<td><label for="description"> <%= I18n.t "description" %>:<br>Description</label>:</td>
+		<td><%= text_area 'organizationtype', 'description' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= I18n.t "save" %><br><%= submit_tag "Create" %></td>
+	</table>
+<%= form_tag %>
+
+
